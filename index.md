@@ -9,7 +9,7 @@ class: home
 
 <img src="{{ site.baseurl }}/assets/images/webrtc-logo-vert-retro-255x305.png" class="pull-right" style="margin-left: 2em; margin-bottom: .5em;">
 
-**WebRTC is a free, open software project** that provides browsers and mobile
+**WebRTC is a free, open project** that provides browsers and mobile
 applications with Real-Time Communications (RTC) capabilities via simple APIs.
 The WebRTC components have been optimized to best serve this purpose.
 
@@ -118,18 +118,17 @@ amongst others. This page is maintained by the Google Chrome team.
 
     <ul>
       <li>
-        <p>On March 24th 2015, WebRTC <strong>moved the master source repository</strong> over to Git at <a href="https://chromium.googlesource.com/external/webrtc">https://chromium.googlesource.com/external/webrtc</a> (check <a href="{{ site.baseurl }}/native-code/development/">Development</a> for more details).</p>
+        <p>The master <strong>source repository</strong> for WebRTC is at
+        <a href="https://chromium.googlesource.com/external/webrtc">
+        https://chromium.googlesource.com/external/webrtc</a> (check
+        <a href="{{ site.baseurl }}/native-code/development/">Development</a>
+        for more details).</p>
       </li>
       <li>
         <p><strong>WebRTC code samples</strong> are now available from <a href="http://github.com/webrtc/samples/">github.com/webrtc/samples/</a>.</p>
       </li>
       <li>
         <p><strong>Live demos</strong> can be accessed at <a href="http://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
-      </li>
-      <li>
-        <p><strong>New data channel file transfer sample</strong> from Philipp Hancke:
-  <a href="http://webrtc.github.io/samples/src/content/datachannel/filetransfer/">webrtc.github.io/samples/src/content/datachannel/filetransfer</a>. Issues
-  and patches welcome!</p>
       </li>
       <li>
         <p>Check out the latest WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
