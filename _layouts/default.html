@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <meta name="google-site-verification" content="os_oQr3oDyUhcuA1dqzPujLyCrC-mKIMJPVg0Lh8KtY" />
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/webrtc.css">
+    <script src="{{ site.baseurl }}/assets/js/jquery-1.11.1.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/bootstrap.js"></script>
+    <script>
+    $(function(){
+    // Offset body padding for TOC link targets
+      setTimeout(function(){
+        var shiftWindow = function() {
+          var hash = "#" + location.hash.replace(/[^A-Za-z0-9_\-]/g, "");
+          if (hash && $(hash).offset()) {
+            var pos = $(hash).offset().top - 60;
+            $(window).scrollTop(pos);
+          }
+        };
+        if (location.hash) shiftWindow();
+        window.addEventListener("hashchange", shiftWindow);
+      },10);
+    })
+    </script>
+
+</head>
+
+<body class="{{ page.class }}">
+
+{% include topnav.html %}
+
+  <div class="container-fluid">
+
+    <div class="row breadbar">
+      <div class="col-md-10 col-md-offset-1">
+        <ul class="breadcrumb">
+          {% if page.url contains '/blog/' %}
+            <li><a href="{{ site.baseurl }}/">Home</a></li>
+            <li><a href="{{ site.baseurl }}/blog/">Blog</a>
+          {% else %}
+            <li><a href="{{ site.baseurl }}/">Home</a></li>
+            {% assign crumbs = page.url | split: '/' %}
+            {% assign crumbs_total = crumbs | size | minus: 1 %}
+              {% for crumb in crumbs offset: 1 %}
+                {% if forloop.index == crumbs_total %}
+                  {% comment %}
+                    Use page.crumb for link text, if it exists. This lets us force a
+                    chosen string if the transformed directory name is ugly. Imperfect:
+                    edge cases exist.
+                  {% endcomment %}
+                  {% if page.crumb %}
+                    <li class="active">{{ page.crumb }}</li>
+                  {% else %}
+                    <li class="active">{{ crumb | replace:'-',' ' | capitalize}}</li>
+                  {% endif %}
+                {% else %}
+                  <li><a href="{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | capitalize }}</a>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div><!-- /.row -->
+
+      <article class="page-content">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h2>{{ page.title }}</h2>
+            {{ content }}
+          </div>
+        </div><!-- /.row -->
+      </article>
+
+    </div><!-- /.container -->
+
+  {% include footer.html %}
+  {% include ganalytics.html %}
+
+  <script>
+  $(document).ready(function(){
+    $("a.tocbutton").click(function () {
+      $("ul#markdown-toc").slideToggle("slow");
+      var text = $(this).text() == 'Show Contents' ? 'Hide Contents' : 'Show Contents';
+      $(this).text(text);
+    });
+  });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+.directory
+.DS_Store
+
+node_modules
+_save
+_site
+_source-graphics
+npm-debug.log
+artwork-new
+artwork/webicons
+assets/fonts
+
+## Temporary ignores

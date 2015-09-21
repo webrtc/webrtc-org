@@ -1,0 +1,74 @@
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{ site.baseurl }}"><img alt="WebRTC logo" src="{{ site.baseurl }}/assets/images/webrtc-logo-horiz-retro-243x40.png" style="margin-top: -2px;"></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ site.baseurl }}/faq/">FAQ</a></li>
+              <li><a href="{{ site.baseurl }}/architecture/">Architecture</a></li>
+              <li><a href="{{ site.baseurl }}/videos/">Videos</a></li>
+              <li><a href="{{ site.baseurl }}/release-notes/">Release Notes</a></li>
+              <li><a href="{{ site.baseurl }}/reference-apps/">Reference Apps</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ site.baseurl }}/license/software/">Software License</a></li>
+              <li><a href="{{ site.baseurl }}/license/additional-ip-grant/">Additional IP Rights Grant</a></li>
+              <li><a href="{{ site.baseurl }}/license/ilbc-freeware/">iLBC Freeware</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ site.baseurl }}/press/">Press Kit</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ site.baseurl }}/blog/">Blog Archive</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Developer <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ site.baseurl }}/contributing/">Contributing</a></li>
+              <li><a href="{{ site.baseurl }}/bugs/">Reporting Bugs</a></li>
+              <li><a href="{{ site.baseurl }}/troubleshooting/">Troubleshooting</a></li>
+              <li class="divider"></li>
+              <li><a href="{{ site.baseurl }}/testing/continuous/">Continuous Testing</a></li>
+              <li><a href="{{ site.baseurl }}/testing/conformance/">Conformance Testing</a></li>
+              <li><a href="{{ site.baseurl }}/testing/wireshark/">Testing with Wireshark</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Native Code <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ site.baseurl }}/native-code/">Overview</a></li>
+              <li><a href="{{ site.baseurl }}/native-code/development/">Development</a></li>
+              <li><a href="{{ site.baseurl }}/native-code/development/prerequisite-sw/">Prerequisites</a></li>
+              <li><a href="{{ site.baseurl }}/native-code/android/">Android</a></li>
+              <li><a href="{{ site.baseurl }}/native-code/ios/">iOS</a></li>
+              <li><a href="{{ site.baseurl }}/native-code/native-apis/">Native APIs</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Web APIs <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="{{ site.baseurl }}/web-apis/">Overview</a></li>
+              <li><a href="{{ site.baseurl }}/web-apis/development/">Development</a></li>
+              <li><a href="{{ site.baseurl }}/web-apis/standardization/">Standardization</a></li>
+              <li><a href="{{ site.baseurl }}/web-apis/chrome/">Chrome</a></li>
+              <li><a href="{{ site.baseurl }}/web-apis/firefox/">Firefox</a></li>
+              <li><a href="{{ site.baseurl }}/web-apis/interop/">Interop</a></li>
+            </ul>
+          </li>
+          {% comment %}<li><a href="#">singleton</a></li>{% endcomment %}
+        </ul>
+        {% include search.html %}
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
