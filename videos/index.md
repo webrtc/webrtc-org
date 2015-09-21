@@ -8,6 +8,16 @@ class: videos
 {% include toc-hide.html %}
 
 
+### WebRTC Update September 11, 2015
+
+14 brilliant WebRTC talks from the [Kranky Geek Show](http://krankygeek.com/),
+including updates from Google, Mozilla and Microsoft.
+
+<div class="embed-responsive embed-responsive-16by9 yt-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/HCE3S1E5UwY" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
 ### WebRTC Update January 2015
 
 <div class="embed-responsive embed-responsive-16by9 yt-embed">
