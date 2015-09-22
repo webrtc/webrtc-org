@@ -4,8 +4,6 @@ title: Status of Implementation
 permalink: /status/
 ---
 
-FIXME
-
 Here, we address questions about changes to the PeerConnection API and other
 topics that developers have been asking about recently.
 
