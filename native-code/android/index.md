@@ -55,7 +55,7 @@ AppRTCDemo is an Android application using WebRTC Native APIs via JNI (JNI
 wrapper is documented [here][2]).
 
 For instructions on how to build and run, see
-[talk/examples/android/README][3].
+[webrtc/examples/androidapp/README][3].
 
 
 ### Running WebRTCDemo
@@ -99,5 +99,5 @@ To build APKs with the WebRTC native tests, follow these instructions.
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/talk/app/webrtc/java/README
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/talk/examples/android/README
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
 [4]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/android/media_demo/README
