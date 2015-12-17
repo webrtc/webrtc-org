@@ -17,4 +17,4 @@ pygments_options:
 permalink: /blog/:year/:month/:day/:title.html
 # relative_permalinks: true
 
-exclude: [third-party,gulpfile.js,package.json,BUILD,_save,node_modules]
+exclude: [third-party,gulpfile.js,package.json,BUILD,_save,node_modules,vendor]

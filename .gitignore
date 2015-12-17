@@ -6,6 +6,7 @@ _save
 _site
 _source-graphics
 npm-debug.log
+.drone.sec.yml
 artwork-new
 artwork/webicons
 
