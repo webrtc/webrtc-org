@@ -16,7 +16,7 @@ publish:
   gcs:
     when:
       repo: webrtc/webrtc-org
-      branch: master
+      branch: gh-pages
     auth_key: >
       $$SERVICE_ACCOUNT_KEY
     source: _site
