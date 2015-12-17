@@ -1,0 +1,8 @@
+# This is Jekyll partial configuration for production builds.
+# It only modifies certain values of the main _config.yml.
+#
+# To build the site with this configuration, use the following:
+#
+#   jekyll build --config _config.yml,_config_prod.yml
+
+baseurl: ""
