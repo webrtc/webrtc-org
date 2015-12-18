@@ -8,15 +8,15 @@ crumb: Reporting Bugs
 {% include toc-hide.html %}
 
 
-There are two bug trackers relevant to WebRTC:
+There are a couple bug trackers relevant to WebRTC:
 
-  * <//crbug.com> - for Chrome.
+  * [crbug.com](http://crbug.com) - for Chrome.
 
-  * <//code.google.com/p/webrtc/issues/list> - for WebRTC native code.
+  * [bugzilla.mozilla.org](https://bugzilla.mozilla.org/) - for Firefox.
 
-Anyone with a Google account can file bugs and they're continuously triaged by
-Chrome and WebRTC engineers.
+  * [bugs.opera.com/wizard](https://bugs.opera.com/wizard/) - for Opera.
 
+  * [bugs.webrtc.org](http://bugs.webrtc.org) - for WebRTC native code.
 
 ### How to File a Good Bug Report
 
