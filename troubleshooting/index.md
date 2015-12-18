@@ -7,7 +7,7 @@ permalink: /troubleshooting/
 ### Self-test Page
 
 Having problems using WebRTC enabled web sites with your browser? Go to
-<//test.webrtc.org> and try out our self-test. It will produce a log
+[test.webrtc.org}}](https://test.webrtc.org) and try out our self-test. It will produce a log
 that is very useful to include when filing a bug.
 
 

@@ -6,12 +6,12 @@ crumb: Quick Links
 ---
 
 
-  * Main site: <http://www.webrtc.org>
+  * Main site: <https://www.webrtc.org>
   * Bug tracker: <http://bugs.webrtc.org>
   * Source code site: <http://code.webrtc.org>
   * Code review site: <https://review.webrtc.org>
 
-  * AppRTC reference app: <https://apprtc.webrtc.org>
+  * AppRTC reference app: <https://appr.tc>
   * TestRTC test app: <https://test.webrtc.org>
   * WebRTC Samples: <https://webrtc.github.io/samples/>
   * WebRTC Sample Code: <https://github.com/GoogleChrome/webrtc>
