@@ -125,10 +125,10 @@ amongst others. This page is maintained by the Google Chrome team.
         for more details).</p>
       </li>
       <li>
-        <p><strong>WebRTC code samples</strong> are now available from <a href="http://github.com/webrtc/samples/">github.com/webrtc/samples/</a>.</p>
+        <p><strong>WebRTC code samples</strong> are now available from <a href="https://github.com/webrtc/samples/">github.com/webrtc/samples/</a>.</p>
       </li>
       <li>
-        <p><strong>Live demos</strong> can be accessed at <a href="http://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
+        <p><strong>Live demos</strong> can be accessed at <a href="https://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
       </li>
       <li>
         <p>Check out the latest WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
