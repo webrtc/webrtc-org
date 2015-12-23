@@ -20,7 +20,7 @@ Please read the [License & Rights]({{ site.baseurl }}/license/) and
 The WebRTC issue tracker can be used for submitting bugs found in the native
 code package.
 
-<https://code.google.com/p/webrtc/issues/list>
+<http://bugs.webrtc.org>
 
 
 ##### Subpage Listing
