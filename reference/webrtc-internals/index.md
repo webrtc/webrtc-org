@@ -14,7 +14,7 @@ crumb: WebRTC Internals
 
 The WebRTC project reuses certain components from libjingle, namely network and transport components. Documentation for libjingle can be found [here][1].
 
-[1]: http://code.google.com/apis/talk/libjingle/developer_guide.html
+[1]: https://developers.google.com/talk/libjingle/developer_guide?csw=1
 
 
 ### Media Processing Classes, Structures and Enumerators

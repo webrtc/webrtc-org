@@ -78,7 +78,7 @@ If all those pass, you're probably good.
 See the [Conformance testing]({{ site.baseurl }}/testing/conformance/) page.
 
 
-[1]: http://code.google.com/p/webrtc/issues
+[1]: http://bugs.webrtc.org
 [2]: http://build.chromium.org/p/client.webrtc/waterfall
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/webrtc_tests.gypi
 [4]: https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/media/chrome_webrtc_browsertest.cc&q=chrome_webrtc&sq=package:chromium

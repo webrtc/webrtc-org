@@ -191,7 +191,7 @@ software as well as open source software.
 No, the license does not require you to release source if you make changes.
 However, we would love to see any changes you make and possibly incorporate
 them, so if you want to participate please visit the
-[code page](http://code.google.com/p/webrtc) and submit some patches.
+[code review page](https://codereview.webrtc.org) and submit some patches.
 
 
 ### Why is there a separate patent grant?

@@ -107,7 +107,7 @@ This will open a text editor showing all local commit messages, allowing you
 to modify it before it becomes the CL description. Save and close the file to
 proceed with the upload to the WebRTC [code review server][3].
 
-[3]: http://webrtc-codereview.appspot.com/
+[3]: http://codereview.webrtc.org/
 
 
 #### Getting your CL Reviewed

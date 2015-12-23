@@ -82,8 +82,9 @@ topics that developers have been asking about recently.
 
   * How do I mute an outgoing track?
 
-    Set track.enabled to false, not yet wired up but there is a tracking
-    [bug](https://code.google.com/p/webrtc/issues/detail?id=582) for it.
+    Set track.enabled to false, see the
+    [bug](https://bugs.chromium.org/p/webrtc/issues/detail?id=582) for
+    implementing it.
 
   * How do I stop sending RTP packets?
 

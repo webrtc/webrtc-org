@@ -24,7 +24,7 @@ crumb: Prerequisites
 
 This, and more, is described on the Chromium site:
 
-<http://code.google.com/p/chromium/wiki/LinuxBuildInstructions>
+<https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md>
 
 A script is provided for Ubuntu, which is available after your first gclient
 sync:
@@ -76,9 +76,9 @@ XCode 3.0 or higher
 
 These instructions are tested on a Linux development machine. In WebRTC, we're using the same Android toolchain as Chrome (the one that is downloaded into third_party/android_tools). So you don't need to install NDK/SDK separately.
 
-  1. Install [Chrome's Linux prerequisites](https://code.google.com/p/chromium/wiki/LinuxBuildInstructionsPrerequisites#Automated_Setup)
+  1. Install [Chrome's Linux prerequisites](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions_prerequisites.md)
 
   2. Install [depot_tools](http://dev.chromium.org/developers/how-tos/install-depot-tools)
 
-  3. Install Java OpenJDK as described at [Android prerequisites](https://code.google.com/p/chromium/wiki/AndroidBuildInstructions#Install_Java_JDK)
+  3. Install Java OpenJDK as described at [Android prerequisites](https://www.chromium.org/developers/how-tos/android-build-instructions)
 
