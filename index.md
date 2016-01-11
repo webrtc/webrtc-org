@@ -28,7 +28,7 @@ amongst others. This page is maintained by the Google Chrome team.
     <h3>Supported Browsers &amp; Platforms</h3>
   </div>
 
-  <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+  <div class="col-md-2 col-sm-2 col-xs-2 col-md-offset-1 col-sm-offset-1">
     <div class="thumbnail">
       <a href="http://chrome.google.com/">
       <div class="caption text-center">
@@ -91,7 +91,7 @@ amongst others. This page is maintained by the Google Chrome team.
     <h3>Get Involved</h3>
   </div>
 
-  <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
+  <div class="col-md-6 col-sm-6 col-xs-6 col-md-offset-1 col-sm-offset-1">
     <ul>
       <li>Try our <a href="https://webrtc.github.io/samples/">samples</a> and
     <a href="{{ site.baseurl }}/reference-apps/">reference applications</a></li>
