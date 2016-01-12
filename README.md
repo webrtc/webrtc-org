@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/webrtc/webrtc-org.svg?branch=gh-pages)](https://travis-ci.org/webrtc/samples/)
 
-# Code for the [webrtc.org](https://webrtc.org) website #
+# The [webrtc.org](https://webrtc.org) website #
 
 This is a repository for the [webrtc.org](http://webrtc.org) website, home of the WebRTC project.
 
@@ -8,11 +8,15 @@ For more information about WebRTC, we maintain a list of [WebRTC Resources](http
 
 We welcome corrections and additions!
 
-See [CONTRIBUTING](https://github.com/webrtc/webrtc-org/blob/gh-pages/CONTRIBUTING.md) for instructions. All contributors must sign a contributor license agreement before code can be accepted. Please complete the agreement for an [individual](https://developers.google.com/open-source/cla/individual) or a [corporation](https://developers.google.com/open-source/cla/corporate) as appropriate.
+See [CONTRIBUTING](CONTRIBUTING.md) for instructions. All contributors must sign a contributor license agreement before code can be accepted. Please complete the agreement for an [individual](https://developers.google.com/open-source/cla/individual) or a [corporation](https://developers.google.com/open-source/cla/corporate) as appropriate.
 
 ## Add or edit content
 
+To reiterate: the default branch for the webrtc.org repo is **gh-pages**.
+
 We recommend building the site in order to be able to check your site locally — see the instructions below.
+
+Alternatively, you can review your changes (after you've pushed them) on the [GitHub Pages site](https://pages.github.com/) for your fork. For example, if your username is _foobar_ and you edited the **Contributing Fixes** page, you can check the page online at _http://foobar.github.io/webrtc-org/contributing/_. A GitHub Pages site is automatically generated for any repo that has a _gh-pages_ fork.
 
 ### Find the right page to edit
 
@@ -48,6 +52,8 @@ Find out more in our [Developer's Guide](https://docs.google.com/document/d/1tn1
     export JAVA_HOME=<location of OpenJDK 7>
     ~~~~~
 
-6. Commit and push your work, then make a pull request.
+6. Commit and push your work.
+
+7. Review your changes, from the GitHub Pages site for your fork (for example, https://username.github.io/webrtc-org/) then make a pull request.
 
 ## Build and run the site locally
