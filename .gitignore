@@ -8,5 +8,6 @@ _source-graphics
 npm-debug.log
 artwork-new
 artwork/webicons
+build
 
 ## Temporary ignores
