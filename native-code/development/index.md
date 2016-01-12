@@ -29,14 +29,15 @@ For desktop development:
      export JAVA_HOME=<location of OpenJDK 7>
      ~~~~~
 
-  2. On Windows: launch a command prompt as Administrator.
+  2. On Windows, launch a command prompt as Administrator.
 
   3. Create a working directory, enter it, and run `fetch webrtc`:
 
      ~~~~~ bash
      mkdir webrtc-checkout
      cd webrtc-checkout
-     fetch webrtc
+     fetch --nohooks webrtc
+     gclient sync
      ~~~~~
 
      This will **take a long time** because it downloads the whole Chromium
@@ -75,7 +76,7 @@ git pull
 **Notice:** if you're not on a branch, `git pull` won't work, and you'll need
 to use `git fetch` instead.
 
-Peridically, the build toolchain and dependencies of WebRTC are updated. To
+Periodically, the build toolchain and dependencies of WebRTC are updated. To
 get such updates you must run:
 
 ~~~~~ bash
@@ -187,7 +188,7 @@ To create a local branch tracking a remote release branch (in this example,
 the 43 branch):
 
 ~~~~~ bash
-git checkout -b my_branch branch-heads/43
+git checkout -b my_branch refs/remotes/branch-heads/43
 ~~~~~
 
 Commit log for the branch:
@@ -211,11 +212,11 @@ committing, below.
 
 To commit code you have to be a committer.
 
-From March 24, 2015, the source of truth is the Git repository at
+Since March 24, 2015 the source of truth is the Git repository at
 <https://chromium.googlesource.com/external/webrtc>. To be able to push
 commits to it, you need to perform the steps below.
 
-If you already have a `.netrc` / `.gitcookies` file (most Chromium committers
+If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
 already do), you can skip steps 1 and 2.
 
   1. Go to <https://chromium.googlesource.com/new-password> and login with
@@ -346,13 +347,13 @@ connection can't be established. Can be used with the call application above.
 #### STUN Server
 
 Target name `stunserver`. Implements the STUN protocol for Session Traversal
-Utilities for NAT as documented in RFC5389.
+Utilities for NAT as documented in [RFC 5389].
 
 
 #### TURN Server
 
 Target name `turnserver`. In active development to reach compatibility with
-RFC5766.
+[RFC 5766].
 
 
 [1]: {{ site.baseurl }}/native-code/android/
@@ -366,3 +367,5 @@ RFC5766.
 [9]: {{ site.baseurl }}/contributing/
 [10]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [11]: {{ site.baseurl }}/native-code/native-apis/
+[RFC 5389]: https://tools.ietf.org/html/rfc5389
+[RFC 5766]: https://tools.ietf.org/html/rfc5766
