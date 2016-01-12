@@ -12,15 +12,15 @@ See [CONTRIBUTING](CONTRIBUTING.md) for instructions. All contributors must sign
 
 ## Add or edit content
 
-To reiterate: the default branch for the webrtc.org repo is **gh-pages**.
+The default branch for the webrtc.org repo is **gh-pages**.
 
-We recommend building the site in order to be able to check your site locally — see the instructions below.
+We recommend building the site locally in order to be able to check your work — see the instructions below.
 
-Alternatively, you can review your changes (after you've pushed them) on the [GitHub Pages site](https://pages.github.com/) for your fork. For example, if your username is _foobar_ and you edited the **Contributing Fixes** page, you can check the page online at _http://foobar.github.io/webrtc-org/contributing/_. A GitHub Pages site is automatically generated for any repo that has a _gh-pages_ fork.
+Alternatively, you can review your changes (after you've pushed them) on the [GitHub Pages](https://pages.github.com/) site for your fork. For example, if your username is _foobar_ and you edited the **Contributing Fixes** page, you can check the page online at _https<nolink>://foobar.github.io/webrtc-org/contributing_. A GitHub Pages site is automatically generated for any repo that has a _gh-pages_ fork.
 
 ### Find the right page to edit
 
-The [webrtc.org](https://webrtc.org) site is built from Markdown files, using the tool [Jekyll](https://jekyllrb.com/). Each page on the site corresponds to an _index.md_ file in a directory of the repository's _gh-pages_ branch. For example, the **Development** page at [webrtc.org/native-code/development](https://webrtc.org/native-code/development/) corresponds to [github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development).
+The [webrtc.org](https://webrtc.org) site is built from Markdown files, using the [Jekyll](https://jekyllrb.com/) tool. Each page on the site corresponds to an _index.md_ file in a directory of the repository's _gh-pages_ branch. For example, the **Development** page at [webrtc.org/native-code/development](https://webrtc.org/native-code/development/) corresponds to [github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development).
 
 To simplify URLs, many pages are at the top level of the site rather than in a subdirectory. For example, the **Release Notes** page is at [webrtc.org/release-notes](https://webrtc.org/release-notes/) even though it belongs to the site's **About** menu. (The corresponding Markdown file is [github.com/webrtc/webrtc-org/tree/gh-pages/release-notes/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/release-notes).)
 
@@ -54,6 +54,6 @@ Find out more in our [Developer's Guide](https://docs.google.com/document/d/1tn1
 
 6. Commit and push your work.
 
-7. Review your changes, from the GitHub Pages site for your fork (for example, https://username.github.io/webrtc-org/) then make a pull request.
+7. Review your changes, from the GitHub Pages site for your fork (for example, https<nolink>://foobar.github.io/webrtc-org/) then make a pull request.
 
 ## Build and run the site locally
