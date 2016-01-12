@@ -82,7 +82,6 @@ ul#markdown-toc {
     //text-decoration: underline;
     margin: 1em 1em .5em -1em;
     //margin-bottom: .5em;
- 
   }
 }
 
@@ -133,6 +132,13 @@ article.page-content {
   code, kbd, pre, samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   }
+
+  p {
+    a, code, pre {
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+  }
 }
 
 // Homepage styles
@@ -159,6 +165,30 @@ body.home {
       margin-top: 0;
     }
   }
+
+  // allow links in news to break/wrap
+  .news {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  // make the supported icons look nice on mobile
+  .supported {
+    @media (max-width: 768px) {
+      .col-xs-2 {
+        width: 33%;
+      }
+    }
+  }
+
+  // Get involved items should only be 1-up on mobile
+  .involved {
+    .col-xs-6, .col-xs-4 {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
 }
 
 // FAQ page styles
@@ -166,7 +196,6 @@ body.faq {
   h3 {
     margin-top: 2em;
     // whitespace above Faq titles
- 
   }
 }
 
@@ -225,11 +254,20 @@ nav.navbar li, nav.navbar input, nav.navbar button {
 // In-progress. Pinned and visible.
 footer.footer {
   position: absolute;
-  bottom: -340px;
+
   // Set the fixed height of the footer here.
   // This value considers negative bottom position.
-  height: 230px;
-  width: 100%;
+
+  //mobile height for footer
+  bottom: -720px;
+  height: 610px;
+  //reset to default height
+  @media (min-width: 768px) {
+    bottom: -340px;
+    height: 230px;
+  }
+
+  min-width: 100%;
   color: #9d9d9d;
   background-color: #444;
   padding-top: 1em;
@@ -247,6 +285,13 @@ footer.footer {
       color: #9d9d9d;
     }
     a:hover {}
+  }
+
+  .overflow-x: auto;
+  @media (max-width: 768px) {
+    .col-xs-2 {
+      width: 50%;
+    }
   }
 }
 
