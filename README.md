@@ -76,7 +76,7 @@ Find out more in our [Developer's Guide](https://docs.google.com/document/d/1tn1
 
         bundle exec jekyll serve
 
-    HTML files are generated in the __site_ directory and regenerated automatically when you make changes.
+    HTML files are generated in the _site directory and regenerated automatically when you make changes.
 
 4. View the site in a browser at [http://0.0.0.0:4000/webrtc-org](http://0.0.0.0:4000/webrtc-org/).
 
