@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/webrtc/webrtc-org.svg?branch=gh-pages)](https://travis-ci.org/webrtc/samples/)
+[![Build Status](https://ci.cloudware.io/api/badges/webrtc/webrtc-org/status.svg)](https://ci.cloudware.io/webrtc/webrtc-org)
 
 # The [webrtc.org](https://webrtc.org) website #
 
