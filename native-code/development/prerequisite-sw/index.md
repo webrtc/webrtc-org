@@ -33,12 +33,12 @@ sync:
 ./build/install-build-deps.sh
 ~~~~~
 
-Pulse Audio is missing from the script. On Ubuntu, this is provided by the
+PulseAudio is missing from the script. On Ubuntu, this is provided by the
 `libpulse-dev` package.
 
-Although the `install-build-deps.sh` script is the recommended method, it will
-install much more than you need. Here is a (hopefully complete) minimal list
-of packages to install (`sudo apt-get install ...`):
+Although the [install-build-deps.sh][1] script is the recommended method, it
+will install much more than you need. Here is a (hopefully complete) minimal
+list of packages to install (`sudo apt-get install ...`):
 
 ~~~~~ bash
 g++ (>= 4.2)
@@ -52,11 +52,16 @@ libgtk2.0-dev
 libexpat1-dev
 ~~~~~
 
-For 32-bit builds on a 64-bit system:
+[1]: https://code.google.com/p/chromium/codesearch#chromium/src/build/install-build-deps.sh
+
+To create 32-bit builds for Linux on a 64-bit system (not needed or Android
+builds):
 
 ~~~~~ bash
 lib32asound2-dev
-ia32-libs
+lib32z1
+lib32ncurses5
+lib32bz2-1.0
 ~~~~~
 
 Tips for other distributions are available on the Chromium page.
@@ -64,17 +69,20 @@ Tips for other distributions are available on the Chromium page.
 
 ### Windows
 
-Follow Chromium's build instructions at <http://www.chromium.org/developers/how-tos/build-instructions-windows>
+Follow Chromium's build instructions at
+<http://www.chromium.org/developers/how-tos/build-instructions-windows>.
 
 
 ### OS X
 
-XCode 3.0 or higher
+Xcode 3.0 or higher
 
 
 ### Android
 
-These instructions are tested on a Linux development machine. In WebRTC, we're using the same Android toolchain as Chrome (the one that is downloaded into third_party/android_tools). So you don't need to install NDK/SDK separately.
+These instructions are tested on a Linux development machine. In WebRTC, we're
+using the same Android toolchain as Chrome (the one that is downloaded into
+`third_party/android_tools`). You don't need to install NDK/SDK separately.
 
   1. Install [Chrome's Linux prerequisites](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions_prerequisites.md)
 

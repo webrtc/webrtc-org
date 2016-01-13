@@ -84,8 +84,8 @@ contributor agreements
   * [Individual Contributors License][1]
   * [Corporate Contributors License][2]
 
-[1]: https://developers.google.com/open-source/cla/individual
-[2]: https://developers.google.com/open-source/cla/corporate
+[1]: https://cla.developers.google.com/about/google-individual
+[2]: https://cla.developers.google.com/about/google-corporate
 
 Also, please re-read our project's
 [license]({{ site.baseurl}}/license/software/) and
