@@ -104,6 +104,7 @@ amongst others. This page is maintained by the Google Chrome team.
     <ul>
       <li><a href="{{ site.baseurl }}/bugs/">Report a bug</a></li>
       <li><a href="{{ site.baseurl }}/contributing/">Contribute a patch</a></li>
+      <li><a href="https://groups.google.com/group/discuss-webrtc">Join our mailing list discuss-webrtc</a></li>
       <li>Other <a href="{{ site.baseurl }}/quick-links/">Quick Links</a></li>
     </ul>
   </div>
