@@ -104,4 +104,4 @@ Please include as many relevant details as possible.
 [1]: https://accounts.google.com/
 [2]: http://www.chromium.org/for-testers/bug-reporting-guidelines/reporting-crash-bug
 [3]: https://code.google.com/p/chromium/issues/entry?template=Audio/Video%20Issue
-[4]: https://code.google.com/p/webrtc/issues/entry
+[4]: https://bugs.chromium.org/p/webrtc/issues/entry
