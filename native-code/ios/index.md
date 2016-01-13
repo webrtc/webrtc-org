@@ -23,10 +23,7 @@ Xcode. Both methods will be illustrated here.
   2. Set the target OS in your environment:
 
      ~~~~~ bash
-     export GYP_CROSSCOMPILE=1
-     export GYP_DEFINES="OS=ios target_arch=arm"
-     export GYP_GENERATOR_FLAGS="output_dir=out_ios"
-     export GYP_GENERATORS=ninja
+     export GYP_DEFINES="OS=ios"
      ~~~~~
 
   3. Create a working directory, enter it, and run:
@@ -54,15 +51,11 @@ GYP is used to generate build instructions for ninja from the relevant .gyp file
 Building for iOS Device:
 
 ~~~~~ bash
-export GYP_CROSSCOMPILE=1
-export GYP_DEFINES="OS=ios target_arch=arm arm_version=7"
+export GYP_DEFINES="OS=ios target_arch=arm"
 export GYP_GENERATOR_FLAGS="output_dir=out_ios"
-export GYP_GENERATORS=ninja
 ~~~~~
 
 Building for 64-bit iOS device:
-
-As above, except with:
 
 ~~~~~ bash
 export GYP_DEFINES="OS=ios target_arch=arm64"
@@ -71,8 +64,6 @@ export GYP_GENERATOR_FLAGS="output_dir=out_ios64"
 
 Building for Simulator:
 
-As above, except with:
-
 ~~~~~ bash
 export GYP_DEFINES="OS=ios target_arch=ia32"
 export GYP_GENERATOR_FLAGS="output_dir=out_sim"
@@ -80,16 +71,12 @@ export GYP_GENERATOR_FLAGS="output_dir=out_sim"
 
 Building for 64-bit Simulator:
 
-As above, except with:
-
 ~~~~~ bash
 export GYP_DEFINES="OS=ios target_arch=x64"
 export GYP_GENERATOR_FLAGS="output_dir=out_sim"
 ~~~~~
 
 Building for OSX:
-
-As above, except with:
 
 ~~~~~ bash
 export GYP_DEFINES="OS=mac target_arch=x64"
