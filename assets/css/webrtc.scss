@@ -132,7 +132,13 @@ article.page-content {
   code, kbd, pre, samp {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   }
-
+  // Need a special selector for the case of <code> within <pre>,
+  // to prevent excess padding-left. Must also correct <code>'s
+  // background-color to match <pre>'s.
+  pre code {
+    padding-left: 0;
+    background-color: #f5f5f5;
+  }
   p {
     a, code, pre {
       overflow-wrap: break-word;
