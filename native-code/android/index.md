@@ -30,23 +30,29 @@ Android development is only supported on Linux.
   4. Create a working directory, enter it, and run:
 
      ~~~~~ bash
-     fetch webrtc_android
+     fetch --nohooks webrtc_android
+     gclient sync
      ~~~~~
 
-See Development for instructions on how to update the code, building etc.
+This will fetch a regular WebRTC checkout with the Android-specific parts
+added. The same checkout can be used for both Linux and Android development,
+depending on the OS you set in `GYP_DEFINES` (see above).
+
+See [Development](/native-code/development/) for instructions on how to update
+the code, building etc.
 
 
 ### Using the Bundled Android SDK/NDK
 
 In order to use the Android SDK and NDK that is bundled in
-third_party/android_tools, run this to get it included in your PATH (from
-src/):
+`third_party/android_tools`, run this to get it included in your `PATH` (from
+`src/`):
 
 ~~~~~ bash
 . build/android/envsetup.sh
 ~~~~~
 
-Then you'll have adb and all the other Android tools in your PATH.
+Then you'll have `adb` and all the other Android tools in your `PATH`.
 
 
 ### Running the AppRTCDemo App
@@ -94,8 +100,33 @@ To build APKs with the WebRTC native tests, follow these instructions.
      webrtc/build/android/test_runner.py gtest -s modules_unittests
      ~~~~~
 
-  5. **NOTICE:** The first time you run a test, you must accept a dialog on
+  5. If want to run a Release build, add `--release` to the command line
+     above.
+
+     If you want to limit to a subset of tests, use the `--gtest_filter flag`,
+     e.g.
+
+     ~~~~~
+     webrtc/build/android/test_runner.py gtest -s modules_unittests \
+     --gtest_filter=RtpRtcpAPITest.SSRC:RtpRtcpRtcpTest.*
+     ~~~~~
+
+  6. **NOTICE:** The first time you run a test, you must accept a dialog on
      the device!
+
+  7. **NOTICE:** If you run large test suites (like `webrtc_perf_tests` and
+     `modules_unittests`) without any test filter, you may need to pass the
+     `-t` flag to the script to set a higher timeout than the default 60
+     seconds. 1800 seconds is needed for `webrtc_perf_tests` on slower
+     devices.
+
+
+### Running WebRTC Instrumentation Tests on an Android Device
+
+To run the instrumentation tests (like AppRTCDemoTest and
+libjingle_peerconnection_android_unittest), use the `instrumentation` command
+for `test_runner.py` instead of `gtest`.
+
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/talk/app/webrtc/java/README
