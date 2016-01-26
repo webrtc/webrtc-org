@@ -24,7 +24,7 @@ applications.
 
 [1]: http://w3c.github.io/webrtc-pc/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/talk/app/webrtc
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/talk/examples/peerconnection
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/peerconnection
 
 
 
