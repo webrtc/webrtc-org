@@ -11,9 +11,7 @@ baseurl: "/webrtc-org"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
-pygments_options:
-  linenos: False
+highlighter: rouge
 permalink: /blog/:year/:month/:day/:title.html
 # relative_permalinks: true
 
