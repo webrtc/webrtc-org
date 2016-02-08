@@ -67,13 +67,15 @@ back to you with the continuous build result.
 
 ### Code Style
 
-We generally follow the [Google][7] and [Chromium][8] C++ style guides. For
+We generally follow the [Chromium][8] style guides. For
 sake of consistency a reviewer might ask you to break the style guide, or
 extend your changes to make old non-compliant code up to date with the style
 guide.
 
-[7]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 [8]: http://www.chromium.org/developers/coding-style
+
+To format the code in a CL, you can use `git cl format`.
+To manually run the C++ lint checker, use `cpplint.py`.
 
 
 ### Contributor Agreement
