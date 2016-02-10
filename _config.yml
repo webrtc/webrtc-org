@@ -2,12 +2,7 @@
 title: WebRTC
 email: webmaster@webrtc.org
 description: "WebRTC is a free, open project that enables web browsers with Real-Time Communications (RTC) capabilities via simple JavaScript APIs. The WebRTC components have been optimized to best serve this purpose."
-#host: webrtc.getwebm.org
-#url: "http://webrtc.getwebm.org/"
 baseurl: "/webrtc-org"
-
-#twitter_username:
-#github_username:
 
 # Build settings
 markdown: kramdown
@@ -15,4 +10,4 @@ highlighter: rouge
 permalink: /blog/:year/:month/:day/:title.html
 # relative_permalinks: true
 
-exclude: [third-party,gulpfile.js,package.json,BUILD,_save,node_modules,vendor]
+exclude: []
