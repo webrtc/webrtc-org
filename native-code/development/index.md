@@ -22,16 +22,9 @@ First, be sure to install the [prerequisite software][3].
 
 For desktop development:
 
-  1. If you're on Linux and have OpenJDK 7 installed in another location than
-     Ubuntu's default:
+  1. On Windows, launch a command prompt as Administrator.
 
-     ~~~~~ bash
-     export JAVA_HOME=<location of OpenJDK 7>
-     ~~~~~
-
-  2. On Windows, launch a command prompt as Administrator.
-
-  3. Create a working directory, enter it, and run `fetch webrtc`:
+  2. Create a working directory, enter it, and run `fetch webrtc`:
 
      ~~~~~ bash
      mkdir webrtc-checkout
@@ -46,14 +39,14 @@ For desktop development:
      `gclient sync` may be enough, but you might also need to start over
      cleanly).
 
-  4. Optionally you can specify how new branches should be tracked:
+  3. Optionally you can specify how new branches should be tracked:
 
      ~~~~~ bash
      git config branch.autosetupmerge always
      git config branch.autosetuprebase always
      ~~~~~
 
-  5. Alternatively, you can create new local branches like this (recommended):
+  4. Alternatively, you can create new local branches like this (recommended):
 
      ~~~~~ bash
      cd src

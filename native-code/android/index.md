@@ -14,20 +14,13 @@ Android development is only supported on Linux.
 
   1. Install [prerequisite software][1]
 
-  2. Set the path to your Java OpenJDK 7 dir if you're not using the Ubuntu
-     default:
-
-     ~~~~~ bash
-     export JAVA_HOME=<location of OpenJDK 7>
-     ~~~~~
-
-  3. Set the target OS in your environment:
+  2. Set the target OS in your environment:
 
      ~~~~~ bash
      export GYP_DEFINES="OS=android"
      ~~~~~
 
-  4. Create a working directory, enter it, and run:
+  3. Create a working directory, enter it, and run:
 
      ~~~~~ bash
      fetch --nohooks webrtc_android
