@@ -33,10 +33,13 @@ For desktop development:
      gclient sync
      ~~~~~
 
-     This will **take a long time** because it downloads the whole Chromium
-     repository and dependencies, which are several gigabytes. **Do not**
-     interrupt this step or you may need to start all over agan (a new
-     `gclient sync` may be enough, but you might also need to start over
+     NOTICE: Due to [bug 5578][12] you may have to press 'y' to accept a license
+     dialog for downloading Google Play Services SDK.
+
+     The dowload will **take a long time** because it downloads the whole
+     Chromium repository and dependencies, which are several gigabytes.
+     **Do not** interrupt this step or you may need to start all over agan (a
+     new `gclient sync` may be enough, but you might also need to start over
      cleanly).
 
   3. Optionally you can specify how new branches should be tracked:
@@ -360,5 +363,6 @@ Target name `turnserver`. In active development to reach compatibility with
 [9]: {{ site.baseurl }}/contributing/
 [10]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [11]: {{ site.baseurl }}/native-code/native-apis/
+[12]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
