@@ -26,46 +26,6 @@ This, and more, is described on the Chromium site:
 
 <https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md>
 
-A script is provided for Ubuntu, which is available after your first gclient
-sync:
-
-~~~~~ bash
-./build/install-build-deps.sh
-~~~~~
-
-PulseAudio is missing from the script. On Ubuntu, this is provided by the
-`libpulse-dev` package.
-
-Although the [install-build-deps.sh][1] script is the recommended method, it
-will install much more than you need. Here is a (hopefully complete) minimal
-list of packages to install (`sudo apt-get install ...`):
-
-~~~~~ bash
-g++ (>= 4.2)
-python (>= 2.4)
-libnss3-dev >= 3.12
-libasound2-dev
-libpulse-dev
-libjpeg62-dev
-libxv-dev
-libgtk2.0-dev
-libexpat1-dev
-~~~~~
-
-[1]: https://code.google.com/p/chromium/codesearch#chromium/src/build/install-build-deps.sh
-
-To create 32-bit builds for Linux on a 64-bit system (not needed or Android
-builds):
-
-~~~~~ bash
-lib32asound2-dev
-lib32z1
-lib32ncurses5
-lib32bz2-1.0
-~~~~~
-
-Tips for other distributions are available on the Chromium page.
-
 
 ### Windows
 
