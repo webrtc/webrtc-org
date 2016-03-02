@@ -67,13 +67,15 @@ back to you with the continuous build result.
 
 ### Code Style
 
-We generally follow the [Google][7] and [Chromium][8] C++ style guides. For
+We generally follow the [Chromium][8] style guides. For
 sake of consistency a reviewer might ask you to break the style guide, or
 extend your changes to make old non-compliant code up to date with the style
 guide.
 
-[7]: http://google-styleguide.googlecode.com/svn/trunk/cppguide.xml
 [8]: http://www.chromium.org/developers/coding-style
+
+To format the code in a CL, you can use `git cl format`.
+To manually run the C++ lint checker, use `cpplint.py`.
 
 
 ### Contributor Agreement
@@ -84,8 +86,8 @@ contributor agreements
   * [Individual Contributors License][1]
   * [Corporate Contributors License][2]
 
-[1]: https://developers.google.com/open-source/cla/individual
-[2]: https://developers.google.com/open-source/cla/corporate
+[1]: https://cla.developers.google.com/about/google-individual
+[2]: https://cla.developers.google.com/about/google-corporate
 
 Also, please re-read our project's
 [license]({{ site.baseurl}}/license/software/) and

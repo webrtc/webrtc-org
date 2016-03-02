@@ -6,21 +6,25 @@ crumb: Native Code
 ---
 
 
-The WebRTC Native Code package is meant for browser developers that want to
+The WebRTC Native Code package is meant for browser developers who want to
 integrate WebRTC. Application developers are encouraged to use the [WebRTC
 API](http://dev.w3.org/2011/webrtc/editor/webrtc.html) instead.
 
-The WebRTC native code package can be found at:
+The WebRTC **native code package** can be found at:
 
-<https://chromium.googlesource.com/external/webrtc>
+  * <https://chromium.googlesource.com/external/webrtc>
 
-Please read the [License & Rights]({{ site.baseurl }}/license/) and
-[FAQ]({{ site.baseurl }}/faq/) before downloading the source code.
+The **change log** is at:
 
-The WebRTC issue tracker can be used for submitting bugs found in the native
-code package.
+  * <https://chromium.googlesource.com/external/webrtc/+log>
 
-<http://bugs.webrtc.org>
+Please read the [**License & Rights**]({{ site.baseurl }}/license/) and
+[**FAQ**]({{ site.baseurl }}/faq/) before downloading the source code.
+
+The WebRTC **issue tracker** can be used for submitting bugs found in the
+native code package.
+
+  * <https://bugs.webrtc.org>
 
 
 ##### Subpage Listing
