@@ -10,7 +10,7 @@ New to WebRTC?
 
 Here are some suggestions to help you get started:
 
-1. Get an overview of WebRTC: [video](http://www.youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/).
+1. Get an overview of WebRTC: [video](https://youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/).
 2. Find out more about WebRTC architecture and JavaScript APIs: [Getting Started With WebRTC](http://html5rocks.com/en/tutorials/webrtc/basics/).
 3. Try out code samples and demos: [github.com/webrtc/samples](http://github.com/webrtc/samples).
 4. Try a codelab: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab) or the [Google I/O 2014 file sharing codelab](http://io2014codelabs.appspot.com/static/codelabs/webrtc-file-sharing/#1).
@@ -25,7 +25,7 @@ More resources below.
 <br>
 
 ### Overview presentations
-* 2013 Google I/O presentation: [video](http://www.youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/)
+* 2013 Google I/O presentation: [video](https://youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/)
 * [Video chat for Web, Android and iOS](https://docs.google.com/presentation/d/1CjuTaY2J9P5xrFDtRCh6VmS7Iw2UBbm-JEwzCHQCYkE)
 * [What’s next for WebRTC?](https://www.youtube.com/watch?v=HCE3S1E5UwY)
 
@@ -45,8 +45,8 @@ More resources below.
 
 ### Tutorials
 * Getting Started With WebRTC:[ html5rocks.com/en/tutorials/webrtc/basics](http://html5rocks.com/en/tutorials/webrtc/basics/)
-* [WebRTC in the real world: STUN, TURN and signaling](http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
-* [A practical guide to WebRTC](http://www.slideshare.net/vline/a-practical): presentation slides from vLine
+* [WebRTC in the real world: STUN, TURN and signaling](https://html5rocks.com/en/tutorials/webrtc/infrastructure/)
+* [A practical guide to WebRTC](https://slideshare.net/vline/a-practical): presentation slides from vLine
 * Capturing audio and video in HTML5:[ html5rocks.com/en/tutorials/getusermedia/intro](http://html5rocks.com/en/tutorials/getusermedia/intro)
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
 * Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
@@ -58,8 +58,8 @@ More resources below.
 * [Google I/O 2014 file sharing codelab](http://io2014codelabs.appspot.com/static/codelabs/webrtc-file-sharing/#1)
 
 ### Books
-* [webrtcbook.com](http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/)
-* [Getting Started with WebRTC](http://www.packtpub.com/getting-started-with-webrtc/book)
+* [webrtcbook.com](https://html5rocks.com/en/tutorials/webrtc/infrastructure/)
+* [Getting Started with WebRTC](https://packtpub.com/getting-started-with-webrtc/book)
 * [Real-Time Communication with WebRTC](http://bloggeek.me/book-webrtc-salvatore-simon/)
 
 ### Developer tools and resources
@@ -67,22 +67,22 @@ More resources below.
 * [WebRTC Troubleshooter](https://test.webrtc.org/), code and documentation at [github.com/webrtc/testrtc](https://github.com/webrtc/testrtc)
 * Stats and information for current RTCPeerConnection session: chrome://webrtc-internals
 * [getUserMedia.js](https://github.com/addyosmani/getUserMedia.js): polyfill from Addy Osmani
-* Chrome–Firefox: [interop notes](http://www.webrtc.org/interop)
+* Chrome–Firefox: [interop notes](https://webrtc.org/web-apis/interop/)
 * File bugs at [new.crbug.com](https://crbug.com/new)
 
 ### Standards and protocols
-* [Web Real-Time Communications Working Group](http://www.w3.org/2011/04/webrtc/)
-* [W3C Working Draft: WebRTC 1.0: Real-time Communication Between Browsers](http://www.w3.org/TR/webrtc/)
-* [Media Capture and Streams W3C Working Draft](http://www.w3.org/TR/mediacapture-streams/)
+* [Web Real-Time Communications Working Group](https://w3.org/2011/04/webrtc/)
+* [W3C Working Draft: WebRTC 1.0: Real-time Communication Between Browsers](https://w3.org/TR/webrtc/)
+* [Media Capture and Streams W3C Working Draft](https://w3.org/TR/mediacapture-streams/)
 * [IETF RTCWEB](http://datatracker.ietf.org/wg/rtcweb/): protocol specifications
 
 ### Native APIs
 * [Getting started with WebRTC on iOS](https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/)
 * [Introduction to WebRTC on Android](https://tech.appear.in/2015/05/25/Introduction-to-WebRTC-on-Android)
-* [Getting Started](http://www.webrtc.org/reference/getting-started) (from webrtc.org)
+* [Getting Started](https://webrtc.org/reference/getting-started) (from webrtc.org)
 * [Build scripts from pristineio](https://github.com/pristineio/webrtc-build-scripts): repo with links to how-to guides for Android and iOS
-* [WebRTC Internals documentation](http://www.webrtc.org/reference/webrtc-internals)
-* [Native API documentation](http://www.webrtc.org/reference/native-apis)
+* [WebRTC Internals documentation](https://webrtc.org/reference/webrtc-internals)
+* [Native API documentation](https://webrtc.org/native-code/)
 * [libjingle Developer Guide](https://developers.google.com/talk/libjingle/developer_guide?csw=1)
 * [WebRTC shim for WKWebView](https://github.com/common-tater/wkwebview-webrtc-shim)
 
@@ -110,15 +110,15 @@ More resources below.
 #### Peer-to-peer data
 * [PeerJS](http://peerjs.com/): data channel abstraction
 * [Sharefest](https://github.com/peer5/sharefest): share files via data channels
-* [Peer5 Downloader](http://peer5.com/downloader/land.html): P2P file download
+* [Peer5 Downloader](https://www.peer5.com): P2P file download
 * [ShareDrop](https://github.com/cowbell/sharedrop): file sharing between devices on the same network
 
 #### VoIP/PSTN
 * Open source JavaScript phone API: [Phono](http://phono.com/)
 * Open source JavaScript SIP client: [sipML5](https://code.google.com/p/sipml5/)
 * Open source JavaScript SIP library: [JsSIP](http://jssip.net/)
-* Open source SIP proxy with WebSocket and SRTP support: [Kamailio](http://www.kamailio.org/w/)
-* [FreeSWITCH](http://www.freeswitch.org/)
+* Open source SIP proxy with WebSocket and SRTP support: [Kamailio](https://kamailio.org/w/)
+* [FreeSWITCH](https://freeswitch.org/)
 
 #### Face/head tracking
 * [clmtrackr](https://github.com/auduno/clmtrackr)
@@ -129,8 +129,8 @@ More resources below.
 * [appear.in](https://www.npmjs.com/package/appearin-sdk)
 
 ### Services
-* [OpenTok](http://www.tokbox.com/) (acquired by Telefonica Digital)
-* [vLine](http://www.vline.com/)
+* [OpenTok](https://tokbox.com/) (acquired by Telefonica Digital)
+* [vLine](https://vline.com/)
 * [WebRTC Developer Tool Vendor Directory](https://webrtchacks.com/vendor-directory/)
 
 
@@ -153,7 +153,7 @@ More resources below.
 * Chris Wilson’s input demos at [webaudiodemos.appspot.com](http://webaudiodemos.appspot.com)
 * Paul Lewis’s gUM/WebGL demo: [lab.aerotwist.com/webgl/audio-room](http://lab.aerotwist.com/webgl/audio-room)
 * RTCPeerConnection integration: [simpl.info/webrtcwebaudio](http://simpl.info/webrtcwebaudio)
-* Theremin: getUserMedia + tracking + Web Audio: [g200kg.com/teburin](http://www.g200kg.com/teburin/)
+* Theremin: getUserMedia + tracking + Web Audio: [g200kg.com/teburin](https://g200kg.com/teburin/)
 * [cabbibo.github.io/holly](http://cabbibo.github.io/holly/)
 
 #### Recording
@@ -172,17 +172,17 @@ More resources below.
 * [codassium.com](http://codassium.com/): job interview tool with live coding
 * [vmux.co](http://vmux.co)
 * [vidtok.com](http://vidtok.com)
-* [voxeet.com](http://www.voxeet.com/): high quality audio
+* [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
-* The first WebRTC game: [Puzzlible](http://www.protothon.com/blog/2012/mar/27/red-square-puzzle-group/)
-* [Who Am I?](http://www.designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
+* The first WebRTC game: [Puzzlible](https://protothon.com/blog/2012/mar/27/red-square-puzzle-group/)
+* [Who Am I?](https://designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
 * WebRTC + Web Audio + WebGL: [Cube Slam](http://cubeslam.com)
-* Face tracking: [shinydemos.com/facekat](http://www.shinydemos.com/facekat/)
+* Face tracking: [shinydemos.com/facekat](https://shinydemos.com/facekat/)
 * RTCDataChannel + WebGL: [BananaBread](https://hacks.mozilla.org/2013/03/webrtc-data-channels-for-great-multiplayer/)
 
 #### Telehealth
-* [Regional Cystic Fibrosis Program](http://www.pulseitmagazine.com.au/index.php?option=com_content&view=article&id=1382:cystic-fibrosis-project-to-trial-webrtc-home-monitoring-and-shared-ehr&catid=16:australian-ehealth&Itemid=327)
+* [Regional Cystic Fibrosis Program](https://pulseitmagazine.com.au/index.php?option=com_content&view=article&id=1382:cystic-fibrosis-project-to-trial-webrtc-home-monitoring-and-shared-ehr&catid=16:australian-ehealth&Itemid=327)
 * [consultdirect.com.au](http://consultdirect.com.au/)
 
 #### Phone
@@ -196,7 +196,7 @@ More resources below.
 * [WebTorrent:](http://webtorrent.io) BitTorrent over WebRTC
 * [cdn.peer5.com/pilots/kaltura](http://cdn.peer5.com/pilots/kaltura/index.html): P2P video
 * [webp2p.org](http://webp2p.org/)
-* [peer5.com/downloader/land.html](http://peer5.com/downloader/land.html): add P2P file download to your web page
+* [peer5.com](https://peer5.com): add P2P file download to your web page
 
 #### Other
 * [Internet-less WebRTC](https://plus.google.com/115686393595662427054/posts/WEmRsCfuCEb)
