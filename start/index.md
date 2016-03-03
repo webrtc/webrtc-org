@@ -6,8 +6,6 @@ permalink: /start/
 
 {% include toc-hide.html %}
 
-### Getting started
-
 New to WebRTC?
 
 Here are some suggestions to help you get started:
@@ -26,21 +24,19 @@ More resources below.
 
 <br>
 
----
-
 ### Overview presentations
 * 2013 Google I/O presentation: [video](http://www.youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/)
 * [Video chat for Web, Android and iOS](https://docs.google.com/presentation/d/1CjuTaY2J9P5xrFDtRCh6VmS7Iw2UBbm-JEwzCHQCYkE)
 * [What’s next for WebRTC?](https://www.youtube.com/watch?v=HCE3S1E5UwY)
 
 ### Demos and samples
-* WebRTC code samples are now available from [github.com/webrtc/samples](http://github.com/webrtc/samples)
-* Live demos can be accessed at [webrtc.github.io/samples](http://webrtc.github.io/samples)
+* WebRTC JavaScript code samples: [github.com/webrtc/samples](http://github.com/webrtc/samples)
+* Live demos of the samples: [webrtc.github.io/samples](http://webrtc.github.io/samples)
 * [List of WebRTC demos and apps](https://docs.google.com/document/d/1hNK15_cNx3CpYsro2TKwEbdFxLv5WFe8djGHdFeZBks) (incomplete and slightly out of date)
-* Simplest possible getUserMedia demo: [simpl.info/gum](http://simpl.info/gum)
+* WebRTC video chat: [appr.tc](https://www.appr.tc) (source code at [github.com/webrtc/apprtc](http://github.com/webrtc/apprtc))
+* Simple getUserMedia demo: [simpl.info/gum](http://simpl.info/gum)
 * RTCPeerConnection 'on one page', i.e. without signalling: [simpl.info/pc](http://www.simpl.info/peerconnection)
-* WebRTC video chat: [apprtc.net](https://www.apprtc.net) (source code at [github.com/webrtc/apprtc](http://github.com/webrtc/apprtc))
-* Simplest possible RTCDataChannel example: [simpl.info/dc](http://simpl.info/dc)
+* Simple RTCDataChannel example: [simpl.info/dc](http://simpl.info/dc)
 * Data channel file transfer:  [webrtc.github.io/samples/src/content/datachannel/filetransfer](http://webrtc.github.io/samples/src/content/datachannel/filetransfer)
 * RTCPeerConnection signaling example:[ w3.org/TR/webrtc/#simple-example](http://w3.org/TR/webrtc/#simple-example)
 * Constraints: [simpl.info/getusermedia/constraints](https://simpl.info/getusermedia/constraints/)
@@ -58,7 +54,7 @@ More resources below.
 * [WebRTC Fundamentals](http://bit.ly/learnwebrtc): online course
 
 ### Codelabs
-* Walkthrough and code for setting up a server and client for video chat: bitbucket.org/webrtc/codelab
+* Walkthrough and code for setting up a server and client for video chat: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab)
 * [Google I/O 2014 file sharing codelab](http://io2014codelabs.appspot.com/static/codelabs/webrtc-file-sharing/#1)
 
 ### Books
@@ -68,9 +64,10 @@ More resources below.
 
 ### Developer tools and resources
 * [adapter.js](https://github.com/webrtc/adapter): shim maintained by Google to cope with API changes and platform differences
+* [WebRTC Troubleshooter](https://test.webrtc.org/), code and documentation at [github.com/webrtc/testrtc](https://github.com/webrtc/testrtc)
+* Stats and information for current RTCPeerConnection session: chrome://webrtc-internals
 * [getUserMedia.js](https://github.com/addyosmani/getUserMedia.js): polyfill from Addy Osmani
 * Chrome–Firefox: [interop notes](http://www.webrtc.org/interop)
-* Stats and information for current RTCPeerConnection session: chrome://webrtc-internals
 * File bugs at [new.crbug.com](https://crbug.com/new)
 
 ### Standards and protocols
@@ -94,6 +91,7 @@ More resources below.
 * [@webrtc](http://twitter.com/webrtc)
 * [+webrtc](https://plus.sandbox.google.com/113817074606039822053/posts)
 * [WebRTC on Stack Overflow](http://stackoverflow.com/tags/webrtc)
+* [Tsahi Levent-Levi](https://bloggeek.me/)
 * [WebRTC Weekly](https://webrtcweekly.com/)
 * [webrtcHacks](https://webrtchacks.com/)
 
@@ -101,7 +99,7 @@ More resources below.
 * [iswebrtcreadyyet.com](http://iswebrtcreadyyet.com/)
 
 ### JavaScript apps and frameworks
-* webrtcHacks [article about JavaScript libraries](https://webrtchacks.com/whats-in-a-webrtc-javascript-library/).
+* Comprehensive list in the [webrtcHacks article about JavaScript libraries](https://webrtchacks.com/whats-in-a-webrtc-javascript-library/).
 
 #### Video chat
 * [appear.in](https://developer.appear.in/)
