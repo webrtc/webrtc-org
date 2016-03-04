@@ -17,6 +17,7 @@ publish:
     when:
       repo: webrtc/webrtc-org
       branch: gh-pages
+      event: push
     auth_key: >
       $$SERVICE_ACCOUNT_KEY
     source: _site
