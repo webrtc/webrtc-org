@@ -24,7 +24,9 @@ You can also review your changes (after you've pushed them) on the [GitHub Pages
 
 Each page on the site corresponds to an _index.md_ file in a directory of the repository's gh-pages branch. For example, the **Development** page at [webrtc.org/native-code/development](https://webrtc.org/native-code/development/) corresponds to [github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/native-code/development).
 
-To simplify URLs, many pages are at the top level of the site rather than in a subdirectory. For example, the **Release Notes** page is at [webrtc.org/release-notes](https://webrtc.org/release-notes/) even though it lives under the site's **About** menu. (The corresponding Markdown file is [github.com/webrtc/webrtc-org/tree/gh-pages/release-notes/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/release-notes).)
+The top navigation menu items are defined in [_includes/topnav.html](https://github.com/webrtc/webrtc-org/blob/gh-pages/_includes/topnav.html).
+
+To simplify URLs, many pages are at the top level of the site rather than in a subdirectory. For example, the **Release Notes** page linked to from the site's **About** menu is at [webrtc.org/release-notes](https://webrtc.org/release-notes/), and the corresponding Markdown file is [release-notes/index.md](https://github.com/webrtc/webrtc-org/tree/gh-pages/release-notes).
 
 ### Make a correction or update
 
