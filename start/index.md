@@ -45,7 +45,7 @@ More resources below.
 
 ### Tutorials
 * Getting Started With WebRTC:[ html5rocks.com/en/tutorials/webrtc/basics](http://html5rocks.com/en/tutorials/webrtc/basics/)
-* [WebRTC in the real world: STUN, TURN and signaling](https://html5rocks.com/en/tutorials/webrtc/infrastructure/)
+* [WebRTC in the real world: STUN, TURN and signaling](http://html5rocks.com/en/tutorials/webrtc/infrastructure/)
 * [A practical guide to WebRTC](https://slideshare.net/vline/a-practical): presentation slides from vLine
 * Capturing audio and video in HTML5:[ html5rocks.com/en/tutorials/getusermedia/intro](http://html5rocks.com/en/tutorials/getusermedia/intro)
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
@@ -58,7 +58,7 @@ More resources below.
 * [Google I/O 2014 file sharing codelab](http://io2014codelabs.appspot.com/static/codelabs/webrtc-file-sharing/#1)
 
 ### Books
-* [webrtcbook.com](https://html5rocks.com/en/tutorials/webrtc/infrastructure/)
+* [webrtcbook.com](http://webrtcbook.com)
 * [Getting Started with WebRTC](https://packtpub.com/getting-started-with-webrtc/book)
 * [Real-Time Communication with WebRTC](http://bloggeek.me/book-webrtc-salvatore-simon/)
 
