@@ -11,42 +11,44 @@ crumb: Prerequisites
 
 ### Depot Tools
 
-  1. You'll need to have the depot tools installed:
+  1. [Install the Chromium depot tools][1].
 
-     <http://dev.chromium.org/developers/how-tos/install-depot-tools>
-
-  2. Git: On Windows it will install a special version of Git automatically on
-     the first sync. On Mac and Linux, you'll need to install Git by yourself
-     (<http://git-scm.com>)
+  2. On Windows, depot tools will download a special version of Git during your
+     first `gclient sync`.
+     On Mac and Linux, you'll need to install Git by yourself
+     (<http://git-scm.com>).
 
 
 ### Linux (Ubuntu/Debian)
 
-This, and more, is described on the Chromium site:
-
-<https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md>
+No specific prerequisites, but you may want to have a look at the
+[Chromium Linux Build instructions][2] if you experience problems building.
 
 
 ### Windows
 
-Follow Chromium's build instructions at
-<http://www.chromium.org/developers/how-tos/build-instructions-windows>.
+Follow step 1 and 2 at [Chromium's build instructions for Windows][3].
 
 
 ### OS X
 
-Xcode 3.0 or higher
+Xcode 3.0 or higher. Latest Xcode is recommended to be able to build all code.
 
 
 ### Android
 
-These instructions are tested on a Linux development machine. In WebRTC, we're
-using the same Android toolchain as Chrome (the one that is downloaded into
-`third_party/android_tools`). You don't need to install NDK/SDK separately.
+You'll need a Linux development machine. WebRTC is using the same Android
+toolchain as Chrome (downloaded into `third_party/android_tools`) so you won't
+need to install the NDK/SDK separately.
 
-  1. Install [Chrome's Linux prerequisites](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions_prerequisites.md)
+  1. Install Java OpenJDK as described in the [Chromium Android prerequisites][5]
+  2. All set! If you don't run Ubuntu, you may want to have a look at
+    [Chromium's Linux prerequisites][4] for distro-specific details.
 
-  2. Install [depot_tools](http://dev.chromium.org/developers/how-tos/install-depot-tools)
 
-  3. Install Java OpenJDK as described at [Android prerequisites](https://www.chromium.org/developers/how-tos/android-build-instructions)
 
+[1]: http://dev.chromium.org/developers/how-tos/install-depot-tools
+[2]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md
+[3]: http://www.chromium.org/developers/how-tos/build-instructions-windows
+[4]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions_prerequisites.md
+[5]: https://www.chromium.org/developers/how-tos/android-build-instructions
