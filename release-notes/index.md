@@ -4,7 +4,8 @@ title: Chrome Report Notes
 permalink: /release-notes/
 crumb: Release Notes
 ---
-
+  * [M50 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/JuXLl5BJoJE/discussion)
+  * [M49 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/mcApW-3YADI/discussion)
   * [M48 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/_5hL0HeBeEA/discussion)
   * [M47 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/sq5CVmY69sc/discussion)
   * [M46 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/uMWoBvCceSg/discussion)
