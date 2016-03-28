@@ -30,6 +30,7 @@ For desktop development:
      mkdir webrtc-checkout
      cd webrtc-checkout
      fetch --nohooks webrtc
+     src/build/install-build-deps.sh
      gclient sync
      ~~~~~
 
