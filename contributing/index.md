@@ -26,7 +26,7 @@ when you have found a bug and have implemented a fix for it.
 
 ### How to Create a Patch
 
-These instructions assume you already have followed the getting started guide and can build the WebRTC code. The work flow is:
+These instructions assume you already have followed the [getting started guide]({{ site.baseurl }}/native-code/development/) and can build the WebRTC code. The work flow is:
 
   1. Make sure you accept and fill out the contributor agreement
 
