@@ -26,5 +26,5 @@ crumb: Release Notes
   * [M31 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/0dReVX4BX3c/discussion)
   * [M30 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/_zdJBwP4vNU/discussion)
   * [M29 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/DytR3rKvmw4/discussion)
-  * [M29 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/CLa_9sYY6ek/discussion)
+  * [M28 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/CLa_9sYY6ek/discussion)
   * [M27 Release Notes](https://groups.google.com/d/topic/discuss-webrtc/NDwzHExp9zM/discussion)
