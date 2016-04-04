@@ -193,6 +193,11 @@ Commit log for the branch:
 To browse it:
 <https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
 
+Since this is the equivalent to stable code, you might want to compile
+it without the tests by adding `include_tests=0` in your `GYP_DEFINES` 
+environement variable. Release builds can also add `fastbuild=2` for
+extra speed.
+
 For more details, read Chromium's [Working with Branches][7] and
 [Working with Release Branches][8] pages.
 
