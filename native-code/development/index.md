@@ -22,9 +22,7 @@ First, be sure to install the [prerequisite software][3].
 
 For desktop development:
 
-  1. On Windows, launch a command prompt as Administrator.
-
-  2. Create a working directory, enter it, and run `fetch webrtc`:
+  1. Create a working directory, enter it, and run `fetch webrtc`:
 
      ~~~~~ bash
      mkdir webrtc-checkout
@@ -42,14 +40,14 @@ For desktop development:
      new `gclient sync` may be enough, but you might also need to start over
      cleanly).
 
-  3. Optionally you can specify how new branches should be tracked:
+  2. Optionally you can specify how new branches should be tracked:
 
      ~~~~~ bash
      git config branch.autosetupmerge always
      git config branch.autosetuprebase always
      ~~~~~
 
-  4. Alternatively, you can create new local branches like this (recommended):
+  3. Alternatively, you can create new local branches like this (recommended):
 
      ~~~~~ bash
      cd src
@@ -194,7 +192,7 @@ To browse it:
 <https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
 
 Since this is the equivalent to stable code, you might want to compile
-it without the tests by adding `include_tests=0` in your `GYP_DEFINES` 
+it without the tests by adding `include_tests=0` in your `GYP_DEFINES`
 environement variable. Release builds can also add `fastbuild=2` for
 extra speed.
 
