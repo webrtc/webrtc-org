@@ -21,8 +21,21 @@ crumb: Prerequisites
 
 ### Linux (Ubuntu/Debian)
 
-No specific prerequisites, but you may want to have a look at the
-[Chromium Linux Build instructions][2] if you experience problems building.
+A script is provided for Ubuntu, which is unfortunately only available after
+your first gclient sync:
+
+~~~~~ bash
+./build/install-build-deps.sh
+~~~~~
+
+Most of the libraries installed with this script are not needed since we now
+build using Debian sysroot images in build/linux, but there are still some tools
+needed for the build that are installed with [install-build-deps.sh][1]
+
+[1]: https://code.google.com/p/chromium/codesearch#chromium/src/build/install-build-deps.sh
+
+You may also want to have a look at the [Chromium Linux Build instructions][2]
+if you experience any other problems building.
 
 
 ### Windows
