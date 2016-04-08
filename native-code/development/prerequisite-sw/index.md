@@ -32,7 +32,7 @@ Follow step 1 and 2 at [Chromium's build instructions for Windows][3].
 
 ### OS X
 
-Xcode 3.0 or higher. Latest Xcode is recommended to be able to build all code.
+Xcode 5 or higher. Latest Xcode is recommended to be able to build all code.
 
 
 ### Android
