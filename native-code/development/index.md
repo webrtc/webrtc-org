@@ -85,7 +85,7 @@ for your environment using [GYP][4] during the execution of the hooks in the
 just generate new build files by calling:
 
 ~~~~~ bash
-python webrtc/build/gyp_webrtc
+python webrtc/build/gyp_webrtc.py
 ~~~~~
 
 This also runs as a part of the `gclient runhooks` step.
@@ -105,7 +105,7 @@ Ninja project files are normally generated during the
 files (like if you've wiped your out folder), run:
 
 ~~~~~ bash
-python webrtc/build/gyp_webrtc
+python webrtc/build/gyp_webrtc.py
 ~~~~~
 
 Then compile with (standing in `src/`):
@@ -144,7 +144,7 @@ manually run the following gyp command from the `src/` directory (this
 replaces `gclient runhooks`):
 
 ~~~~~ bash
-python webrtc/build/gyp_webrtc -G msvs_version=<version>
+python webrtc/build/gyp_webrtc.py -G msvs_version=<version>
 ~~~~~
 
 Where `<version>` is on the form YYYY. And Chromium requests VS2013 for now.

@@ -88,7 +88,7 @@ under `src/`. Now run the gyp generator script from the source root
 (`<working directory>/src`):
 
 ~~~~~ bash
-webrtc/build/gyp_webrtc
+webrtc/build/gyp_webrtc.py
 ~~~~~
 
 Now to compile, just run ninja on the appropriate target. For example:
