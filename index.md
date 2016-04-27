@@ -20,6 +20,8 @@ all to communicate via a common set of protocols.
 The WebRTC initiative is a project supported by Google, Mozilla and Opera,
 amongst others. This page is maintained by the Google Chrome team.
 
+**New to WebRTC? Take a look at our guide to getting started: [https://webrtc.org/start](webrtc.org/start).**
+
 </div>
 
 <div class="row supported">
