@@ -169,27 +169,29 @@ otherwise would not be revealed until WebRTC is rolled in Chromium's
 To use this feature:
 
   1. Create a Rietveld CL as usual.
+
   2. Schedule the tryjobs using any of the following approaches:
 
-    * Rietveld UI: click the "Choose trybots" link or add a line like this to
-      your CL's description:
+     **Rietveld UI:**
+     Click the "Choose trybots" link or add a line like this to your CL's
+     description:
 
-        ~~~~~ bash
-        CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
-        ~~~~~
+     ~~~~~ bash
+     CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
+     ~~~~~
 
-      Adjust it to your needs but make sure to follow the format: semicolon
-      between try servers and comma-separated bot names.
-      Then send it to CQ (or CQ dry run).
+     Adjust it to your needs but make sure to follow the format convention:
+     semicolon between try servers and comma-separated bot names.
+     Then send it to CQ (or CQ dry run).
 
-    * Command line:
+     **Command line:**
 
-        ~~~~~ bash
-        git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
-        ~~~~~
+     ~~~~~ bash
+     git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
+     ~~~~~
 
-      To see available trybots, it's easiest to click the "Choose trybots" link
-      in Rietveld.
+     To see available trybots, click the "Choose trybots" link in Rietveld.
+
   3. The trybot results will be posted back to the Reitveld UI for the CL.
 
 Example preset selection of bots (notice this may quickly become outdated):
