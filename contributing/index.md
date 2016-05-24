@@ -24,7 +24,7 @@ the external contributions at a small scale, so please ask for access only
 when you have found a bug and have implemented a fix for it.
 
 
-### How to Create a Patch
+## How to Create a Patch
 
 These instructions assume you already have followed the [getting started guide]({{ site.baseurl }}/native-code/development/) and can build the WebRTC code. The work flow is:
 
@@ -56,7 +56,7 @@ Please help us:
     (No new features just yet!)
 
 
-### Testing
+## Testing
 
 Your commit will be subject to a number of automated tests that is run on
 several platforms by our [continuous integration
@@ -65,7 +65,7 @@ for what tests to run. When your patch is committed, the developer will get
 back to you with the continuous build result.
 
 
-### Code Style
+## Code Style
 
 We generally follow the [Chromium][8] style guides. For
 sake of consistency a reviewer might ask you to break the style guide, or
@@ -78,7 +78,7 @@ To format the code in a CL, you can use `git cl format`.
 To manually run the C++ lint checker, use `cpplint.py`.
 
 
-### Contributor Agreement
+## Contributor Agreement
 
 To contribute code, you will need to fill in one of the following required
 contributor agreements
@@ -94,10 +94,10 @@ Also, please re-read our project's
 [patent grant]({{ site.baseurl }}/license/additional-ip-grant/).
 
 
-### Detailed Instructions
+## Detailed Instructions
 
 
-#### Creating your CL
+### Creating your CL
 
 To create a CL after you've done some edits (in a local Git branch):
 
@@ -133,7 +133,7 @@ once. Reviewers are not notified when you upload a patch; you must again mail
 them.
 
 
-#### Running Tryjobs
+### Running Tryjobs
 
 As a committer, you should run tryjobs before committing to ensure you don't
 break the tree:
@@ -158,7 +158,7 @@ Rietveld (scroll down to `tryserver.webrtc`).
 [5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
 
 
-##### Tryjobs on Chromium trybots
+#### Tryjobs on Chromium trybots
 
 It is also possible to send patches from a standalone WebRTC checkout to the
 Chromium trybots. This makes it possible to catch breakages in the
@@ -170,23 +170,30 @@ To use this feature:
 
   1. Create a Rietveld CL as usual.
   2. Schedule the tryjobs using any of the following approaches:
+
     * Rietveld UI: click the "Choose trybots" link or add a line like this to
       your CL's description:
 
+        ~~~~~ bash
         CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
+        ~~~~~
 
       Adjust it to your needs but make sure to follow the format: semicolon
       between try servers and comma-separated bot names.
       Then send it to CQ (or CQ dry run).
+
     * Command line:
 
+        ~~~~~ bash
         git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
+        ~~~~~
 
       To see available trybots, it's easiest to click the "Choose trybots" link
       in Rietveld.
   3. The trybot results will be posted back to the Reitveld UI for the CL.
 
 Example preset selection of bots (notice this may quickly become outdated):
+
 ~~~~~ bash
 git cl try -m tryserver.chromium.win -b win_chromium_rel_ng
 git cl try -m tryserver.chromium.android -b android_compile_dbg -b linux_android_rel_ng
@@ -194,15 +201,13 @@ git cl try -m tryserver.chromium.linux -b linux_chromium_rel_ng
 git cl try -m tryserver.chromium.mac -b mac_chromium_gn_rel -b mac_chromium_rel_ng -b  ios-device -b ios-simulator-gn
 ~~~~~
 
-
-
-###### Note about which tests are run
+##### Note about which tests are run
 Our bots in the [chromium.webrtc.fyi][6] waterfall runs special video and audio
 quality tests + webcam tests that are not run on Chromium trybots. This is
 useful to know since there may still be a breakage at those bots even if your CL
 passes the Chromium trybots.
 
-###### Note about the "without patch" feature of Chromium trybots
+##### Note about the "without patch" feature of Chromium trybots
 Chromium trybots have a feature where they deapply the patch upon a compile or
 test failure. Doing this, it will restore the revision of
 `src/third_party/webrtc` to HEAD revision (i.e. not the DEPS-pinned revision).
@@ -212,7 +217,7 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
 [7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
 
-### Committing your CL
+## Committing your CL
 
 After the review process is done and you get LGTM (Looks Good To Me) from all
 reviewers you can go ahead and submit your change, assuming you're an approved
