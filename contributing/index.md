@@ -144,15 +144,84 @@ To run a try job on your CL, run:
 git cl try
 ~~~~~
 
-The results will be presented in the code review web UI.
+The results will be presented in the code review web UI. You can also click the
+"CQ dry run" link. Both these alternatives will trigger the default trybots that
+are configured in [infra/config/cq.cfg][5].
+To run tryjobs on a smaller set of bots; use the -b (--bot) flag:
+
+~~~~~ bash
+git cl try -b mac -b mac_rel -m tryserver.webrtc
+~~~~~
+You can see the available trybot names by clicking the "Choose trybots" link in
+Rietveld (scroll down to `tryserver.webrtc`).
+
+[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
 
 
-#### Committing your CL
+##### Tryjobs on Chromium trybots
+
+It is also possible to send patches from a standalone WebRTC checkout to the
+Chromium trybots. This makes it possible to catch breakages in the
+[chromium.webrtc.fyi][6] waterfall before submit, i.e. detect errors that
+otherwise would not be revealed until WebRTC is rolled in Chromium's
+[DEPS file][7]!
+
+To use this feature:
+
+  1. Create a Rietveld CL as usual.
+  2. Schedule the tryjobs using any of the following approaches:
+    * Rietveld UI: click the "Choose trybots" link or add a line like this to
+      your CL's description:
+
+      ~~~~~ bash
+      CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
+      ~~~~~
+
+      Adjust it to your needs but make sure to follow the format: semicolon
+      between try servers and comma-separated bot names.
+      Then send it to CQ (or CQ dry run).
+    * Command line:
+
+      ~~~~~ bash
+      git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
+      ~~~~~
+
+      To see available trybots, it's easiest to click the "Choose trybots" link
+      in Rietveld.
+  3. The trybot results will be posted back to the Reitveld UI for the CL.
+
+Example preset selection of bots (notice this may quickly become outdated):
+~~~~~ bash
+git cl try -m tryserver.chromium.win -b win_chromium_rel_ng
+git cl try -m tryserver.chromium.android -b android_compile_dbg -b linux_android_rel_ng
+git cl try -m tryserver.chromium.linux -b linux_chromium_rel_ng
+git cl try -m tryserver.chromium.mac -b mac_chromium_gn_rel -b mac_chromium_rel_ng -b  ios-device -b ios-simulator-gn
+~~~~~
+
+
+
+###### Note about which tests are run
+Our bots in the [chromium.webrtc.fyi][6] waterfall runs special video and audio
+quality tests + webcam tests that are not run on Chromium trybots. This is
+useful to know since there may still be a breakage at those bots even if your CL
+passes the Chromium trybots.
+
+###### Note about the "without patch" feature of Chromium trybots
+Chromium trybots have a feature where they deapply the patch upon a compile or
+test failure. Doing this, it will restore the revision of
+`src/third_party/webrtc` to HEAD revision (i.e. not the DEPS-pinned revision).
+This makes it possible that a test still fails without the patch in case there's
+currently an error for the HEAD revision of WebRTC when built inside Chromium.
+
+[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
+[7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
+
+### Committing your CL
 
 After the review process is done and you get LGTM (Looks Good To Me) from all
 reviewers you can go ahead and submit your change, assuming you're an approved
 committer. If you're not a committer, you'll need to ask one of the reviewers
-to submit the CL for you.
+to submit the CL for you using the Commit Queue (CQ).
 
 See the "Committing Code" section at the
 [Development]({{ site.baseurl }}/native-code/development/) page for details on
