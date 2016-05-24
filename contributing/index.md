@@ -173,18 +173,14 @@ To use this feature:
     * Rietveld UI: click the "Choose trybots" link or add a line like this to
       your CL's description:
 
-      ~~~~~ bash
-      CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
-      ~~~~~
+        CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
 
       Adjust it to your needs but make sure to follow the format: semicolon
       between try servers and comma-separated bot names.
       Then send it to CQ (or CQ dry run).
     * Command line:
 
-      ~~~~~ bash
-      git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
-      ~~~~~
+        git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
 
       To see available trybots, it's easiest to click the "Choose trybots" link
       in Rietveld.
