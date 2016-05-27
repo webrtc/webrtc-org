@@ -34,3 +34,4 @@ native code package.
     * [Prerequisite software]({{ site.baseurl }}/native-code/development/prerequisite-sw/)
   * [iOS]({{ site.baseurl }}/native-code/ios/)
   * [Native APIs]({{ site.baseurl }}/native-code/native-apis/)
+  * [Logging]({{ site.baseurl }}/native-code/logging/)
