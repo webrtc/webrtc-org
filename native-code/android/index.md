@@ -57,16 +57,6 @@ For instructions on how to build and run, see
 [webrtc/examples/androidapp/README][3].
 
 
-### Running WebRTCDemo
-
-WebRTCDemo is a sample app that can send and receive media streams if manually
-connected to another WebRTCDemo that is directly accessible (e.g. firewalls
-might prevent you from establishing a connection). Further, it allows setting,
-enabling and disabling audio and video processing functionality (e.g. echo
-cancellation, NACK, audio codec and video codec). For instructions on how to
-build and run it, see [webrtc/examples/android/media_demo/README][4]
-
-
 ### Running WebRTC Native Tests on an Android Device
 
 To build APKs with the WebRTC native tests, follow these instructions.
@@ -81,47 +71,36 @@ To build APKs with the WebRTC native tests, follow these instructions.
      ninja -C out/Debug
      ~~~~~
 
-  3. Check which tests are available (see the output for the `--suite` flag):
-
-     ~~~~~ bash
-     webrtc/build/android/test_runner.py gtest --help
-     ~~~~~
+  3. To see which tests are available: look in `out/Debug/bin`.
 
   4. Run a test on your device:
 
      ~~~~~ bash
-     webrtc/build/android/test_runner.py gtest -s modules_unittests
+     out/Debug/bin/run_modules_unittests
      ~~~~~
 
-  5. If want to run a Release build, add `--release` to the command line
-     above.
-
-     If you want to limit to a subset of tests, use the `--gtest_filter flag`,
+  5. If you want to limit to a subset of tests, use the `--gtest_filter flag`,
      e.g.
 
      ~~~~~
-     webrtc/build/android/test_runner.py gtest -s modules_unittests \
+     out/Debug/bin/run_modules_unittests \
      --gtest_filter=RtpRtcpAPITest.SSRC:RtpRtcpRtcpTest.*
      ~~~~~
 
   6. **NOTICE:** The first time you run a test, you must accept a dialog on
      the device!
 
-  7. **NOTICE:** If you run large test suites (like `webrtc_perf_tests` and
-     `modules_unittests`) without any test filter, you may need to pass the
-     `-t` flag to the script to set a higher timeout than the default 60
-     seconds. 1800 seconds is needed for `webrtc_perf_tests` on slower
-     devices.
+If want to run Release builds instead; build `out/Release` and use the scripts
+generated in `out/Release/bin`.
 
 
 ### Running WebRTC Instrumentation Tests on an Android Device
 
-To run the instrumentation tests (like AppRTCDemoTest and
-libjingle_peerconnection_android_unittest), use the `instrumentation` command
-for `test_runner.py` instead of `gtest`.
+The instrumentation tests (like AppRTCDemoTest and
+libjingle_peerconnection_android_unittest) gets scripts generated in the same
+location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://chromium.googlesource.com/external/webrtc/+/master/talk/app/webrtc/java/README
+[2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
-[4]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/android/media_demo/README
