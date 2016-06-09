@@ -9,7 +9,7 @@ class: home
 
 <p style="font-family: Open Sans, sans-serif; font-size: 30px; font-weight: bold; margin: 40px 0 40px 0; text-align: center">Happy Birthday WebRTC!</p>
 
-<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold; margin: 40px 0 40px 0; text-align: center">Want to learn more about WebRTC's history? Check out <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">Harald Alvestrand's post</a>.</p>
+<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold; margin: 40px 0 40px 0; text-align: center">Want to learn more about WebRTC's origins? Check out Harald Alvestrand's <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">discuss-webrtc post</a>.</p>
 
 
 <div class="jumbotron clearfix" markdown="1">
