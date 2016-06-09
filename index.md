@@ -5,9 +5,9 @@ permalink: /
 class: home
 ---
 
-<a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to Harald Alvestrand post on discuss-webrtc" style="margin: 0 0 30px 0;"><img src="{{ site.baseurl }}/assets/images/webrtc-5-banner.png" style="max-width: 100%"></a>
+<a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to Harald Alvestrand post on discuss-webrtc"><img src="{{ site.baseurl }}/assets/images/webrtc-5-banner.png" style="max-width: 100%"></a>
 
-<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold; margin: 0 0 10px 0">Happy Birthday WebRTC! <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">Harald Alvestrand's blog post</a> explains the origins of WebRTC.</p>
+<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold; margin: 40px 0 40px 0">Happy Birthday WebRTC! Want to know where WebRTC came from? Check out <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">Harald Alvestrand's blog post</a>.</p>
 
 <div class="jumbotron clearfix" markdown="1">
 
