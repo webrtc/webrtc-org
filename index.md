@@ -5,11 +5,13 @@ permalink: /
 class: home
 ---
 
+<a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to Harald Alvestrand post on discuss-webrtc" style="margin: 0 0 20px 0;"><img src="{{ site.baseurl }}/assets/images/webrtc-5-banner.png"></a>
+
+<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold;">Happy Birthday WebRTC! Take a look at <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">Harald Alvestrand's post</a> explaining the origin's of WebRTC.</p>
+
 <div class="jumbotron clearfix" markdown="1">
 
 <!-- <img src="{{ site.baseurl }}/assets/images/webrtc-logo-vert-retro-255x305.png" class="pull-right" style="margin-left: 2em; margin-bottom: .5em;"> -->
-
-<a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to Harald Alvestrand post on discuss-webrtc"><img src="{{ site.baseurl }}/assets/images/webrtc-5-banner.png"></a>
 
 **WebRTC is a free, open project** that provides browsers and mobile
 applications with Real-Time Communications (RTC) capabilities via simple APIs.
