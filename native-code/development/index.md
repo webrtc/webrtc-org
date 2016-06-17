@@ -209,11 +209,13 @@ committing, below.
 
 ### Committing Code
 
-To commit code you have to be a committer.
+To commit code directly to the Git repo, you have to be a committer. CLs created
+by external contributors can be committed via the Commit Queue (CQ).
 
-Since March 24, 2015 the source of truth is the Git repository at
+The source of truth is the Git repository at
 <https://chromium.googlesource.com/external/webrtc>. To be able to push
-commits to it, you need to perform the steps below.
+commits to it, you need to perform the steps below (assuming you're a
+committer).
 
 If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
 already do), you can skip steps 1 and 2.
@@ -228,7 +230,9 @@ already do), you can skip steps 1 and 2.
      webrtc.org account. This will create the user in the Gerrit permission
      system so it can be added to the right committers group.
 
-  4. Make sure you have set the `user.name` and `user.email` Git config
+  4. Ask to be added to the committers group to get push access.
+
+  5. Make sure you have set the `user.name` and `user.email` Git config
      settings as specified at the [depot tools setup page][10]. If you're also
      a Chromium committer, read the next section.
 

@@ -13,7 +13,7 @@ Here are some suggestions to help you get started:
 1. Get an overview of WebRTC: [video](https://youtube.com/watch?v=p2HzZkd2A40), [slides](http://io13webrtc.appspot.com/).
 2. Find out more about WebRTC architecture and JavaScript APIs: [Getting Started With WebRTC](http://html5rocks.com/en/tutorials/webrtc/basics/).
 3. Try out our [code samples](https://github.com/webrtc/samples) and [live demos](https://webrtc.github.io/samples).
-4. Try a codelab: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab) or the [Google I/O 2014 file sharing codelab](http://io2014codelabs.appspot.com/static/codelabs/webrtc-file-sharing/#1).
+4. Try our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web/#0).
 5. Read through the code for the canonical video chat app [appr.tc](https://appr.tc). The repo is at [github.com/webrtc/apprtc](http://github.com/webrtc/apprtc).
 6. For iOS, Android or the C++ WebRTC APIs, take a look at the Native APIs resources below.
 7. Ask general questions on [Stack Overflow](http://stackoverflow.com/tags/webrtc), deeper technical WebRTC questions on [discuss-webrtc](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc).
