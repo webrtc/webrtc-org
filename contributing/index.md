@@ -67,10 +67,9 @@ back to you with the continuous build result.
 
 ### Code Style
 
-We generally follow the [Chromium][8] style guides. For
-sake of consistency a reviewer might ask you to break the style guide, or
-extend your changes to make old non-compliant code up to date with the style
-guide.
+We follow the [Chromium][8] style guides. For sake of consistency a reviewer
+might ask you to break the style guide, or extend your changes to make old
+non-compliant code up to date with the style guide.
 
 [8]: http://www.chromium.org/developers/coding-style
 
