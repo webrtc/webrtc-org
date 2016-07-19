@@ -24,6 +24,11 @@ h6 {
   font-size: 100%;
   font-weight: 400;
 }
+
+img {
+  max-width: 100%;
+}
+
 a {
   color: #2a7ae2;
   text-decoration: none;
