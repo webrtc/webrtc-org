@@ -63,6 +63,9 @@ Please include as many relevant details as possible.
     * If you experience a crash while using WebRTC native code, please include
       the full stacktrace.
 
+  * For **functional** issues or **ICE** issues, in either Chrome or a native
+    application, please gather a [native log][5].
+
   * For **connectivity** issues on Chrome, while the call is in progress,
 
     * please open **chrome://webrtc-internals** in another tab,
@@ -105,3 +108,4 @@ Please include as many relevant details as possible.
 [2]: http://www.chromium.org/for-testers/bug-reporting-guidelines/reporting-crash-bug
 [3]: https://code.google.com/p/chromium/issues/entry?template=Audio/Video%20Issue
 [4]: https://bugs.chromium.org/p/webrtc/issues/entry
+[5]: {{ site.baseurl }}/native-code/logging/
