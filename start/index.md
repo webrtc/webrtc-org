@@ -144,6 +144,7 @@ More resources below.
 * SVG filters: [rawgithub.com/SenorBlanco/moggy/master/filterbooth.html](https://rawgithub.com/SenorBlanco/moggy/master/filterbooth.html)
 * Face masking with WebGL:[auduno.github.io/clmtrackr/face\_mask.html](http://auduno.github.io/clmtrackr/face_mask.html)
 * Face deformation with WebGL: [auduno.github.io/clmtrackr/examples/facedeform.html](http://auduno.github.io/clmtrackr/examples/facedeform.html)
+* Augmented Reality Photobooth: [picshare.jooink.com](https://picshare.jooink.com/)
 
 #### Screen capture
 * [Screen recording app](https://github.com/niklasenbom/RecordingApp)
