@@ -83,7 +83,6 @@ More resources below.
 * [Build scripts from pristineio](https://github.com/pristineio/webrtc-build-scripts): repo with links to how-to guides for Android and iOS
 * [WebRTC Internals documentation](https://webrtc.org/reference/webrtc-internals)
 * [Native API documentation](https://webrtc.org/native-code/)
-* [libjingle Developer Guide](https://developers.google.com/talk/libjingle/developer_guide?csw=1)
 * [WebRTC shim for WKWebView](https://github.com/common-tater/wkwebview-webrtc-shim)
 
 ### Discussion, blogs and articles
