@@ -201,7 +201,7 @@ Example preset selection of bots (notice this may quickly become outdated):
 git cl try -m tryserver.chromium.win -b win_chromium_rel_ng
 git cl try -m tryserver.chromium.android -b android_compile_dbg -b linux_android_rel_ng
 git cl try -m tryserver.chromium.linux -b linux_chromium_rel_ng
-git cl try -m tryserver.chromium.mac -b mac_chromium_gn_rel -b mac_chromium_rel_ng -b  ios-device -b ios-simulator-gn
+git cl try -m tryserver.chromium.mac -b mac_chromium_rel_ng -b  ios-device
 ~~~~~
 
 ##### Note about which tests are run
