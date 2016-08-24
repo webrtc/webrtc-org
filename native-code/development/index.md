@@ -100,6 +100,11 @@ Binaries are by default (i.e. when building with ninja) generated in
 
 #### With Ninja
 
+**NOTICE:** We're in the middle of migrating from [GYP][4] to [GN][5] for
+generating project files. Currently only Android is switched to GN, so check the
+[Android page]({{ site.baseurl }}/native-code/android/) for details on how to
+build for that platform.
+
 Ninja project files are normally generated during the
 `gclient sync</runhooks>` step. If you need to re-generate only the ninja
 files (like if you've wiped your out folder), run:
@@ -371,5 +376,7 @@ Target name `turnserver`. In active development to reach compatibility with
 [10]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [11]: {{ site.baseurl }}/native-code/native-apis/
 [12]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
+[13]: https://gyp.gsrc.io/
+[14]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
