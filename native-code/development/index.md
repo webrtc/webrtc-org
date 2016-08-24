@@ -100,7 +100,7 @@ Binaries are by default (i.e. when building with ninja) generated in
 
 #### With Ninja
 
-**NOTICE:** We're in the middle of migrating from [GYP][4] to [GN][5] for
+**NOTICE:** We're in the middle of migrating from [GYP][13] to [GN][14] for
 generating project files. Currently only Android is switched to GN, so check the
 [Android page]({{ site.baseurl }}/native-code/android/) for details on how to
 build for that platform.
