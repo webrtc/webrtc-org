@@ -34,6 +34,28 @@ depending on the OS you set in `GYP_DEFINES` (see above).
 See [Development](/native-code/development/) for instructions on how to update
 the code, building etc.
 
+### Compiling
+
+**NOTICE:** We're in the middle of migrating from [GYP][4] to [GN][5] for
+generating project files, so right now both GYP_DEFINES needs to be set and a GN
+command line needs to be invoked to generate the project files.
+
+   1. Generate projects using GN:
+
+     ~~~~~ bash
+     gn gen out/Default --args='target_os="android" target_cpu="arm"'
+     ~~~~~
+     You can specify a directory of your own choice instead of `out/Default`,
+     to enable managing multiple configurations in parallel.
+
+      * To build for ARM64: use target_cpu="arm64"
+      * To build for 32-bit x86: use target_cpu="x86"
+      * To build for 64-bit x64: use target_cpu="x64"
+
+   2. Compile using:
+     ~~~~~ bash
+     ninja -C out/Default
+     ~~~~~
 
 ### Using the Bundled Android SDK/NDK
 
@@ -64,14 +86,9 @@ To build APKs with the WebRTC native tests, follow these instructions.
   1. Ensure you have an Android device set in Developer mode connected via
      USB.
 
-  2. With the target OS set in `GYP_DEFINES` as described above, compile
-     everything:
+  2. Compile as described in the section above.
 
-     ~~~~~ bash
-     ninja -C out/Debug
-     ~~~~~
-
-  3. To see which tests are available: look in `out/Debug/bin`.
+  3. To see which tests are available: look in `out/Default/bin`.
 
   4. Run a test on your device:
 
@@ -104,3 +121,5 @@ location as the native tests described in the previous section.
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
+[4]: https://gyp.gsrc.io/
+[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
