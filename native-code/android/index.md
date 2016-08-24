@@ -54,6 +54,7 @@ command line needs to be invoked to generate the project files.
       * To build for 64-bit x64: `use target_cpu="x64"`
 
   2. Compile using:
+
      ~~~~~ bash
      ninja -C out/Default
      ~~~~~
