@@ -40,19 +40,20 @@ the code, building etc.
 generating project files, so right now both GYP_DEFINES needs to be set and a GN
 command line needs to be invoked to generate the project files.
 
-   1. Generate projects using GN:
+  1. Generate projects using GN:
 
      ~~~~~ bash
      gn gen out/Default --args='target_os="android" target_cpu="arm"'
      ~~~~~
+
      You can specify a directory of your own choice instead of `out/Default`,
      to enable managing multiple configurations in parallel.
 
-      * To build for ARM64: use target_cpu="arm64"
-      * To build for 32-bit x86: use target_cpu="x86"
-      * To build for 64-bit x64: use target_cpu="x64"
+      * To build for ARM64: use `target_cpu="arm64"`
+      * To build for 32-bit x86: `use target_cpu="x86"`
+      * To build for 64-bit x64: `use target_cpu="x64"`
 
-   2. Compile using:
+  2. Compile using:
      ~~~~~ bash
      ninja -C out/Default
      ~~~~~
