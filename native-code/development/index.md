@@ -89,7 +89,7 @@ platforms.
 #### Generating Ninja project files
 
 **NOTICE:** We're in the middle of migrating from [GYP][4] to [GN][13] for
-generating project files. Currently only Android and Mac are switched to GN on
+generating project files. Currently Linux, Android and Mac are switched to GN on
 our bots. For Android, check
 [this page]({{ site.baseurl }}/native-code/android/) for details on how to
 build for that platform. For Mac, see the GN section below.
