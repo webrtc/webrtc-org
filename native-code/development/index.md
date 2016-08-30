@@ -88,8 +88,8 @@ platforms.
 
 #### Generating Ninja project files
 
-[Ninja][6] project files are generated using a tool called [GN][13]. They're put
-in a directory of your choice, like `out/Debug` or `out/Release`, but you can
+[Ninja][6] project files are generated using [GN][13]. They're put in a
+directory of your choice, like `out/Debug` or `out/Release`, but you can
 use any directory for keeping multiple configurations handy.
 
 To generate project files using the defaults (Debug build), run:
@@ -135,14 +135,7 @@ python webrtc/build/gyp_webrtc.py
 When you have Ninja project files generated (see previous section), compile
 (standing in `src/`) using:
 
-For default GYP ninja generated files (Debug/Release):
-
-~~~~~ bash
-ninja -C out/Debug
-~~~~~
-
-For [GN][13], the out/ folder is decided by what argument you ran `gn gen` with.
-Example:
+For [Ninja][6] project files generated in `out/Default`:
 
 ~~~~~ bash
 ninja -C out/Default
@@ -152,8 +145,9 @@ ninja -C out/Default
 #### Using Another Build System
 
 Other build systems are **not supported** (and may fail), such as Visual
-Studio on Win or Xcode on OSX. Both GYP and GN supports a hybrid approach of
-using ninja for building, but VS/Xcode for editing and driving compilation.
+Studio on Windows or Xcode on OSX. GN supports a hybrid approach of using
+[Ninja][6] for building, but Visual Studio/Xcode for editing and driving
+compilation.
 
 To generate IDE project files, pass the `--ide` flag to the [GN][13] command.
 See the [GN reference][14] for more details on the supported IDEs.
