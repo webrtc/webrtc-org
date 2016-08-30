@@ -67,7 +67,7 @@ Update your current branch with:
 git pull
 ~~~~~
 
-**Notice:** if you're not on a branch, `git pull` won't work, and you'll need
+**NOTICE:** if you're not on a branch, `git pull` won't work, and you'll need
 to use `git fetch` instead.
 
 Periodically, the build toolchain and dependencies of WebRTC are updated. To
@@ -89,9 +89,8 @@ platforms.
 #### Generating Ninja project files
 
 [Ninja][6] project files are generated using a tool called [GN][13]. They're put
-in a directory of your choice, which can be directories like `out/Debug` or
-`out/Release`, but you can use any directory for keeping your own
-configurations.
+in a directory of your choice, like `out/Debug` or `out/Release`, but you can
+use any directory for keeping multiple configurations handy.
 
 To generate project files using the defaults (Debug build), run:
 
@@ -106,7 +105,7 @@ gn gen out/Default --args='is_debug=false'
 ~~~~~
 
 To clean all build artifacts in a directory but leave the current GN
-configuration untouched (kept in the args.gn file), do:
+configuration untouched (stored in the args.gn file), do:
 
 ~~~~~ bash
 gn clean out/Default
@@ -156,39 +155,8 @@ Other build systems are **not supported** (and may fail), such as Visual
 Studio on Win or Xcode on OSX. Both GYP and GN supports a hybrid approach of
 using ninja for building, but VS/Xcode for editing and driving compilation.
 
-
-
-##### Using GN
-
 To generate IDE project files, pass the `--ide` flag to the [GN][13] command.
 See the [GN reference][14] for more details on the supported IDEs.
-
-
-##### Using GYP
-
-For GYP, set the `GYP_GENERATORS` environment variable to the string:
-
-  * `ninja,msvs-ninja` for Visual Studio project building with ninja
-
-  * `ninja,xcode-ninja` for Xcode
-
-Note, when the build environment is set to generate Visual Studio project
-files, GYP will by default generate a project for the latest version of
-Visual Studio installed on your computer. It is possible to specify the
-desired Visual Studio version as described below:
-
-Set environment variable `GYP_MSVS_VERSION=<version>` before `runhooks`, or
-manually run the following gyp command from the `src/` directory (this
-replaces `gclient runhooks`):
-
-~~~~~ bash
-python webrtc/build/gyp_webrtc.py -G msvs_version=<version>
-~~~~~
-
-Where `<version>` is on the form YYYY. And Chromium requests VS2013 for now.
-Then use Visual Studio to open and build the `src/all.sln` solution file.
-Please refer to <http://www.chromium.org> for more details.
-
 
 
 ### Working with Release Branches
@@ -199,7 +167,7 @@ To see available release branches, run:
 git branch -r
 ~~~~~
 
-**Notice:** If you only see your local branches, you have a checkout created
+**NOTICE:** If you only see your local branches, you have a checkout created
 before our switch to Git (March 24, 2015). In that case, first run:
 
 ~~~~~ bash
@@ -227,11 +195,6 @@ Commit log for the branch:
 
 To browse it:
 <https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
-
-Since this is the equivalent to stable code, you might want to compile
-it without the tests by adding `include_tests=0` in your `GYP_DEFINES`
-environement variable. Release builds can also add `fastbuild=2` for
-extra speed.
 
 For more details, read Chromium's [Working with Branches][7] and
 [Working with Release Branches][8] pages.
@@ -279,7 +242,7 @@ Commit a change list to the Git repo using:
 git cl land
 ~~~~~
 
-**Notice:** On Windows, you'll need to run this in a Git bash shell in order
+**NOTICE:** On Windows, you'll need to run this in a Git bash shell in order
 for gclient to find the `.gitcookies` file.
 
 Sometimes it's necessary to bypass the presubmit checks (like when fixing an
@@ -354,7 +317,7 @@ server to connect to.
 
 Start an instance of `peerconnection_server` application.
 
-Open `src/talk/examples/peerconnection/server/server_test.html` in your
+Open `src/webrtc/examples/peerconnection/server/server_test.html` in your
 browser. Click **Connect**. Observe that the `peerconnection_server` announces
 your connection. Open one more tab using the same page. Connect it too (with a
 different name). It is now possible to exchange messages between the connected

@@ -49,7 +49,7 @@ Building for iOS Device (the different output directories can be replaced with a
 directory of your own choice):
 
 ~~~~~ bash
-gn gen out/Debug-device-arm --args='target_os="ios" target_cpu="arm" is_component_build=false'
+gn gen out/Debug-device-arm32 --args='target_os="ios" target_cpu="arm" is_component_build=false'
 ~~~~~
 
 Building for 64-bit iOS device:
@@ -61,13 +61,13 @@ gn gen out/Debug-device-arm64 --args='target_os="ios" target_cpu="arm64" is_comp
 Building for Simulator:
 
 ~~~~~ bash
-gn gen out/Debug-sim --args='target_os="ios" target_cpu="x86" is_component_build=false'
+gn gen out/Debug-sim32 --args='target_os="ios" target_cpu="x86" is_component_build=false'
 ~~~~~
 
 Building for 64-bit Simulator:
 
 ~~~~~ bash
-gn gen out/Debug-sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
+gn gen out/Debug-sim64 --args='target_os="ios" target_cpu="x64" is_component_build=false'
 ~~~~~
 
 Building for OSX:
@@ -84,7 +84,7 @@ why `is_component_build=false` is specified for all the examples above.
 Now, to compile just run ninja on the appropriate target. For example:
 
 ~~~~~ bash
-ninja -C out/Debug-device AppRTCDemo
+ninja -C out/Debug-device-arm32 AppRTCDemo
 ~~~~~
 
 Some sample scripts are also available in [webrtc/build/ios][3].
@@ -98,10 +98,10 @@ project, `--ide=xcode` to the GN command. By using Xcode in this manner, we get
 the build speed of ninja while at the same time getting access to the usual
 methods of deployment/debugging for iOS.
 
-When running the generator script, you should see an `all.ninja.xcworkspace`
-file. You should be able to select the desired target and platform in the
-Xcode usual fashion and build/deploy. Note that you will need to rerun the
-GYP generator if you want to switch target platforms.
+After running GN, you'll find a `all.xcworkspace` file in the output directory.
+Using this, you can select the desired target and platform in the Xcode usual
+fashion and build/deploy. Note that you will need to rerun GN if you want to
+switch target platforms.
 
 
 ### Deploying to Device
@@ -112,6 +112,6 @@ as well, e.g. `ios-deploy`.
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
-[3]: https://code.google.com/p/chromium/codesearch#chromium/src/third_party/webrtc/build/ios
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/build/ios
 [4]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
