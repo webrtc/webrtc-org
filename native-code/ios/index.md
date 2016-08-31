@@ -94,8 +94,8 @@ Some sample scripts are also available in [webrtc/build/ios][3].
 
 Compiling with Xcode is not supported! What we do instead is compile using a
 script that runs ninja from Xcode. In order to generate the relevant Xcode
-project, `--ide=xcode` to the GN command. By using Xcode in this manner, we get
-the build speed of ninja while at the same time getting access to the usual
+project, add `--ide=xcode` to the GN command. By using Xcode in this manner, we
+get the build speed of ninja while at the same time getting access to the usual
 methods of deployment/debugging for iOS.
 
 After running GN, you'll find a `all.xcworkspace` file in the output directory.
