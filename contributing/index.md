@@ -44,7 +44,6 @@ These instructions assume you already have followed the [getting started guide](
   6. Commit your change, or ask a reviewer to do it for you if you don't have
      access right.
 
-[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
 
 Please help us:
 
@@ -73,8 +72,6 @@ changes to old, non-compliant code it may be better to maintain its
 non-compliant style&mdash;or to lead with a CL that makes the whole
 chunk of non-compliant code comply with the style guide.
 
-[8]: http://www.chromium.org/developers/coding-style
-
 To format the code in a CL, you can use `git cl format`.
 To manually run the C++ lint checker, use `cpplint.py`.
 
@@ -86,9 +83,6 @@ contributor agreements
 
   * [Individual Contributors License][1]
   * [Corporate Contributors License][2]
-
-[1]: https://cla.developers.google.com/about/google-individual
-[2]: https://cla.developers.google.com/about/google-corporate
 
 Also, please re-read our project's
 [license]({{ site.baseurl}}/license/software/) and
@@ -110,7 +104,15 @@ This will open a text editor showing all local commit messages, allowing you
 to modify it before it becomes the CL description. Save and close the file to
 proceed with the upload to the WebRTC [code review server][3].
 
-[3]: https://codereview.webrtc.org/
+
+#### Referencing bugs
+
+In your CL description you should always try to reference a bug using the `BUG=`
+field. After the equals sign you should add the bug number of a bug in the
+[WebRTC bug tracker][10], e.g. BUG=1234.
+
+If you want to reference a bug in the [Chromium bug tracker][11], you need to
+prefix the number with `chromium:`, e.g. BUG=chromium:123456
 
 
 #### Getting your CL Reviewed
@@ -121,8 +123,6 @@ CL, add reviewers etc.
 Add the reviewers that should review your change, including at least one of
 the directory owners for each directory you modify. See the OWNERS files in
 the source tree and [read more about OWNERS files][4] if needed.
-
-[4]: http://www.chromium.org/developers/owners-files
 
 A CL must be approved by a directory owner to be able to commit. To send out a
 mail with the CL to everybody included you need to press
@@ -155,8 +155,6 @@ git cl try -b mac -b mac_rel -m tryserver.webrtc
 ~~~~~
 You can see the available trybot names by clicking the "Choose trybots" link in
 Rietveld (scroll down to `tryserver.webrtc`).
-
-[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
 
 
 #### Tryjobs on Chromium trybots
@@ -217,8 +215,6 @@ test failure. Doing this, it will restore the revision of
 This makes it possible that a test still fails without the patch in case there's
 currently an error for the HEAD revision of WebRTC when built inside Chromium.
 
-[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
-[7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
 
 ## Committing your CL
 
@@ -230,3 +226,15 @@ to submit the CL for you using the Commit Queue (CQ).
 See the "Committing Code" section at the
 [Development]({{ site.baseurl }}/native-code/development/) page for details on
 how to commit the CL.
+
+[1]: https://cla.developers.google.com/about/google-individual
+[2]: https://cla.developers.google.com/about/google-corporate
+[3]: https://codereview.webrtc.org/
+[4]: http://www.chromium.org/developers/owners-files
+[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
+[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
+[7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
+[8]: http://www.chromium.org/developers/coding-style
+[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
+[10]: https://bugs.webrtc.org
+[11]: https://crbug.com
