@@ -98,6 +98,10 @@ To generate project files using the defaults (Debug build), run:
 gn gen out/Default
 ~~~~~
 
+**NOTICE:** Debug builds are [component builds][15] (shared libraries) by
+default unless `is_component_build=false` is passed to `gn gen --args`.
+Release builds are static by default.
+
 To generate ninja project files for a Release build instead:
 
 ~~~~~ bash
@@ -367,5 +371,6 @@ Target name `turnserver`. In active development to reach compatibility with
 [12]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
 [13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [14]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
+[15]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
