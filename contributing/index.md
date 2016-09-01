@@ -108,8 +108,8 @@ proceed with the upload to the WebRTC [code review server][3].
 #### Referencing bugs
 
 In your CL description you should always try to reference a bug using the `BUG=`
-field. After the equals sign you should add a prefix followed by the number of
-the bug in the bug tracker of your bug:
+field. After the equals sign you should add a prefix followed by the bug number
+in the issue tracker of your bug:
 
 * `webrtc:` for the [WebRTC bug tracker][10], e.g. `BUG=webrtc:1234`
 * `chromium:` for the [Chromium bug tracker][11], e.g. `BUG=chromium:123456`
