@@ -63,15 +63,15 @@ are built with the same configuration:
 
   * `rtc_test` which replaces `test`
   * `rtc_source_set` which replaces `source_set`
-  * `rtc_executable` which replaces  executable 
+  * `rtc_executable` which replaces `executable`
   * `rtc_static_library` which replaces `static_library`
 
-All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn?rcl=0&l=105)
-and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn?rcl=0&l=18)
-by default, and use the [`optimize_max`](https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn?rcl=0&l=1399)
+All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
+and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
+by default, and use the [`optimize_max`](https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn)
 compiler configuration in Windows instead of the default.
 
-The `rtc_executable` template also includes [`//build/config/sanitizers:deps`](https://cs.chromium.org/chromium/src/build/config/sanitizers/BUILD.gn?l=15)
+The `rtc_executable` template also includes [`//build/config/sanitizers:deps`](https://cs.chromium.org/chromium/src/build/config/sanitizers/BUILD.gn)
 to allow compilation with sanitizers.
 
 
