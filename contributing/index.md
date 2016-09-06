@@ -55,6 +55,26 @@ Please help us:
     (No new features just yet!)
 
 
+## Writing or Modifying GN Targets
+
+We provide the following [GN Templates](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Templates)
+to ensure that all our [targets](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Targets)
+are built with the same configuration:
+
+  * `rtc_test` which replaces `test`
+  * `rtc_source_set` which replaces `source_set`
+  * `rtc_executable` which replaces  executable 
+  * `rtc_static_library` which replaces `static_library`
+
+All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn?rcl=0&l=105)
+and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn?rcl=0&l=18)
+by default, and use the [`optimize_max`](https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn?rcl=0&l=1399)
+compiler configuration in Windows instead of the default.
+
+The `rtc_executable` template also includes [`//build/config/sanitizers:deps`](https://cs.chromium.org/chromium/src/build/config/sanitizers/BUILD.gn?l=15)
+to allow compilation with sanitizers.
+
+
 ## Testing
 
 Your commit will be subject to a number of automated tests that is run on
