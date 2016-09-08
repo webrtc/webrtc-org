@@ -65,6 +65,7 @@ are built with the same configuration:
   * `rtc_source_set` which replaces `source_set`
   * `rtc_executable` which replaces `executable`
   * `rtc_static_library` which replaces `static_library`
+  * `rtc_shared_library` which replaces `shared_library`
 
 All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
 and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
