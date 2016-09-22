@@ -84,7 +84,7 @@ why `is_component_build=false` is specified for all the examples above.
 Now, to compile just run ninja on the appropriate target. For example:
 
 ~~~~~ bash
-ninja -C out/Debug-device-arm32 AppRTCDemo
+ninja -C out/Debug-device-arm32 AppRTCMobile
 ~~~~~
 
 Some sample scripts are also available in [webrtc/build/ios][3].
