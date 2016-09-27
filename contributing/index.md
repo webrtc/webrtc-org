@@ -87,7 +87,8 @@ back to you with the continuous build result.
 
 ## Code Style
 
-We follow the [Chromium][8] style guides. However, it is usually a
+We follow the [Chromium][8] style guides, with the exception that Java
+follows the [Google Java Style Guide][12]. However, it is usually a
 good idea to maintain consistency with nearby code, so when making
 changes to old, non-compliant code it may be better to maintain its
 non-compliant style&mdash;or to lead with a CL that makes the whole
@@ -259,3 +260,4 @@ how to commit the CL.
 [9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com
+[12]: https://google.github.io/styleguide/javaguide.html
