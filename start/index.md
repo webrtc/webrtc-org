@@ -79,9 +79,7 @@ More resources below.
 ### Native APIs
 * [Getting started with WebRTC on iOS](https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/)
 * [Introduction to WebRTC on Android](https://tech.appear.in/2015/05/25/Introduction-to-WebRTC-on-Android)
-* [Getting Started](https://webrtc.org/reference/getting-started) (from webrtc.org)
 * [Build scripts from pristineio](https://github.com/pristineio/webrtc-build-scripts): repo with links to how-to guides for Android and iOS
-* [WebRTC Internals documentation](https://webrtc.org/reference/webrtc-internals)
 * [Native API documentation](https://webrtc.org/native-code/)
 * [WebRTC shim for WKWebView](https://github.com/common-tater/wkwebview-webrtc-shim)
 
