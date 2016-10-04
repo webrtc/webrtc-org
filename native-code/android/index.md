@@ -72,9 +72,9 @@ In order to use the Android SDK and NDK that is bundled in
 Then you'll have `adb` and all the other Android tools in your `PATH`.
 
 
-### Running the AppRTCDemo App
+### Running the AppRTCMobile App
 
-AppRTCDemo is an Android application using WebRTC Native APIs via JNI (JNI
+AppRTCMobile is an Android application using WebRTC Native APIs via JNI (JNI
 wrapper is documented [here][2]).
 
 For instructions on how to build and run, see
@@ -115,7 +115,7 @@ generated in `out/Release/bin`.
 
 ### Running WebRTC Instrumentation Tests on an Android Device
 
-The instrumentation tests (like AppRTCDemoTest and
+The instrumentation tests (like AppRTCMobileTest and
 libjingle_peerconnection_android_unittest) gets scripts generated in the same
 location as the native tests described in the previous section.
 
