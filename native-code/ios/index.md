@@ -11,7 +11,7 @@ crumb: iOS
 
 ### Development Environment
 
-An OS X machine is required for iOS development. While it's possible to
+A macOS machine is required for iOS development. While it's possible to
 develop purely from the command line with text editors, it's easiest to use
 Xcode. Both methods will be illustrated here.
 
@@ -58,6 +58,18 @@ Building for 64-bit iOS device:
 gn gen out/Debug-device-arm64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
 ~~~~~
 
+**NOTICE:** To build for simulator, you must have a signing identity configured
+for your Xcode installation. You can check this by running:
+
+~~~~~ bash
+python build/config/ios/find_signing_identity.py
+~~~~~
+
+If you need to build for ARM devices without this setup, you can add the
+`ios_enable_code_signing=false` variable to GN's arguments.
+
+
+
 Building for Simulator:
 
 ~~~~~ bash
@@ -70,10 +82,10 @@ Building for 64-bit Simulator:
 gn gen out/Debug-sim64 --args='target_os="ios" target_cpu="x64" is_component_build=false'
 ~~~~~
 
-Building for OSX:
+Building for macOS (host OS is the default `target_os`):
 
 ~~~~~ bash
-gn gen out/Debug-mac --args='target_os="mac" target_cpu="x64" is_component_build=false'
+gn gen out/Debug-mac'
 ~~~~~
 
 The component build is the default for Debug builds, which are also enabled by
