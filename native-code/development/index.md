@@ -92,7 +92,8 @@ platforms.
 directory of your choice, like `out/Debug` or `out/Release`, but you can
 use any directory for keeping multiple configurations handy.
 
-To generate project files using the defaults (Debug build), run:
+To generate project files using the defaults (Debug build), run (standing in
+the src/ directory of your checkout):
 
 ~~~~~ bash
 gn gen out/Default
