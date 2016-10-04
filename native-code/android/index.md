@@ -40,7 +40,10 @@ the code, building etc.
 generating project files, so right now both GYP_DEFINES needs to be set and a GN
 command line needs to be invoked to generate the project files.
 
-  1. Generate projects using GN:
+  1. Generate projects using GN.
+
+     Make sure your current working directory is src/ of your workspace.
+     Then run:
 
      ~~~~~ bash
      gn gen out/Default --args='target_os="android" target_cpu="arm"'
