@@ -198,7 +198,7 @@ To use this feature:
      description:
 
      ~~~~~ bash
-     CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
+     CQ_INCLUDE_TRYBOTS=master.tryserver.chromium.linux:bot1,bot2;master.tryserver.chromium.mac:bot3
      ~~~~~
 
      Adjust it to your needs but make sure to follow the format convention:
