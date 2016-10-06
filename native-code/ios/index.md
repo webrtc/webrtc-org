@@ -66,7 +66,7 @@ gn gen out/Debug-device-arm32 --args='target_os="ios" target_cpu="arm" is_compon
 gn gen out/Debug-device-arm64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
 ~~~~~
 
-**NOTICE:** To build for simulator, you must have a signing identity configured
+**NOTICE:** To build for devices, you must have a signing identity configured
 for your Xcode installation. You can check this by running:
 
 ~~~~~ bash
