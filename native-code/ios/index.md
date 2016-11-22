@@ -149,6 +149,18 @@ use the `-a` flag to pass arguments to the executable on launch.
 It's easiest to deploy to a device using Xcode. Other command line tools exist
 as well, e.g. [`ios-deploy`][6].
 
+**NOTICE:** To deploy to an iOS device you must have a valid signing identity
+set up. You can verify this by running:
+
+~~~~ bash
+xcrun security find-identity -v -p codesigning
+~~~~
+
+If you don't have a valid signing identity, you can still build for ARM,
+but you won't be able to deploy your code to an iOS device. To do this,
+add the flag `ios_enable_code_signing=false` to the `gn gen` args when you
+generate the build files.
+
 ### Using WebRTC in your app
 
 To build WebRTC for use in a native iOS app, it's easiest to build
