@@ -74,7 +74,7 @@ default unless `is_debug=false` is specified.
 
 The [GN][5] command for generating build files is `gn gen <output folder>`.
 
-After you've generated your build files once, subsequent invocations of `gen gen`
+After you've generated your build files once, subsequent invocations of `gn gen`
 with the same output folder will use the same arguments as first supplied.
 To edit these at any time use `gn args <output folder>`. This will open up
 a file in `$EDITOR` where you can edit the arguments. When you've made
@@ -115,6 +115,7 @@ when running `gn gen`. This will result in a file named `all.xcworkspace`
 placed in your specified output directory.
 
 Example:
+
 ~~~~~ bash
 gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
 open -a Xcode.app out/ios/all.xcworkspace
