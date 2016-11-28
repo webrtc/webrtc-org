@@ -9,6 +9,7 @@ permalink: /web-apis/standardization/
 
   * <https://w3c.github.io/webrtc-pc/> - WebRTC 1.0: Real-time Communication
     Between Browsers
+  * <https://w3c.github.io/webrtc-stats/> - Identifiers for WebRTC's Statistics API
   * <https://w3c.github.io/mediacapture-main/> - Media Capture and Streams
 
 ### Workgroups
