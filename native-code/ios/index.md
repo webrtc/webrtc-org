@@ -179,6 +179,12 @@ If you need a FAT `.framework`, that is, a binary that contains code for
 multiple architectures, and will work both on device and in the simulator,
 a script is available [here][3]
 
+Please note that you can not ship the FAT framework binary with your app
+if you intend to distribute it through the app store.
+To solve this either remove "x86-64" from the list of architectures in
+the [build script][3] or split the binary and recreate it without x86-64.
+For instructions on how to do this see [here][7]
+
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
@@ -186,3 +192,4 @@ a script is available [here][3]
 [4]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
+[7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
