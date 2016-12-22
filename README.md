@@ -90,8 +90,9 @@ Find out more in our
 
      Images are added with markup like the following example (from the
      [Architecture](https://raw.githubusercontent.com/webrtc/webrtc-org/gh-pages/architecture/index.md) page):
-
+     ```markdown
      ![]({{ site.baseurl }}/assets/images/webrtc-public-diagram-for-website.png)
+     ```
 
      Add code snippets like this:
 
