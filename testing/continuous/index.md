@@ -80,7 +80,7 @@ See the [Conformance testing]({{ site.baseurl }}/testing/conformance/) page.
 
 [1]: http://bugs.webrtc.org
 [2]: http://build.chromium.org/p/client.webrtc/waterfall
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/webrtc_tests.gypi
-[4]: https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/media/chrome_webrtc_browsertest.cc&q=chrome_webrtc&sq=package:chromium
-[5]: https://code.google.com/p/chromium/codesearch#chromium/src/content/browser/media/webrtc_browsertest.cc&q=webrtc_bro&sq=package:chromium
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/BUILD.gn#568
+[4]: https://cs.chromium.org/chromium/src/chrome/browser/media/webrtc/webrtc_browsertest.cc
+[5]: https://cs.chromium.org/chromium/src/content/browser/webrtc/webrtc_browsertest.cc
 [6]: https://code.google.com/p/chromium/codesearch#chromium/src/content/test/data/media/peerconnection-call.html&q=peerconn&sq=package:chromium&l=1
