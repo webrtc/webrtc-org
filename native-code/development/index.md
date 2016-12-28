@@ -365,7 +365,7 @@ Target name `turnserver`. In active development to reach compatibility with
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [4]: https://gyp.gsrc.io/
 [5]: https://chromium.googlesource.com/external/webrtc/+/master/DEPS
-[6]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
+[6]: https://ninja-build.org/
 [7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
 [8]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
 [9]: {{ site.baseurl }}/contributing/

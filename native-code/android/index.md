@@ -122,4 +122,4 @@ location as the native tests described in the previous section.
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
 [4]: https://gyp.gsrc.io/
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
-[6]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
+[6]: https://ninja-build.org/

@@ -189,7 +189,7 @@ For instructions on how to do this see [here][7]
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/build/ios/build_ios_libs.sh
-[4]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
+[4]: https://ninja-build.org/
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
 [7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
