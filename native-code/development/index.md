@@ -31,14 +31,15 @@ For desktop development:
      gclient sync
      ~~~~~
 
-     NOTICE: Due to [bug 5578][12] you may have to press 'y' to accept a license
-     dialog for downloading Google Play Services SDK.
+     NOTICE: During your first sync, you'll have to accept the license
+     agreement of the Google Play Services SDK.
 
-     The dowload will **take a long time** because it downloads the whole
-     Chromium repository and dependencies, which are several gigabytes.
-     **Do not** interrupt this step or you may need to start all over agan (a
-     new `gclient sync` may be enough, but you might also need to start over
-     cleanly).
+     The checkout size is large due the use of the Chromium build toolchain and
+     many dependencies. Estimated size:
+      * Linux: 6.4 GB.
+      * Linux (with Android): 16 GB (of which ~8 GB is Android SDK+NDK images).
+      * Mac (with iOS support): 5.6GB
+
 
   2. Optionally you can specify how new branches should be tracked:
 

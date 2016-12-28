@@ -27,9 +27,9 @@ gclient sync
 ~~~~~
 
 This will fetch a regular WebRTC checkout with the iOS-specific parts
-added. The same checkout can be used for both Mac and iOS development,
-since you can generate your [Ninja][4] project files in multiple
-directories (see below).
+added. Notice the size is quite large: about 6GB. The same checkout can be used
+for both Mac and iOS development, since GN allows you to generate your
+[Ninja][4] project files in different directories for each build config.
 
 You may want to disable Spotlight indexing for the checkout to speed up
 file operations.
