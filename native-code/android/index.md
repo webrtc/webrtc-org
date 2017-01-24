@@ -25,7 +25,7 @@ This will fetch a regular WebRTC checkout with the Android-specific parts
 added. Notice that the Android specific parts like the Android SDK and NDK are
 quite large (~8 GB), so the total checkout size will be about 16 GB.
 The same checkout can be used for both Linux and Android development since you
-can generate your [Ninja][6] project files in different directories for each
+can generate your [Ninja][4] project files in different directories for each
 build config.
 
 See [Development](/native-code/development/) for instructions on how to update
@@ -120,6 +120,4 @@ location as the native tests described in the previous section.
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
-[4]: https://gyp.gsrc.io/
-[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
-[6]: https://ninja-build.org/
+[4]: https://ninja-build.org/
