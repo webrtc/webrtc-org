@@ -36,6 +36,7 @@ For desktop development:
 
      The checkout size is large due the use of the Chromium build toolchain and
      many dependencies. Estimated size:
+
       * Linux: 6.4 GB.
       * Linux (with Android): 16 GB (of which ~8 GB is Android SDK+NDK images).
       * Mac (with iOS support): 5.6GB
