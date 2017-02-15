@@ -11,128 +11,185 @@ crumb: iOS
 
 ### Development Environment
 
-An OS X machine is required for iOS development. While it's possible to
+A macOS machine is required for iOS development. While it's possible to
 develop purely from the command line with text editors, it's easiest to use
 Xcode. Both methods will be illustrated here.
 
+_NOTICE:_ You will need to install [Chromium depot_tools][1].
 
 ### Getting the Code
 
-  1. Install [prerequisite software][1]
+Create a working directory, enter it, and run:
 
-  2. Set the target OS in your environment:
+~~~~~ bash
+fetch --nohooks webrtc_ios
+gclient sync
+~~~~~
 
-     ~~~~~ bash
-     export GYP_DEFINES="OS=ios"
-     ~~~~~
+This will fetch a regular WebRTC checkout with the iOS-specific parts
+added. Notice the size is quite large: about 6GB. The same checkout can be used
+for both Mac and iOS development, since GN allows you to generate your
+[Ninja][4] project files in different directories for each build config.
 
-  3. Create a working directory, enter it, and run:
+You may want to disable Spotlight indexing for the checkout to speed up
+file operations.
 
-     ~~~~~ bash
-     fetch --nohooks webrtc_ios
-     gclient sync
-     ~~~~~
+Note that the git repository root is in `src`.
 
-     This will fetch a regular WebRTC checkout with the iOS-specific parts
-     added. The same checkout can be used for both Mac and iOS development,
-     depending on the OS you set in `GYP_DEFINES` (see above).
+From here you can check out a new local branch with:
 
-  4. You may want to disable Spotlight indexing for the checkout to speed up
-     file operations..
+~~~~~ bash
+git new-branch <branch name>
+~~~~~
 
 See [Development][2] for generic instructions on how
 to update the code in your checkout.
 
 
-### Compiling the Code
+### Generating project files
 
-GYP is used to generate build instructions for ninja from the relevant .gyp files. Ninja is used to compile the source using the previously generated instructions. In order to configure GYP to generate build files for iOS certain environment variables need to be set. Those variables can be edited for the various build configurations as needed.
+[GN][5] is used to generate [Ninja][4] project files. In order to configure
+[GN][5] to generate build files for iOS certain variables need to be set.
+Those variables can be edited for the various build configurations as needed.
 
-Building for iOS Device:
+The variables you should care about are the following:
 
-~~~~~ bash
-export GYP_DEFINES="OS=ios target_arch=arm"
-export GYP_GENERATOR_FLAGS="output_dir=out_ios"
-~~~~~
+* `target_os`:
+  - To build for iOS this should be set as `target_os="ios"` in your `gn args`.
+  The default is whatever OS you are running the script on, so this can be
+  omitted when generating build files for macOS.
+* `target_cpu`:
+  - For builds targeting iOS devices, this should be set to either `"arm"` or
+  `"arm64"`, depending on the architecture of the device. For builds to run in
+  the simulator, this should be set to `"x64"`.
+* `is_component_build`:
+  - Component builds don't take as long to link, but have runtime performance
+  implications. They are not supported on iOS, so this should always be set
+  to `false`.
+* `is_debug`:
+  - Debug builds are the default. When building for release, specify `false`.
 
-Building for 64-bit iOS device:
+The component build is the default for Debug builds, which are also enabled by
+default unless `is_debug=false` is specified.
 
-~~~~~ bash
-export GYP_DEFINES="OS=ios target_arch=arm64"
-export GYP_GENERATOR_FLAGS="output_dir=out_ios64"
-~~~~~
+The [GN][5] command for generating build files is `gn gen <output folder>`.
 
-Building for Simulator:
+After you've generated your build files once, subsequent invocations of `gn gen`
+with the same output folder will use the same arguments as first supplied.
+To edit these at any time use `gn args <output folder>`. This will open up
+a file in `$EDITOR` where you can edit the arguments. When you've made
+changes and save the file, `gn` will regenerate your project files for you
+with the new arguments.
 
-~~~~~ bash
-export GYP_DEFINES="OS=ios target_arch=ia32"
-export GYP_GENERATOR_FLAGS="output_dir=out_sim"
-~~~~~
-
-Building for 64-bit Simulator:
-
-~~~~~ bash
-export GYP_DEFINES="OS=ios target_arch=x64"
-export GYP_GENERATOR_FLAGS="output_dir=out_sim"
-~~~~~
-
-Building for OSX:
-
-~~~~~ bash
-export GYP_DEFINES="OS=mac target_arch=x64"
-export GYP_GENERATOR_FLAGS="output_dir=out_mac"
-~~~~~
-
-Note that you can set `output_dir` to whatever you'd like. It will be created
-under `src/`. Now run the gyp generator script from the source root
-(`<working directory>/src`):
+#### Examples
 
 ~~~~~ bash
-webrtc/build/gyp_webrtc.py
+# debug build for 64-bit iOS
+gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
+
+# debug build for simulator
+gn gen out/ios_sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
 ~~~~~
 
-Now to compile, just run ninja on the appropriate target. For example:
+### Compiling with ninja
+
+To compile, just run ninja on the appropriate target. For example:
 
 ~~~~~ bash
-ninja -C out_ios/Debug-iphoneos AppRTCDemo
-ninja -C out_ios/Release-iphoneos AppRTCDemo
-ninja -C out_sim/Debug-iphonesimulator AppRTCDemo
+ninja -C out/ios_64 AppRTCMobile
 ~~~~~
 
-For interesting targets to build, see the `.gyp` files in `webrtc/webrtc.gyp`,
-`webrtc/webrtc_examples.gyp`, `talk/libjingle.gyp`,
-`talk/libjingle_examples.gyp`.
+Replace `AppRTCMobile` in the command above with the target you
+are interested in.
 
-Some sample scripts are also available at [talk/app/webrtc/objc/README][3].
+To see a list of available targets, run `gn ls out/<output folder>`.
 
+### Using Xcode
 
-### Compiling with Xcode
+Xcode is the default and preferred IDE to develop for the iOS platform.
+
+*Generating an Xcode project*
+
+To have GN generate Xcode project files, pass the argument `--ide=xcode`
+when running `gn gen`. This will result in a file named `all.xcworkspace`
+placed in your specified output directory.
+
+Example:
+
+~~~~~ bash
+gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
+open -a Xcode.app out/ios/all.xcworkspace
+~~~~~
+
+*Compile and run with Xcode*
 
 Compiling with Xcode is not supported! What we do instead is compile using a
-script that runs ninja from Xcode. In order to generate the relevant Xcode
-project, add `xcode-ninja` to `GYP_GENERATORS` along with the targets you're
-interested in. By using Xcode in this manner, we get the build speed of ninja
-while at the same time getting access to the usual methods of
-deployment/debugging for iOS.
+script that runs ninja from Xcode. This is done with a custom _run script_
+action in the build phases of the generated project. This script will simply
+call ninja as you would when building from the command line.
 
-~~~~~ bash
-export GYP_GENERATOR_FLAGS="xcode_project_version=3.2 xcode_ninja_target_pattern=All_iOS xcode_ninja_executable_target_pattern=AppRTCDemo|libjingle_peerconnection_unittest|libjingle_peerconnection_objc_test output_dir=out_ios"
+This gives us access to the usual deployment/debugging workflow iOS developers
+are used to in Xcode, without sacrificing the build speed of Ninja.
 
-export GYP_GENERATORS="ninja,xcode-ninja"
-~~~~~
+### Running the tests
 
-When running the generator script, you should see an `all.ninja.xcworkspace`
-file. You should be able to select the desired target and platform in the
-Xcode usual fashion and build/deploy. Note that you will need to rerun the
-GYP generator if you want to switch target platforms.
+There are several test targets in WebRTC. To run the tests, you must deploy the
+`.app` bundle to a device (see next section) and run them from there.
+To run a specific test or collection of tests, normally with gtest one would pass
+the `--gtest_filter` argument to the test binary when running. To do this when
+running the tests from Xcode, from the targets menu, select the test bundle
+and press _edit scheme..._ at the bottom of the target dropdown menu. From there
+click _Run_ in the sidebar and add `--gtest_filter` to the _Arguments passed on
+Launch_ list.
 
+If deploying to a device via the command line using [`ios-deploy`][6],
+use the `-a` flag to pass arguments to the executable on launch.
 
 ### Deploying to Device
 
-It's easiest to deploy to a device using Xcode in `xcode-ninja` mode. Other
-command line tools exist as well, e.g. `ios-deploy`.
+It's easiest to deploy to a device using Xcode. Other command line tools exist
+as well, e.g. [`ios-deploy`][6].
+
+**NOTICE:** To deploy to an iOS device you must have a valid signing identity
+set up. You can verify this by running:
+
+~~~~ bash
+xcrun security find-identity -v -p codesigning
+~~~~
+
+If you don't have a valid signing identity, you can still build for ARM,
+but you won't be able to deploy your code to an iOS device. To do this,
+add the flag `ios_enable_code_signing=false` to the `gn gen` args when you
+generate the build files.
+
+### Using WebRTC in your app
+
+To build WebRTC for use in a native iOS app, it's easiest to build
+`WebRTC.framework`. This can be done with ninja as follows, replacing `ios`
+with the actual location of your generated build files.
+
+~~~~~ bash
+ninja -C out/ios rtc_sdk_framework_objc
+~~~~~
+
+This should result in a `.framework` bundle being generated in `out/ios`.
+This bundle can now be directly included in another app.
+
+If you need a FAT `.framework`, that is, a binary that contains code for
+multiple architectures, and will work both on device and in the simulator,
+a script is available [here][3]
+
+Please note that you can not ship the FAT framework binary with your app
+if you intend to distribute it through the app store.
+To solve this either remove "x86-64" from the list of architectures in
+the [build script][3] or split the binary and recreate it without x86-64.
+For instructions on how to do this see [here][7]
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
-[3]: https://code.google.com/p/chromium/codesearch#chromium/src/third_party/libjingle/source/talk/app/webrtc/objc/README
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/build/ios/build_ios_libs.sh
+[4]: https://ninja-build.org/
+[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
+[6]: https://github.com/phonegap/ios-deploy
+[7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/

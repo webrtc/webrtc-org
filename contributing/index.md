@@ -44,7 +44,6 @@ These instructions assume you already have followed the [getting started guide](
   6. Commit your change, or ask a reviewer to do it for you if you don't have
      access right.
 
-[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
 
 Please help us:
 
@@ -54,6 +53,27 @@ Please help us:
 
   * New features will probably require dividing your work into multiple CLs.
     (No new features just yet!)
+
+
+## Writing or Modifying GN Targets
+
+We provide the following [GN Templates](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Templates)
+to ensure that all our [targets](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Targets)
+are built with the same configuration:
+
+  * `rtc_test` which replaces `test`
+  * `rtc_source_set` which replaces `source_set`
+  * `rtc_executable` which replaces `executable`
+  * `rtc_static_library` which replaces `static_library`
+  * `rtc_shared_library` which replaces `shared_library`
+
+All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
+and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
+by default, and use the [`optimize_max`](https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn)
+compiler configuration in Windows instead of the default.
+
+The `rtc_executable` template also includes [`//build/config/sanitizers:deps`](https://cs.chromium.org/chromium/src/build/config/sanitizers/BUILD.gn)
+to allow compilation with sanitizers.
 
 
 ## Testing
@@ -67,12 +87,12 @@ back to you with the continuous build result.
 
 ## Code Style
 
-We generally follow the [Chromium][8] style guides. For
-sake of consistency a reviewer might ask you to break the style guide, or
-extend your changes to make old non-compliant code up to date with the style
-guide.
-
-[8]: http://www.chromium.org/developers/coding-style
+We follow the [Chromium][8] style guides, with the exception that Java
+follows the [Google Java Style Guide][12]. However, it is usually a
+good idea to maintain consistency with nearby code, so when making
+changes to old, non-compliant code it may be better to maintain its
+non-compliant style&mdash;or to lead with a CL that makes the whole
+chunk of non-compliant code comply with the style guide.
 
 To format the code in a CL, you can use `git cl format`.
 To manually run the C++ lint checker, use `cpplint.py`.
@@ -85,9 +105,6 @@ contributor agreements
 
   * [Individual Contributors License][1]
   * [Corporate Contributors License][2]
-
-[1]: https://cla.developers.google.com/about/google-individual
-[2]: https://cla.developers.google.com/about/google-corporate
 
 Also, please re-read our project's
 [license]({{ site.baseurl}}/license/software/) and
@@ -109,7 +126,15 @@ This will open a text editor showing all local commit messages, allowing you
 to modify it before it becomes the CL description. Save and close the file to
 proceed with the upload to the WebRTC [code review server][3].
 
-[3]: https://codereview.webrtc.org/
+
+#### Referencing bugs
+
+In your CL description you should always try to reference a bug using the `BUG=`
+field. After the equals sign you should add a prefix followed by the bug number
+in the issue tracker of your bug:
+
+* `webrtc:` for the [WebRTC bug tracker][10], e.g. `BUG=webrtc:1234`
+* `chromium:` for the [Chromium bug tracker][11], e.g. `BUG=chromium:123456`
 
 
 #### Getting your CL Reviewed
@@ -120,8 +145,6 @@ CL, add reviewers etc.
 Add the reviewers that should review your change, including at least one of
 the directory owners for each directory you modify. See the OWNERS files in
 the source tree and [read more about OWNERS files][4] if needed.
-
-[4]: http://www.chromium.org/developers/owners-files
 
 A CL must be approved by a directory owner to be able to commit. To send out a
 mail with the CL to everybody included you need to press
@@ -155,8 +178,6 @@ git cl try -b mac -b mac_rel -m tryserver.webrtc
 You can see the available trybot names by clicking the "Choose trybots" link in
 Rietveld (scroll down to `tryserver.webrtc`).
 
-[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
-
 
 #### Tryjobs on Chromium trybots
 
@@ -177,7 +198,7 @@ To use this feature:
      description:
 
      ~~~~~ bash
-     CQ_INCLUDE_TRYBOTS=tryserver.chromium.linux:bot1,bot2;tryserver.chromium.mac:bot3
+     CQ_INCLUDE_TRYBOTS=master.tryserver.chromium.linux:bot1,bot2;master.tryserver.chromium.mac:bot3
      ~~~~~
 
      Adjust it to your needs but make sure to follow the format convention:
@@ -200,7 +221,7 @@ Example preset selection of bots (notice this may quickly become outdated):
 git cl try -m tryserver.chromium.win -b win_chromium_rel_ng
 git cl try -m tryserver.chromium.android -b android_compile_dbg -b linux_android_rel_ng
 git cl try -m tryserver.chromium.linux -b linux_chromium_rel_ng
-git cl try -m tryserver.chromium.mac -b mac_chromium_gn_rel -b mac_chromium_rel_ng -b  ios-device -b ios-simulator-gn
+git cl try -m tryserver.chromium.mac -b mac_chromium_rel_ng -b ios-device
 ~~~~~
 
 ##### Note about which tests are run
@@ -216,8 +237,6 @@ test failure. Doing this, it will restore the revision of
 This makes it possible that a test still fails without the patch in case there's
 currently an error for the HEAD revision of WebRTC when built inside Chromium.
 
-[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
-[7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
 
 ## Committing your CL
 
@@ -229,3 +248,16 @@ to submit the CL for you using the Commit Queue (CQ).
 See the "Committing Code" section at the
 [Development]({{ site.baseurl }}/native-code/development/) page for details on
 how to commit the CL.
+
+[1]: https://cla.developers.google.com/about/google-individual
+[2]: https://cla.developers.google.com/about/google-corporate
+[3]: https://codereview.webrtc.org/
+[4]: http://www.chromium.org/developers/owners-files
+[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
+[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
+[7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
+[8]: http://www.chromium.org/developers/coding-style
+[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
+[10]: https://bugs.webrtc.org
+[11]: https://crbug.com
+[12]: https://google.github.io/styleguide/javaguide.html

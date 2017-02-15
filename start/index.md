@@ -79,11 +79,8 @@ More resources below.
 ### Native APIs
 * [Getting started with WebRTC on iOS](https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/)
 * [Introduction to WebRTC on Android](https://tech.appear.in/2015/05/25/Introduction-to-WebRTC-on-Android)
-* [Getting Started](https://webrtc.org/reference/getting-started) (from webrtc.org)
 * [Build scripts from pristineio](https://github.com/pristineio/webrtc-build-scripts): repo with links to how-to guides for Android and iOS
-* [WebRTC Internals documentation](https://webrtc.org/reference/webrtc-internals)
 * [Native API documentation](https://webrtc.org/native-code/)
-* [libjingle Developer Guide](https://developers.google.com/talk/libjingle/developer_guide?csw=1)
 * [WebRTC shim for WKWebView](https://github.com/common-tater/wkwebview-webrtc-shim)
 
 ### Discussion, blogs and articles
@@ -144,6 +141,7 @@ More resources below.
 * SVG filters: [rawgithub.com/SenorBlanco/moggy/master/filterbooth.html](https://rawgithub.com/SenorBlanco/moggy/master/filterbooth.html)
 * Face masking with WebGL:[auduno.github.io/clmtrackr/face\_mask.html](http://auduno.github.io/clmtrackr/face_mask.html)
 * Face deformation with WebGL: [auduno.github.io/clmtrackr/examples/facedeform.html](http://auduno.github.io/clmtrackr/examples/facedeform.html)
+* Augmented Reality Photobooth: [picshare.jooink.com](https://picshare.jooink.com/)
 
 #### Screen capture
 * [Screen recording app](https://github.com/niklasenbom/RecordingApp)

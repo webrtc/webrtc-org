@@ -14,13 +14,7 @@ Android development is only supported on Linux.
 
   1. Install [prerequisite software][1]
 
-  2. Set the target OS in your environment:
-
-     ~~~~~ bash
-     export GYP_DEFINES="OS=android"
-     ~~~~~
-
-  3. Create a working directory, enter it, and run:
+  2. Create a working directory, enter it, and run:
 
      ~~~~~ bash
      fetch --nohooks webrtc_android
@@ -28,12 +22,38 @@ Android development is only supported on Linux.
      ~~~~~
 
 This will fetch a regular WebRTC checkout with the Android-specific parts
-added. The same checkout can be used for both Linux and Android development,
-depending on the OS you set in `GYP_DEFINES` (see above).
+added. Notice that the Android specific parts like the Android SDK and NDK are
+quite large (~8 GB), so the total checkout size will be about 16 GB.
+The same checkout can be used for both Linux and Android development since you
+can generate your [Ninja][4] project files in different directories for each
+build config.
 
 See [Development](/native-code/development/) for instructions on how to update
 the code, building etc.
 
+### Compiling
+
+  1. Generate projects using GN.
+
+     Make sure your current working directory is src/ of your workspace.
+     Then run:
+
+     ~~~~~ bash
+     gn gen out/Debug --args='target_os="android" target_cpu="arm"'
+     ~~~~~
+
+     You can specify a directory of your own choice instead of `out/Debug`,
+     to enable managing multiple configurations in parallel.
+
+      * To build for ARM64: use `target_cpu="arm64"`
+      * To build for 32-bit x86: use `target_cpu="x86"`
+      * To build for 64-bit x64: use `target_cpu="x64"`
+
+  2. Compile using:
+
+     ~~~~~ bash
+     ninja -C out/Debug
+     ~~~~~
 
 ### Using the Bundled Android SDK/NDK
 
@@ -48,9 +68,9 @@ In order to use the Android SDK and NDK that is bundled in
 Then you'll have `adb` and all the other Android tools in your `PATH`.
 
 
-### Running the AppRTCDemo App
+### Running the AppRTCMobile App
 
-AppRTCDemo is an Android application using WebRTC Native APIs via JNI (JNI
+AppRTCMobile is an Android application using WebRTC Native APIs via JNI (JNI
 wrapper is documented [here][2]).
 
 For instructions on how to build and run, see
@@ -64,12 +84,7 @@ To build APKs with the WebRTC native tests, follow these instructions.
   1. Ensure you have an Android device set in Developer mode connected via
      USB.
 
-  2. With the target OS set in `GYP_DEFINES` as described above, compile
-     everything:
-
-     ~~~~~ bash
-     ninja -C out/Debug
-     ~~~~~
+  2. Compile as described in the section above.
 
   3. To see which tests are available: look in `out/Debug/bin`.
 
@@ -90,13 +105,14 @@ To build APKs with the WebRTC native tests, follow these instructions.
   6. **NOTICE:** The first time you run a test, you must accept a dialog on
      the device!
 
-If want to run Release builds instead; build `out/Release` and use the scripts
-generated in `out/Release/bin`.
+If want to run Release builds instead; pass `is_debug=false` to GN (and
+preferably generate the projects files into a directory like `out/Release`).
+Then use the scripts generated in `out/Release/bin` instead.
 
 
 ### Running WebRTC Instrumentation Tests on an Android Device
 
-The instrumentation tests (like AppRTCDemoTest and
+The instrumentation tests (like AppRTCMobileTest and
 libjingle_peerconnection_android_unittest) gets scripts generated in the same
 location as the native tests described in the previous section.
 
@@ -104,3 +120,4 @@ location as the native tests described in the previous section.
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
+[4]: https://ninja-build.org/

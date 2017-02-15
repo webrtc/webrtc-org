@@ -31,14 +31,16 @@ For desktop development:
      gclient sync
      ~~~~~
 
-     NOTICE: Due to [bug 5578][12] you may have to press 'y' to accept a license
-     dialog for downloading Google Play Services SDK.
+     NOTICE: During your first sync, you'll have to accept the license
+     agreement of the Google Play Services SDK.
 
-     The dowload will **take a long time** because it downloads the whole
-     Chromium repository and dependencies, which are several gigabytes.
-     **Do not** interrupt this step or you may need to start all over agan (a
-     new `gclient sync` may be enough, but you might also need to start over
-     cleanly).
+     The checkout size is large due the use of the Chromium build toolchain and
+     many dependencies. Estimated size:
+
+      * Linux: 6.4 GB.
+      * Linux (with Android): 16 GB (of which ~8 GB is Android SDK+NDK images).
+      * Mac (with iOS support): 5.6GB
+
 
   2. Optionally you can specify how new branches should be tracked:
 
@@ -67,7 +69,7 @@ Update your current branch with:
 git pull
 ~~~~~
 
-**Notice:** if you're not on a branch, `git pull` won't work, and you'll need
+**NOTICE:** if you're not on a branch, `git pull` won't work, and you'll need
 to use `git fetch` instead.
 
 Periodically, the build toolchain and dependencies of WebRTC are updated. To
@@ -77,81 +79,70 @@ get such updates you must run:
 gclient sync
 ~~~~~
 
-In addition to downloading dependencies this also generates native build files
-for your environment using [GYP][4] during the execution of the hooks in the
-[DEPS][5] file (which can also be run separately using `gclient runhooks`).
-
-[Ninja][6] is the default build system for all platforms. It is possible to
-just generate new build files by calling:
-
-~~~~~ bash
-python webrtc/build/gyp_webrtc.py
-~~~~~
-
-This also runs as a part of the `gclient runhooks` step.
-
 
 ### Building
 
-Binaries are by default (i.e. when building with ninja) generated in
-`out/Debug` and `out/Release` for debug and release builds respectively. See
-[Android][1] and [iOS][2] for build instructions specific to those platforms.
+[Ninja][5] is the default build system for all platforms.
+
+See [Android][1] and [iOS][2] for build instructions specific to those
+platforms.
 
 
-#### With Ninja
+#### Generating Ninja project files
 
-Ninja project files are normally generated during the
-`gclient sync</runhooks>` step. If you need to re-generate only the ninja
-files (like if you've wiped your out folder), run:
+[Ninja][5] project files are generated using [GN][12]. They're put in a
+directory of your choice, like `out/Debug` or `out/Release`, but you can
+use any directory for keeping multiple configurations handy.
+
+To generate project files using the defaults (Debug build), run (standing in
+the src/ directory of your checkout):
 
 ~~~~~ bash
-python webrtc/build/gyp_webrtc.py
+gn gen out/Default
 ~~~~~
 
-Then compile with (standing in `src/`):
+**NOTICE:** Debug builds are [component builds][14] (shared libraries) by
+default unless `is_component_build=false` is passed to `gn gen --args`.
+Release builds are static by default.
 
-Debug:
+To generate ninja project files for a Release build instead:
 
 ~~~~~ bash
-ninja -C out/Debug
+gn gen out/Default --args='is_debug=false'
 ~~~~~
 
-Release:
+To clean all build artifacts in a directory but leave the current GN
+configuration untouched (stored in the args.gn file), do:
 
 ~~~~~ bash
-ninja -C out/Release
+gn clean out/Default
+~~~~~
+
+See the [GN][12] documentation for all available options. There are also more
+platform specific tips on the [Android][1] and [iOS][2] pages.
+
+
+#### Compiling
+
+When you have Ninja project files generated (see previous section), compile
+(standing in `src/`) using:
+
+For [Ninja][5] project files generated in `out/Default`:
+
+~~~~~ bash
+ninja -C out/Default
 ~~~~~
 
 
 #### Using Another Build System
 
-Other build systems are **not fully supported** (and may fail), such as Visual
-Studio on Win or Xcode on OSX. GYP supports a hybrid approach of using ninja
-for building, but VS/Xcode for editing and driving compilation. Set the
-`GYP_GENERATORS` environment variable to the string:
+Other build systems are **not supported** (and may fail), such as Visual
+Studio on Windows or Xcode on OSX. GN supports a hybrid approach of using
+[Ninja][5] for building, but Visual Studio/Xcode for editing and driving
+compilation.
 
-  * `ninja,msvs-ninja` for Visual Studio project building with ninja
-
-  * `ninja,xcode-ninja` for Xcode
-
-Note, when the build environment is set to generate Visual Studio project
-files, GYP will by default generate a project for the latest version of
-Visual Studio installed on your computer. It is possible to specify the
-desired Visual Studio version as described below:
-
-Set environment variable `GYP_MSVS_VERSION=<version>` before `runhooks`, or
-manually run the following gyp command from the `src/` directory (this
-replaces `gclient runhooks`):
-
-~~~~~ bash
-python webrtc/build/gyp_webrtc.py -G msvs_version=<version>
-~~~~~
-
-Where `<version>` is on the form YYYY. And Chromium requests VS2013 for now.
-
-Then use Visual Studio to open and build the `src/all.sln` solution file.
-
-Please refer to <http://www.chromium.org> for more details.
+To generate IDE project files, pass the `--ide` flag to the [GN][12] command.
+See the [GN reference][13] for more details on the supported IDEs.
 
 
 ### Working with Release Branches
@@ -162,7 +153,7 @@ To see available release branches, run:
 git branch -r
 ~~~~~
 
-**Notice:** If you only see your local branches, you have a checkout created
+**NOTICE:** If you only see your local branches, you have a checkout created
 before our switch to Git (March 24, 2015). In that case, first run:
 
 ~~~~~ bash
@@ -191,18 +182,13 @@ Commit log for the branch:
 To browse it:
 <https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
 
-Since this is the equivalent to stable code, you might want to compile
-it without the tests by adding `include_tests=0` in your `GYP_DEFINES`
-environement variable. Release builds can also add `fastbuild=2` for
-extra speed.
-
-For more details, read Chromium's [Working with Branches][7] and
-[Working with Release Branches][8] pages.
+For more details, read Chromium's [Working with Branches][6] and
+[Working with Release Branches][7] pages.
 
 
 ### Contributing Patches
 
-Please see [Contributing Fixes][9] for information on how to get your changes
+Please see [Contributing Fixes][8] for information on how to get your changes
 included in the WebRTC codebase. You'll also need to setup authentication for
 committing, below.
 
@@ -233,7 +219,7 @@ already do), you can skip steps 1 and 2.
   4. Ask to be added to the committers group to get push access.
 
   5. Make sure you have set the `user.name` and `user.email` Git config
-     settings as specified at the [depot tools setup page][10]. If you're also
+     settings as specified at the [depot tools setup page][9]. If you're also
      a Chromium committer, read the next section.
 
 Commit a change list to the Git repo using:
@@ -242,7 +228,7 @@ Commit a change list to the Git repo using:
 git cl land
 ~~~~~
 
-**Notice:** On Windows, you'll need to run this in a Git bash shell in order
+**NOTICE:** On Windows, you'll need to run this in a Git bash shell in order
 for gclient to find the `.gitcookies` file.
 
 Sometimes it's necessary to bypass the presubmit checks (like when fixing an
@@ -254,7 +240,7 @@ error that has closed the tree). Then use the `--bypass-hooks` flag.
 Many WebRTC committers are also Chromium committers. To make sure to use the
 right account for pushing commits to WebRTC, use the `user.email` Git config
 setting. The recommended way is to have the chromium.org account set globally
-as described at the [depot tools setup page][10] and then set `user.email`
+as described at the [depot tools setup page][9] and then set `user.email`
 locally for the WebRTC repos using (change to your webrtc.org address):
 
 ~~~~~ bash
@@ -272,7 +258,7 @@ listed first.
 
 #### Peerconnection
 
-Peerconnection consist of two applications using the [WebRTC Native APIs][11]:
+Peerconnection consist of two applications using the [WebRTC Native APIs][10]:
 
   * A server application, with target name `peerconnection_server`
 
@@ -317,7 +303,7 @@ server to connect to.
 
 Start an instance of `peerconnection_server` application.
 
-Open `src/talk/examples/peerconnection/server/server_test.html` in your
+Open `src/webrtc/examples/peerconnection/server/server_test.html` in your
 browser. Click **Connect**. Observe that the `peerconnection_server` announces
 your connection. Open one more tab using the same page. Connect it too (with a
 different name). It is now possible to exchange messages between the connected
@@ -362,14 +348,16 @@ Target name `turnserver`. In active development to reach compatibility with
 [1]: {{ site.baseurl }}/native-code/android/
 [2]: {{ site.baseurl }}/native-code/ios/
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[4]: https://gyp.gsrc.io/
-[5]: https://chromium.googlesource.com/external/webrtc/+/master/DEPS
-[6]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
-[7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
-[8]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
-[9]: {{ site.baseurl }}/contributing/
-[10]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
-[11]: {{ site.baseurl }}/native-code/native-apis/
-[12]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
+[4]: https://chromium.googlesource.com/external/webrtc/+/master/DEPS
+[5]: https://ninja-build.org/
+[6]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
+[7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
+[8]: {{ site.baseurl }}/contributing/
+[9]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
+[10]: {{ site.baseurl }}/native-code/native-apis/
+[11]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
+[12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
+[13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
+[14]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
