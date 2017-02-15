@@ -5,13 +5,6 @@ permalink: /
 class: home
 ---
 
-<a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to Harald Alvestrand post on discuss-webrtc"><img src="{{ site.baseurl }}/assets/images/webrtc-5-banner.png" style="max-width: 100%"></a>
-
-<p style="font-family: Open Sans, sans-serif; font-size: 30px; font-weight: bold; margin: 40px 0 40px 0; text-align: center">Happy Birthday WebRTC!</p>
-
-<p style="font-family: Open Sans, sans-serif; font-size: 21px; font-weight: bold; margin: 40px 0 40px 0; text-align: center">Want to learn more about WebRTC's history? Check out <a href="https://groups.google.com/forum/#!topic/discuss-webrtc/I0GqzwfKJfQ" title="Link to post on discuss-webrtc">Harald Alvestrand's post</a>.</p>
-
-
 <div class="jumbotron clearfix" markdown="1">
 
 <!-- <img src="{{ site.baseurl }}/assets/images/webrtc-logo-vert-retro-255x305.png" class="pull-right" style="margin-left: 2em; margin-bottom: .5em;"> -->
@@ -27,7 +20,7 @@ all to communicate via a common set of protocols.
 The WebRTC initiative is a project supported by Google, Mozilla and Opera,
 amongst others. This page is maintained by the Google Chrome team.
 
-**New to WebRTC? Take a look at our new [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web).**
+**New to WebRTC? Take a look at our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web).**
 
 Lots more resources for getting started are available from [webrtc.org/start](https://webrtc.org/start).
 
@@ -143,11 +136,11 @@ Lots more resources for getting started are available from [webrtc.org/start](ht
         <p><strong>Live demos</strong> can be accessed at <a href="https://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
       </li>
       <li>
-        <p>Check out the latest WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
+        <p>Check out the WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
       </li>
     </ul>
     <div class="embed-responsive embed-responsive-16by9 yt-embed">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/HCE3S1E5UwY" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/NEx1XwwwcO0" frameborder="0" allowfullscreen></iframe>
     </div>
 
   </div>
