@@ -49,6 +49,16 @@ the code, building etc.
       * To build for 32-bit x86: use `target_cpu="x86"`
       * To build for 64-bit x64: use `target_cpu="x64"`
 
+     **NOTICE: Component Builds are not supported**
+
+     The Gn arg `is_component_build` is currently ignored for WebRTC builds.
+     [Component builds][5] are supported by Chromium and the arg
+     `is_component_build` makes it possible to create shared libraries instead
+     of static libraries.
+     If an app depends on WebRTC it makes sense to just depend on the WebRTC
+     static library, so there is no difference between `is_component_build=true`
+     and `is_component_build=false`.
+
   2. Compile using:
 
      ~~~~~ bash
@@ -121,3 +131,4 @@ location as the native tests described in the previous section.
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
 [4]: https://ninja-build.org/
+[5]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md

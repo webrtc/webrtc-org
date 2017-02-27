@@ -62,10 +62,6 @@ The variables you should care about are the following:
   - For builds targeting iOS devices, this should be set to either `"arm"` or
   `"arm64"`, depending on the architecture of the device. For builds to run in
   the simulator, this should be set to `"x64"`.
-* `is_component_build`:
-  - Component builds don't take as long to link, but have runtime performance
-  implications. They are not supported on iOS, so this should always be set
-  to `false`.
 * `is_debug`:
   - Debug builds are the default. When building for release, specify `false`.
 
@@ -85,11 +81,21 @@ with the new arguments.
 
 ~~~~~ bash
 # debug build for 64-bit iOS
-gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
+gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64"'
 
 # debug build for simulator
-gn gen out/ios_sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
+gn gen out/ios_sim --args='target_os="ios" target_cpu="x64"'
 ~~~~~
+
+**NOTICE: Component Builds are not supported**
+
+The Gn arg `is_component_build` is currently ignored for WebRTC builds.
+[Component builds][8] are supported by Chromium and the arg
+`is_component_build` makes it possible to create shared libraries instead
+of static libraries.
+If an app depends on WebRTC it makes sense to just depend on the WebRTC static
+library, so there is no difference between `is_component_build=true` and
+`is_component_build=false`.
 
 ### Compiling with ninja
 
@@ -117,7 +123,7 @@ placed in your specified output directory.
 Example:
 
 ~~~~~ bash
-gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
+gn gen out/ios --args='target_os="ios" target_cpu="arm64"' --ide=xcode
 open -a Xcode.app out/ios/all.xcworkspace
 ~~~~~
 
@@ -193,3 +199,4 @@ For instructions on how to do this see [here][7]
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
 [7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
+[8]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md

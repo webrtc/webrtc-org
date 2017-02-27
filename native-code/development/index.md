@@ -101,10 +101,6 @@ the src/ directory of your checkout):
 gn gen out/Default
 ~~~~~
 
-**NOTICE:** Debug builds are [component builds][14] (shared libraries) by
-default unless `is_component_build=false` is passed to `gn gen --args`.
-Release builds are static by default.
-
 To generate ninja project files for a Release build instead:
 
 ~~~~~ bash
@@ -120,6 +116,16 @@ gn clean out/Default
 
 See the [GN][12] documentation for all available options. There are also more
 platform specific tips on the [Android][1] and [iOS][2] pages.
+
+**NOTICE: Component Builds are not supported**
+
+The Gn arg `is_component_build` is currently ignored for WebRTC builds.
+[Component builds][15] are supported by Chromium and the arg
+`is_component_build` makes it possible to create shared libraries instead
+of static libraries.
+If an app depends on WebRTC it makes sense to just depend on the WebRTC static
+library, so there is no difference between `is_component_build=true` and
+`is_component_build=false`.
 
 
 #### Compiling
@@ -359,5 +365,6 @@ Target name `turnserver`. In active development to reach compatibility with
 [12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
 [14]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
+[15]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
