@@ -51,8 +51,8 @@ the code, building etc.
 
      **NOTICE: Component Builds are not supported**
 
-     The Gn arg `is_component_build` is currently ignored for WebRTC builds.
-     [Component builds][5] are supported by Chromium and the arg
+     The Gn argument `is_component_build` is currently ignored for WebRTC builds.
+     [Component builds][5] are supported by Chromium and the argument
      `is_component_build` makes it possible to create shared libraries instead
      of static libraries.
      If an app depends on WebRTC it makes sense to just depend on the WebRTC
