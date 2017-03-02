@@ -353,7 +353,5 @@ Target name `turnserver`. In active development to reach compatibility with
 [11]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
 [12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
-[14]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
-[15]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766

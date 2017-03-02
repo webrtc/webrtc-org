@@ -189,4 +189,3 @@ For instructions on how to do this see [here][7]
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
 [7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
-[8]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md

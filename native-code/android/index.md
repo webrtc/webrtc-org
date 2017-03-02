@@ -121,4 +121,3 @@ location as the native tests described in the previous section.
 [2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
 [4]: https://ninja-build.org/
-[5]: https://chromium.googlesource.com/chromium/src/+/master/docs/component_build.md
