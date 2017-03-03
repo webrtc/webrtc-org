@@ -62,10 +62,6 @@ The variables you should care about are the following:
   - For builds targeting iOS devices, this should be set to either `"arm"` or
   `"arm64"`, depending on the architecture of the device. For builds to run in
   the simulator, this should be set to `"x64"`.
-* `is_component_build`:
-  - Component builds don't take as long to link, but have runtime performance
-  implications. They are not supported on iOS, so this should always be set
-  to `false`.
 * `is_debug`:
   - Debug builds are the default. When building for release, specify `false`.
 
@@ -85,10 +81,10 @@ with the new arguments.
 
 ~~~~~ bash
 # debug build for 64-bit iOS
-gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
+gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64"'
 
 # debug build for simulator
-gn gen out/ios_sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
+gn gen out/ios_sim --args='target_os="ios" target_cpu="x64"'
 ~~~~~
 
 ### Compiling with ninja
@@ -117,7 +113,7 @@ placed in your specified output directory.
 Example:
 
 ~~~~~ bash
-gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
+gn gen out/ios --args='target_os="ios" target_cpu="arm64"' --ide=xcode
 open -a Xcode.app out/ios/all.xcworkspace
 ~~~~~
 
