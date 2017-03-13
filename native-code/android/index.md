@@ -79,7 +79,8 @@ For instructions on how to build and run, see
 
 ### Using Android Studio
 
-  1. Build the project normally:
+  1. Build the project normally (out/Debug should be the directory you used when
+     generating the build files using GN):
 
      ~~~~~ bash
      ninja -C out/Debug AppRTCMobile
