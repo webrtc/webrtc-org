@@ -89,7 +89,8 @@ For instructions on how to build and run, see
 
      ~~~~~ bash
      build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
-     --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources
+     --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources \
+     --split-projects
      ~~~~~
 
   3. *Import* the project in Android Studio. (Do not just open it.) The project
