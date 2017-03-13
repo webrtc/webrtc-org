@@ -98,7 +98,7 @@ For instructions on how to build and run, see
      Android Studio's SDK. When asked whether to use the Gradle wrapper, press
      "OK".
 
-  4. Ensure target `webrtc>examples>AppRTCMobile` is selected and press Run.
+  4. Ensure target `webrtc > examples > AppRTCMobile` is selected and press Run.
      AppRTCMobile should now start on the device.
 
 If you do any changes to the C++ code, you have to compile the project using
