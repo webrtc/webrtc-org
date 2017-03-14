@@ -77,6 +77,35 @@ For instructions on how to build and run, see
 [webrtc/examples/androidapp/README][3].
 
 
+### Using Android Studio
+
+  1. Build the project normally (out/Debug should be the directory you used when
+     generating the build files using GN):
+
+     ~~~~~ bash
+     ninja -C out/Debug AppRTCMobile
+     ~~~~~
+
+  2. Generate the project files:
+
+     ~~~~~ bash
+     build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
+     --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources \
+     --split-projects
+     ~~~~~
+
+  3. *Import* the project in Android Studio. (Do not just open it.) The project
+     is located in `out/Debug/gradle`. If asked which SDK to use, choose to use
+     Android Studio's SDK. When asked whether to use the Gradle wrapper, press
+     "OK".
+
+  4. Ensure target `webrtc > examples > AppRTCMobile` is selected and press Run.
+     AppRTCMobile should now start on the device.
+
+If you do any changes to the C++ code, you have to compile the project using
+ninja after the changes (see step 1).
+
+
 ### Running WebRTC Native Tests on an Android Device
 
 To build APKs with the WebRTC native tests, follow these instructions.
