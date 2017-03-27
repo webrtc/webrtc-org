@@ -21,10 +21,10 @@ _NOTICE:_ You will need to install [Chromium depot_tools][1].
 
 Create a working directory, enter it, and run:
 
-~~~~~ bash
+```shell
 fetch --nohooks webrtc_ios
 gclient sync
-~~~~~
+```
 
 This will fetch a regular WebRTC checkout with the iOS-specific parts
 added. The same checkout can be used for both Mac and iOS development,
@@ -38,9 +38,9 @@ Note that the git repository root is in `src`.
 
 From here you can check out a new local branch with:
 
-~~~~~ bash
+```shell
 git new-branch <branch name>
-~~~~~
+```
 
 See [Development][2] for generic instructions on how
 to update the code in your checkout.
@@ -83,21 +83,21 @@ with the new arguments.
 
 #### Examples
 
-~~~~~ bash
+```shell
 # debug build for 64-bit iOS
 gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
 
 # debug build for simulator
 gn gen out/ios_sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
-~~~~~
+```
 
 ### Compiling with ninja
 
 To compile, just run ninja on the appropriate target. For example:
 
-~~~~~ bash
+``` shell
 ninja -C out/ios_64 AppRTCMobile
-~~~~~
+```
 
 Replace `AppRTCMobile` in the command above with the target you
 are interested in.
@@ -116,10 +116,10 @@ placed in your specified output directory.
 
 Example:
 
-~~~~~ bash
+``` shell
 gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
 open -a Xcode.app out/ios/all.xcworkspace
-~~~~~
+```
 
 *Compile and run with Xcode*
 
@@ -153,9 +153,9 @@ as well, e.g. [`ios-deploy`][6].
 **NOTICE:** To deploy to an iOS device you must have a valid signing identity
 set up. You can verify this by running:
 
-~~~~ bash
+``` shell
 xcrun security find-identity -v -p codesigning
-~~~~
+```
 
 If you don't have a valid signing identity, you can still build for ARM,
 but you won't be able to deploy your code to an iOS device. To do this,
@@ -168,9 +168,10 @@ To build WebRTC for use in a native iOS app, it's easiest to build
 `WebRTC.framework`. This can be done with ninja as follows, replacing `ios`
 with the actual location of your generated build files.
 
-~~~~~ bash
+``` shell
 ninja -C out/ios rtc_sdk_framework_objc
-~~~~~
+```
+
 
 This should result in a `.framework` bundle being generated in `out/ios`.
 This bundle can now be directly included in another app.
