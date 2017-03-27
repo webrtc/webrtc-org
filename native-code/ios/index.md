@@ -182,7 +182,7 @@ a script is available [here][3]
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/build/ios/build_ios_libs.sh
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/tools-webrtc/ios/build_ios_libs.py
 [4]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
