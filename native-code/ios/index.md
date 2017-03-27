@@ -27,9 +27,9 @@ gclient sync
 ```
 
 This will fetch a regular WebRTC checkout with the iOS-specific parts
-added. The same checkout can be used for both Mac and iOS development,
-since you can generate your [Ninja][4] project files in multiple
-directories (see below).
+added. Notice the size is quite large: about 6GB. The same checkout can be used
+for both Mac and iOS development, since GN allows you to generate your
+[Ninja][4] project files in different directories for each build config.
 
 You may want to disable Spotlight indexing for the checkout to speed up
 file operations.
@@ -62,10 +62,6 @@ The variables you should care about are the following:
   - For builds targeting iOS devices, this should be set to either `"arm"` or
   `"arm64"`, depending on the architecture of the device. For builds to run in
   the simulator, this should be set to `"x64"`.
-* `is_component_build`:
-  - Component builds don't take as long to link, but have runtime performance
-  implications. They are not supported on iOS, so this should always be set
-  to `false`.
 * `is_debug`:
   - Debug builds are the default. When building for release, specify `false`.
 
@@ -85,10 +81,10 @@ with the new arguments.
 
 ```shell
 # debug build for 64-bit iOS
-gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64" is_component_build=false'
+gn gen out/ios_64 --args='target_os="ios" target_cpu="arm64"'
 
 # debug build for simulator
-gn gen out/ios_sim --args='target_os="ios" target_cpu="x64" is_component_build=false'
+gn gen out/ios_sim --args='target_os="ios" target_cpu="x64"'
 ```
 
 ### Compiling with ninja
@@ -117,7 +113,7 @@ placed in your specified output directory.
 Example:
 
 ``` shell
-gn gen out/ios --args='target_os="ios" target_cpu="arm64" is_component_build=false' --ide=xcode
+gn gen out/ios --args='target_os="ios" target_cpu="arm64"' --ide=xcode
 open -a Xcode.app out/ios/all.xcworkspace
 ```
 
@@ -180,10 +176,17 @@ If you need a FAT `.framework`, that is, a binary that contains code for
 multiple architectures, and will work both on device and in the simulator,
 a script is available [here][3]
 
+Please note that you can not ship the FAT framework binary with your app
+if you intend to distribute it through the app store.
+To solve this either remove "x86-64" from the list of architectures in
+the [build script][3] or split the binary and recreate it without x86-64.
+For instructions on how to do this see [here][7]
+
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
 [3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/tools-webrtc/ios/build_ios_libs.py
-[4]: https://chromium.googlesource.com/chromium/src/+/master/docs/ninja_build.md
+[4]: https://ninja-build.org/
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
+[7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
