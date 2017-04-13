@@ -11,4 +11,4 @@ permalink: /experiments/rtp-hdrext/
 Underneath this page, RTP header extensions are listed.
 
   * [abs-send-time](abs-send-time)
-  * [content-type](content-type)
+  * [video-content-type](video-content-type)
