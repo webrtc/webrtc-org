@@ -9,6 +9,9 @@ dir=$(dirname $0)
 [ "$TRAVIS_SECURE_ENV_VARS" != "true" ] && exit 0
 [ "$TRAVIS_BRANCH" != "gh-pages" ] && exit 0
 
+# The robot.json was encrypted using "travis encrypt-file" command.
+# See the following for more details:
+# https://docs.travis-ci.com/user/encrypting-files/.
 openssl aes-256-cbc -d \
   -K $encrypted_8544588a4144_key -iv $encrypted_8544588a4144_iv \
   -in $dir/robot.json.enc -out $dir/robot.json
