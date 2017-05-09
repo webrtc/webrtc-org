@@ -7,7 +7,7 @@ date: 2012-03-05 14:21:00
 
 
 The source code to <https://apprtc.appspot.com/> is now available at
-<https://chromium.googlesource.com/external/webrtc/+/master/talk/examples/android/src/org/appspot/apprtc/>
+<https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/src/org/appspot/apprtc>.
 
 Our goal is to keep this app updated to work with the latest Chrome code and
 to keep the code simple enough for everyone to use as an example or to simply

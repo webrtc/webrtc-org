@@ -139,7 +139,7 @@ More resources below.
 * Xylophone: [soundstep.com/blog/experiments/jsdetection](http://soundstep.com/blog/experiments/jsdetection)
 * Photobooth with filters: [webcamtoy.com](http://webcamtoy.com)
 * SVG filters: [rawgithub.com/SenorBlanco/moggy/master/filterbooth.html](https://rawgithub.com/SenorBlanco/moggy/master/filterbooth.html)
-* Face masking with WebGL:[auduno.github.io/clmtrackr/face\_mask.html](http://auduno.github.io/clmtrackr/face_mask.html)
+* Face masking with WebGL:[www.auduno.com/clmtrackr/examples/face_mask.html](https://www.auduno.com/clmtrackr/examples/face_mask.html)
 * Face deformation with WebGL: [auduno.github.io/clmtrackr/examples/facedeform.html](http://auduno.github.io/clmtrackr/examples/facedeform.html)
 * Augmented Reality Photobooth: [picshare.jooink.com](https://picshare.jooink.com/)
 

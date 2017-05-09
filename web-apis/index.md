@@ -15,8 +15,6 @@ developers to develop web applications using WebRTC technology:
     Between Browsers
   * <http://w3c.github.io/mediacapture-main/> - Media Capture and Streams
 
-See also the [webplatform.org documentation][1].
-
 
 ### Subpage Listing
 
@@ -25,5 +23,3 @@ See also the [webplatform.org documentation][1].
   * [Firefox](firefox)
   * [Interop Notes](interop)
   * [Standardization](standardization)
-
-[1]: http://docs.webplatform.org/wiki/apis/webrtc
