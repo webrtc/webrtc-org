@@ -51,7 +51,7 @@ More resources below.
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
 * Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
 * Cullen Jennings video: HTML5 WebRTC:[ vimeo.com/47682405](http://vimeo.com/47682405)
-* [WebRTC Fundamentals](http://bit.ly/learnwebrtc): online course
+* [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
 
 ### Codelabs
 * Walkthrough and code for setting up a server and client for video chat: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab)
