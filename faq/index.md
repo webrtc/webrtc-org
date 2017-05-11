@@ -125,11 +125,6 @@ components under it may be modified to improve quality, performance and
 feature set.
 
 
-### How can I implement my own renderer or add my own hooks in the WebRTC Platform?
-
-Please take a look at the [external renderer API](https://chromium.googlesource.com/external/webrtc/+/master/webrtc/video_engine/include/vie_render.h).
-
-
 ### WebRTC components are open-source. How do I get the source and contribute code?
 
 Please see [Getting Started]({{ site.baseurl }}/native-code/development/) and

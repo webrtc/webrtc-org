@@ -22,8 +22,6 @@ branches:
 
 script:
 - bundle exec jekyll build --config _config.yml,_config_prod.yml
-# There are too many broken links at the moment.
-# Uncomment when https://github.com/webrtc/webrtc-org/issues/131 is fixed.
-#- gem install html-proofer
-#- htmlproofer ./_site --only-4xx --allow-hash-href --alt-ignore '/.*/'
+- gem install html-proofer
+- htmlproofer ./_site --only-4xx --allow-hash-href --alt-ignore '/.*/'
 - _scripts/travis-deploy.sh

@@ -184,7 +184,7 @@ For instructions on how to do this see [here][7]
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/tools-webrtc/ios/build_ios_libs.py
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/tools_webrtc/ios/build_ios_libs.py
 [4]: https://ninja-build.org/
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy
