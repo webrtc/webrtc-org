@@ -1,0 +1,27 @@
+sudo: false
+language: ruby
+rvm: 2.3.3
+
+env:
+  global:
+  - PATH=$HOME/google-cloud-sdk/bin:$PATH
+  - CLOUDSDK_CORE_DISABLE_PROMPTS=1
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speed up html-proofer install
+
+cache:
+  bundler: true
+  directories:
+  - "$HOME/google-cloud-sdk/"
+
+# See the following for more details:
+# https://docs.travis-ci.com/user/customizing-the-build/#Building-Specific-Branches
+branches:
+  only:
+  - gh-pages
+  - /.*/
+
+script:
+- bundle exec jekyll build --config _config.yml,_config_prod.yml
+- gem install html-proofer
+- htmlproofer ./_site --only-4xx --allow-hash-href --alt-ignore '/.*/'
+- _scripts/travis-deploy.sh

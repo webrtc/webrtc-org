@@ -51,7 +51,7 @@ More resources below.
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
 * Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
 * Cullen Jennings video: HTML5 WebRTC:[ vimeo.com/47682405](http://vimeo.com/47682405)
-* [WebRTC Fundamentals](http://bit.ly/learnwebrtc): online course
+* [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
 
 ### Codelabs
 * Walkthrough and code for setting up a server and client for video chat: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab)
@@ -86,7 +86,6 @@ More resources below.
 ### Discussion, blogs and articles
 * [discuss-webrtc ](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc)
 * [@webrtc](http://twitter.com/webrtc)
-* [+webrtc](https://plus.sandbox.google.com/113817074606039822053/posts)
 * [WebRTC on Stack Overflow](http://stackoverflow.com/tags/webrtc)
 * [Tsahi Levent-Levi](https://bloggeek.me/)
 * [WebRTC Weekly](https://webrtcweekly.com/)
@@ -139,7 +138,7 @@ More resources below.
 * Xylophone: [soundstep.com/blog/experiments/jsdetection](http://soundstep.com/blog/experiments/jsdetection)
 * Photobooth with filters: [webcamtoy.com](http://webcamtoy.com)
 * SVG filters: [rawgithub.com/SenorBlanco/moggy/master/filterbooth.html](https://rawgithub.com/SenorBlanco/moggy/master/filterbooth.html)
-* Face masking with WebGL:[auduno.github.io/clmtrackr/face\_mask.html](http://auduno.github.io/clmtrackr/face_mask.html)
+* Face masking with WebGL:[www.auduno.com/clmtrackr/examples/face_mask.html](https://www.auduno.com/clmtrackr/examples/face_mask.html)
 * Face deformation with WebGL: [auduno.github.io/clmtrackr/examples/facedeform.html](http://auduno.github.io/clmtrackr/examples/facedeform.html)
 * Augmented Reality Photobooth: [picshare.jooink.com](https://picshare.jooink.com/)
 
@@ -164,7 +163,6 @@ More resources below.
 * [talky.io](http://talky.io)
 * [appear.in](http://appear.in)
 * [tawk.com](http://tawk.com)
-* [hu.tt](http://hu.tt)
 * [Twelephone](http://twelephone.com/): chat with Twitter contacts
 * [browsermeeting.com](http://browsermeeting.com/)
 * [codassium.com](http://codassium.com/): job interview tool with live coding

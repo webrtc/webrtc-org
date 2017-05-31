@@ -70,9 +70,9 @@ The worker thread is used to handle more resource-intensive processes, such as
 data streaming.
 
 
-  * Stream APIs ([mediastream.h](https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/mediastream.h))
+  * Stream APIs ([mediastreaminterface.h](https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/mediastreaminterface.h))
 
-  * PeerConnection APIs ([peerconnection.h](https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/peerconnection.h))
+  * PeerConnection APIs ([peerconnectioninterface.h](https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/peerconnectioninterface.h))
 
 
 
