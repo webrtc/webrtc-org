@@ -105,6 +105,10 @@ For instructions on how to build and run, see
 If you do any changes to the C++ code, you have to compile the project using
 ninja after the changes (see step 1).
 
+*Note: Only "arm" is supported as the target_cpu when using Android Studio. This
+still allows you to run the application on 64-bit ARM devices. x86-based devices
+are not supported right now.*
+
 
 ### Running WebRTC Native Tests on an Android Device
 
