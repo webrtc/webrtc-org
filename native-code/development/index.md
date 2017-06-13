@@ -169,6 +169,7 @@ the 43 branch):
 
 ~~~~~ bash
 git checkout -b my_branch refs/remotes/branch-heads/43
+gclient sync
 ~~~~~
 
 Commit log for the branch:
