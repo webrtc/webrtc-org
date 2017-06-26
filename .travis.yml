@@ -22,6 +22,6 @@ branches:
 
 script:
 - bundle exec jekyll build --config _config.yml,_config_prod.yml
-#- gem install html-proofer
-#- htmlproofer ./_site --only-4xx --allow-hash-href --alt-ignore '/.*/'
+- gem install html-proofer
+- htmlproofer ./_site --only-4xx --allow-hash-href --alt-ignore '/.*/'
 - _scripts/travis-deploy.sh
