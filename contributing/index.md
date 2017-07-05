@@ -23,6 +23,11 @@ After 10-20 non-trivial patches you can apply for commit rights. We will start
 the external contributions at a small scale, so please ask for access only
 when you have found a bug and have implemented a fix for it.
 
+## Code of conduct
+
+Google and the WebRTC team are committed to preserving and fostering a diverse, welcoming and open
+community.
+To make sure we preserve this, we have adopted a [Code of conduct](https://chromium.googlesource.com/external/webrtc/+/master/CODE_OF_CONDUCT.md).
 
 ## How to Create a Patch
 
