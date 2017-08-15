@@ -165,7 +165,7 @@ To build WebRTC for use in a native iOS app, it's easiest to build
 with the actual location of your generated build files.
 
 ~~~~~ bash
-ninja -C out/ios framework_objc
+ninja -C out/ios objc_framework
 ~~~~~
 
 This should result in a `.framework` bundle being generated in `out/ios`.
