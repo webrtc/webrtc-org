@@ -5,6 +5,7 @@ permalink: /release-notes/
 crumb: Release Notes
 ---
 
+  * [M61 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/8gJyg8EFPdo/OxUdyMjXBwAJ)
   * [M60 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/iw3c5xYXOUw/WF5QxRReBgAJ)
   * [M59 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/ogPObezLpHw/hwVgcW57BgAJ)
   * [M58 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/13BE3fbHcLU/bQJWNBihBgAJ)
