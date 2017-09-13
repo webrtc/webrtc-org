@@ -124,8 +124,8 @@ Lots more resources for getting started are available from [webrtc.org/start](ht
     <ul>
       <li>
         <p>The master <strong>source repository</strong> for WebRTC is at
-        <a href="https://chromium.googlesource.com/external/webrtc">
-        https://chromium.googlesource.com/external/webrtc</a> (check
+        <a href="https://webrtc.googlesource.com/src">
+        https://webrtc.googlesource.com/src</a> (check
         <a href="{{ site.baseurl }}/native-code/development/">Development</a>
         for more details).</p>
       </li>
