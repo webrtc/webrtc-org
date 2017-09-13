@@ -27,7 +27,7 @@ when you have found a bug and have implemented a fix for it.
 
 Google and the WebRTC team are committed to preserving and fostering a diverse, welcoming and open
 community.
-To make sure we preserve this, we have adopted a [Code of conduct](https://chromium.googlesource.com/external/webrtc/+/master/CODE_OF_CONDUCT.md).
+To make sure we preserve this, we have adopted a [Code of conduct](https://webrtc.googlesource.com/src/+/master/CODE_OF_CONDUCT.md).
 
 ## How to Create a Patch
 
@@ -73,7 +73,7 @@ back to you with the continuous build result.
 
 See the [coding style guide in the WebRTC tree][webrtc-coding-style].
 
-[webrtc-coding-style]: https://chromium.googlesource.com/external/webrtc/+/HEAD/style-guide.md
+[webrtc-coding-style]: https://webrtc.googlesource.com/src/+/HEAD/style-guide.md
 
 To format the code in a CL, you can use `git cl format`.
 To manually run the C++ lint checker, use `cpplint.py`.
@@ -234,9 +234,9 @@ how to commit the CL.
 [2]: https://cla.developers.google.com/about/google-corporate
 [3]: https://codereview.webrtc.org/
 [4]: http://www.chromium.org/developers/owners-files
-[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
+[5]: https://webrtc.googlesource.com/src/+/master/infra/config/cq.cfg
 [6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
 [7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
-[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
+[9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com

@@ -173,10 +173,10 @@ gclient sync
 ~~~~~
 
 Commit log for the branch:
-<https://chromium.googlesource.com/external/webrtc/+log/branch-heads/43>
+<https://webrtc.googlesource.com/src/+log/branch-heads/43>
 
 To browse it:
-<https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
+<https://webrtc.googlesource.com/src/+/branch-heads/43>
 
 For more details, read Chromium's [Working with Branches][6] and
 [Working with Release Branches][7] pages.
@@ -195,7 +195,7 @@ To commit code directly to the Git repo, you have to be a committer. CLs created
 by external contributors can be committed via the Commit Queue (CQ).
 
 The source of truth is the Git repository at
-<https://chromium.googlesource.com/external/webrtc>. To be able to push
+<https://webrtc.googlesource.com/src>. To be able to push
 commits to it, you need to perform the steps below (assuming you're a
 committer).
 
@@ -344,7 +344,7 @@ Target name `turnserver`. In active development to reach compatibility with
 [1]: {{ site.baseurl }}/native-code/android/
 [2]: {{ site.baseurl }}/native-code/ios/
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[4]: https://chromium.googlesource.com/external/webrtc/+/master/DEPS
+[4]: https://webrtc.googlesource.com/src/+/master/DEPS
 [5]: https://ninja-build.org/
 [6]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
 [7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
