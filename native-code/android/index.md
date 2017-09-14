@@ -14,11 +14,13 @@ available at JCenter. These libraries are compiled from the tip-of-tree and are
 meant for development purposes only.
 
 On Android Studio 3 add to your dependencies:
+
 ~~~~~
 implementation 'org.webrtc:google-webrtc:1.0.+'
 ~~~~~
 
 On Android Studio 2 add to your dependencies:
+
 ~~~~~
 compile 'org.webrtc:google-webrtc:1.0.+'
 ~~~~~
