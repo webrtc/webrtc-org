@@ -8,6 +8,28 @@ permalink: /native-code/android/
 {% include toc-hide.html %}
 
 
+### Prebuilt libraries
+The easiest way to get started is using the [official prebuilt libraries][5]
+available at JCenter. These libraries are compiled from the tip-of-tree and are
+meant for development purposes only.
+
+On Android Studio 3 add to your dependencies:
+
+~~~~~
+implementation 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+On Android Studio 2 add to your dependencies:
+
+~~~~~
+compile 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+The version of the library is `1.0.<Cr-Commit-Position>`. The hash of the commit
+can be found in the .pom-file. The third party licenses can be found in the
+THIRD_PARTY_LICENSES.md file next to the .aar-file.
+
+
 ### Getting the Code
 
 Android development is only supported on Linux.
@@ -91,7 +113,7 @@ For instructions on how to build and run, see
      ~~~~~ bash
      build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
      --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources \
-     --split-projects
+     --split-projects --canary
      ~~~~~
 
   3. *Import* the project in Android Studio. (Do not just open it.) The project
@@ -151,6 +173,7 @@ location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/sdk/android/README
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
+[2]: https://webrtc.googlesource.com/src/+/master/webrtc/sdk/android/README
+[3]: https://webrtc.googlesource.com/src/+/master/webrtc/examples/androidapp/README
 [4]: https://ninja-build.org/
+[5]: https://bintray.com/google/webrtc/google-webrtc

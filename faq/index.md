@@ -106,7 +106,7 @@ connection using ICE / STUN / Turn / RTP-over-TCP and support for proxies.
 
 ### How do I access the WebRTC code?
 
-Go to <https://chromium.googlesource.com/external/webrtc>
+Go to <https://webrtc.googlesource.com/src>
 
 
 ### How can I test the quality of WebRTC components?

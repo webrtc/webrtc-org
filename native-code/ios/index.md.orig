@@ -212,8 +212,8 @@ Please note that you can not ship the FAT framework binary with your app
 if you intend to distribute it through the app store.
 To solve this either remove "x86-64" from the list of architectures in
 the [build script][3] or split the binary and recreate it without x86-64.
+<<<<<<< HEAD
 For instructions on how to do this see [here][8]
-
 
 [1]: https://cocoapods.org/pods/GoogleWebRTC
 [2]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
@@ -223,3 +223,15 @@ For instructions on how to do this see [here][8]
 [6]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [7]: https://github.com/phonegap/ios-deploy
 [8]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
+=======
+For instructions on how to do this see [here][7]
+
+
+[1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
+[2]: {{ site.baseurl }}/native-code/development/
+[3]: https://webrtc.googlesource.com/src/+/master/tools_webrtc/ios/build_ios_libs.py
+[4]: https://ninja-build.org/
+[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
+[6]: https://github.com/phonegap/ios-deploy
+[7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
+>>>>>>> ec542df246b39b6bb817d031fba1544eba3392bd
