@@ -8,8 +8,29 @@ crumb: iOS
 
 {% include toc-hide.html %}
 
+### Using Cocoapods
+
+The WebRTC framework  is published on [cocoapods.org](https://cocoapods.org/pods/GoogleWebRTC).
+The framework is built from tip-of-tree.
+To integrate it into your project add the following lines to your Podfile
+
+~~~~
+source 'https://github.com/CocoaPods/Specs.git'
+target 'YOUR_APPLICATION_TARGET_NAME_HERE' do
+  platform :ios, '9.0'
+  pod 'GoogleWebRTC'
+end
+~~~~
+
+The versioning system used is *1.1.cr-commit-position*, where *cr-commit-position* can
+be used to identify the exact WebRTC revision the pod was built from. You can check the
+revision at crrev.com/CR_COMMIT_POSITION_HERE.
 
 ### Development Environment
+
+In case you need to build the framework manually
+(for instance if you need to support bitcode) or you want to try out the demo application
+AppRTCMobile, follow the instructions illustrated bellow.
 
 A macOS machine is required for iOS development. While it's possible to
 develop purely from the command line with text editors, it's easiest to use
@@ -174,6 +195,13 @@ This bundle can now be directly included in another app.
 If you need a FAT `.framework`, that is, a binary that contains code for
 multiple architectures, and will work both on device and in the simulator,
 a script is available [here][3]
+
+To build the framework with bitcode support, pass the `--bitcode` flag to the script like so
+
+~~~~ bash
+python build_ios_libs.py --bitcode
+~~~~
+The resulting framework can be found in out_ios_libs/.
 
 Please note that you can not ship the FAT framework binary with your app
 if you intend to distribute it through the app store.
