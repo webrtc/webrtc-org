@@ -10,8 +10,13 @@ crumb: iOS
 
 ### Using Cocoapods
 
-The WebRTC framework  is published on [cocoapods.org](https://cocoapods.org/pods/GoogleWebRTC).
+The WebRTC framework  is published on [cocoapods.org][1].
 The framework is built from tip-of-tree.
+
+_NOTICE_: The pod version of the framework doesn't support bitcode currently.
+If you need bitcode support, you'll need to manually build the framework.
+The process is described in detail in the following sections.
+
 To integrate it into your project add the following lines to your Podfile
 
 ~~~~
@@ -36,7 +41,7 @@ A macOS machine is required for iOS development. While it's possible to
 develop purely from the command line with text editors, it's easiest to use
 Xcode. Both methods will be illustrated here.
 
-_NOTICE:_ You will need to install [Chromium depot_tools][1].
+_NOTICE:_ You will need to install [Chromium depot_tools][2].
 
 ### Getting the Code
 
@@ -63,14 +68,14 @@ From here you can check out a new local branch with:
 git new-branch <branch name>
 ~~~~~
 
-See [Development][2] for generic instructions on how
+See [Development][3] for generic instructions on how
 to update the code in your checkout.
 
 
 ### Generating project files
 
-[GN][5] is used to generate [Ninja][4] project files. In order to configure
-[GN][5] to generate build files for iOS certain variables need to be set.
+[GN][6] is used to generate [Ninja][5] project files. In order to configure
+[GN][6] to generate build files for iOS certain variables need to be set.
 Those variables can be edited for the various build configurations as needed.
 
 The variables you should care about are the following:
@@ -89,7 +94,7 @@ The variables you should care about are the following:
 The component build is the default for Debug builds, which are also enabled by
 default unless `is_debug=false` is specified.
 
-The [GN][5] command for generating build files is `gn gen <output folder>`.
+The [GN][6] command for generating build files is `gn gen <output folder>`.
 
 After you've generated your build files once, subsequent invocations of `gn gen`
 with the same output folder will use the same arguments as first supplied.
@@ -159,13 +164,13 @@ and press _edit scheme..._ at the bottom of the target dropdown menu. From there
 click _Run_ in the sidebar and add `--gtest_filter` to the _Arguments passed on
 Launch_ list.
 
-If deploying to a device via the command line using [`ios-deploy`][6],
+If deploying to a device via the command line using [`ios-deploy`][7],
 use the `-a` flag to pass arguments to the executable on launch.
 
 ### Deploying to Device
 
 It's easiest to deploy to a device using Xcode. Other command line tools exist
-as well, e.g. [`ios-deploy`][6].
+as well, e.g. [`ios-deploy`][7].
 
 **NOTICE:** To deploy to an iOS device you must have a valid signing identity
 set up. You can verify this by running:
@@ -194,7 +199,7 @@ This bundle can now be directly included in another app.
 
 If you need a FAT `.framework`, that is, a binary that contains code for
 multiple architectures, and will work both on device and in the simulator,
-a script is available [here][3]
+a script is available [here][4]
 
 To build the framework with bitcode support, pass the `--bitcode` flag to the script like so
 
@@ -207,13 +212,13 @@ Please note that you can not ship the FAT framework binary with your app
 if you intend to distribute it through the app store.
 To solve this either remove "x86-64" from the list of architectures in
 the [build script][3] or split the binary and recreate it without x86-64.
-For instructions on how to do this see [here][7]
+For instructions on how to do this see [here][8]
 
-
-[1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: {{ site.baseurl }}/native-code/development/
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/tools_webrtc/ios/build_ios_libs.py
-[4]: https://ninja-build.org/
-[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
-[6]: https://github.com/phonegap/ios-deploy
-[7]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
+[1]: https://cocoapods.org/pods/GoogleWebRTC
+[2]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
+[3]: {{ site.baseurl }}/native-code/development/
+[4]: https://chromium.googlesource.com/external/webrtc/+/master/tools_webrtc/ios/build_ios_libs.py
+[5]: https://ninja-build.org/
+[6]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
+[7]: https://github.com/phonegap/ios-deploy
+[8]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
