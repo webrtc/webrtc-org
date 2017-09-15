@@ -186,7 +186,7 @@ To build WebRTC for use in a native iOS app, it's easiest to build
 with the actual location of your generated build files.
 
 ~~~~~ bash
-ninja -C out/ios rtc_sdk_framework_objc
+ninja -C out/ios framework_objc
 ~~~~~
 
 This should result in a `.framework` bundle being generated in `out/ios`.
@@ -212,7 +212,7 @@ For instructions on how to do this see [here][7]
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
 [2]: {{ site.baseurl }}/native-code/development/
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/tools_webrtc/ios/build_ios_libs.py
+[3]: https://webrtc.googlesource.com/src/+/master/tools_webrtc/ios/build_ios_libs.py
 [4]: https://ninja-build.org/
 [5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [6]: https://github.com/phonegap/ios-deploy

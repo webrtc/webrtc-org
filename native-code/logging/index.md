@@ -43,6 +43,9 @@ Logged to Android system log. Can be obtained using:
 adb logcat -s "libjingle"
 ~~~~
 
+To enable the logging in a non-debug build from Java code, use
+`Logging.enableLogToDebugOutput(Logging.Severity.LS_INFO)`.
+
 #### iOS
 
 Only logged to `stderr` by default. To log to a file, use `RTCFileLogger`.

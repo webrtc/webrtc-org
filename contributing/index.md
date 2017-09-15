@@ -27,7 +27,7 @@ when you have found a bug and have implemented a fix for it.
 
 Google and the WebRTC team are committed to preserving and fostering a diverse, welcoming and open
 community.
-To make sure we preserve this, we have adopted a [Code of conduct](https://chromium.googlesource.com/external/webrtc/+/master/CODE_OF_CONDUCT.md).
+To make sure we preserve this, we have adopted a [Code of conduct](https://webrtc.googlesource.com/src/+/master/CODE_OF_CONDUCT.md).
 
 ## How to Create a Patch
 
@@ -60,27 +60,6 @@ Please help us:
     (No new features just yet!)
 
 
-## Writing or Modifying GN Targets
-
-We provide the following [GN Templates](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Templates)
-to ensure that all our [targets](https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/language.md#Targets)
-are built with the same configuration:
-
-  * `rtc_test` which replaces `test`
-  * `rtc_source_set` which replaces `source_set`
-  * `rtc_executable` which replaces `executable`
-  * `rtc_static_library` which replaces `static_library`
-  * `rtc_shared_library` which replaces `shared_library`
-
-All templates include both [`common_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
-and [`common_inherited_config`](https://cs.chromium.org/chromium/src/third_party/webrtc/BUILD.gn)
-by default, and use the [`optimize_max`](https://cs.chromium.org/chromium/src/build/config/compiler/BUILD.gn)
-compiler configuration in Windows instead of the default.
-
-The `rtc_executable` template also includes [`//build/config/sanitizers:deps`](https://cs.chromium.org/chromium/src/build/config/sanitizers/BUILD.gn)
-to allow compilation with sanitizers.
-
-
 ## Testing
 
 Your commit will be subject to a number of automated tests that is run on
@@ -92,12 +71,9 @@ back to you with the continuous build result.
 
 ## Code Style
 
-We follow the [Chromium][8] style guides, with the exception that Java
-follows the [Google Java Style Guide][12]. However, it is usually a
-good idea to maintain consistency with nearby code, so when making
-changes to old, non-compliant code it may be better to maintain its
-non-compliant style&mdash;or to lead with a CL that makes the whole
-chunk of non-compliant code comply with the style guide.
+See the [coding style guide in the WebRTC tree][webrtc-coding-style].
+
+[webrtc-coding-style]: https://webrtc.googlesource.com/src/+/HEAD/style-guide.md
 
 To format the code in a CL, you can use `git cl format`.
 To manually run the C++ lint checker, use `cpplint.py`.
@@ -258,11 +234,9 @@ how to commit the CL.
 [2]: https://cla.developers.google.com/about/google-corporate
 [3]: https://codereview.webrtc.org/
 [4]: http://www.chromium.org/developers/owners-files
-[5]: https://chromium.googlesource.com/external/webrtc/+/master/infra/config/cq.cfg
+[5]: https://webrtc.googlesource.com/src/+/master/infra/config/cq.cfg
 [6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
 [7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
-[8]: http://www.chromium.org/developers/coding-style
-[9]: https://chromium.googlesource.com/external/webrtc/+/master/AUTHORS
+[9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com
-[12]: https://google.github.io/styleguide/javaguide.html
