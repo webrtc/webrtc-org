@@ -16,7 +16,7 @@ Here are some suggestions to help you get started:
 4. Try our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web/#0).
 5. Read through the code for the canonical video chat app [appr.tc](https://appr.tc). The repo is at [github.com/webrtc/apprtc](http://github.com/webrtc/apprtc).
 6. For iOS, Android or the C++ WebRTC APIs, take a look at the Native APIs resources below.
-7. Ask general questions on [Stack Overflow](http://stackoverflow.com/tags/webrtc), deeper technical WebRTC questions on [discuss-webrtc](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc).
+7. Ask general questions on [Stack Overflow](https://stackoverflow.com/tags/webrtc), deeper technical WebRTC questions on [discuss-webrtc](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc).
 
 More resources below.
 
