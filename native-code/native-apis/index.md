@@ -69,16 +69,9 @@ thread. Resource-intensive processes should be posted to a different thread.
 The worker thread is used to handle more resource-intensive processes, such as
 data streaming.
 
-
-<<<<<<< HEAD
   * Stream APIs ([mediastreaminterface.h](https://webrtc.googlesource.com/src/+/master/api/mediastreaminterface.h))
 
   * PeerConnection APIs ([peerconnectioninterface.h](https://webrtc.googlesource.com/src/+/master/api/peerconnectioninterface.h))
-=======
-  * Stream APIs ([mediastreaminterface.h](https://webrtc.googlesource.com/src/+/master/webrtc/api/mediastreaminterface.h))
-
-  * PeerConnection APIs ([peerconnectioninterface.h](https://webrtc.googlesource.com/src/+/master/webrtc/api/peerconnectioninterface.h))
->>>>>>> 578fe45252b52fdf038b51d8b64e31416a08e91b
 
 
 
@@ -91,16 +84,8 @@ The current HTML5 specification for WebRTC is here:
 
 The source code of the WebRTC Native API is here:
 
-<<<<<<< HEAD
-<https://webrtc.googlesource.com/src/+/master/api/>
-
-Client and server sample apps can be found here:
-
-<https://webrtc.googlesource.com/src/+/master/examples>
-=======
-<https://webrtc.googlesource.com/src/+/master/webrtc/api>
+<https://webrtc.googlesource.com/src/+/master/api>
 
 Client and server sample apps can be found here:
 
 <https://webrtc.googlesource.com/src/+/master/webrtc/examples>
->>>>>>> 578fe45252b52fdf038b51d8b64e31416a08e91b

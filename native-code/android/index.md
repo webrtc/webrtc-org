@@ -173,7 +173,7 @@ location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://webrtc.googlesource.com/src/+/webrtc/sdk/android/README
-[3]: https://webrtc.googlesource.com/src/+/webrtc/examples/androidapp/README
+[2]: https://webrtc.googlesource.com/src/+/master/sdk/android/README
+[3]: https://webrtc.googlesource.com/src/+/master/examples/androidapp/README
 [4]: https://ninja-build.org/
 [5]: https://bintray.com/google/webrtc/google-webrtc
