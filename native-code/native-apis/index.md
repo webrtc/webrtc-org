@@ -23,8 +23,8 @@ APIs to implement WebRTC JavaScript APIs or to develop native RTC
 applications.
 
 [1]: http://w3c.github.io/webrtc-pc/
-[2]: https://webrtc.googlesource.com/src/+/master/webrtc/api/
-[3]: https://webrtc.googlesource.com/src/+/master/webrtc/examples/peerconnection
+[2]: https://webrtc.googlesource.com/src/+/master/api/
+[3]: https://webrtc.googlesource.com/src/+/master/examples/peerconnection
 
 
 
@@ -69,10 +69,9 @@ thread. Resource-intensive processes should be posted to a different thread.
 The worker thread is used to handle more resource-intensive processes, such as
 data streaming.
 
+  * Stream APIs ([mediastreaminterface.h](https://webrtc.googlesource.com/src/+/master/api/mediastreaminterface.h))
 
-  * Stream APIs ([mediastreaminterface.h](https://webrtc.googlesource.com/src/+/master/webrtc/api/mediastreaminterface.h))
-
-  * PeerConnection APIs ([peerconnectioninterface.h](https://webrtc.googlesource.com/src/+/master/webrtc/api/peerconnectioninterface.h))
+  * PeerConnection APIs ([peerconnectioninterface.h](https://webrtc.googlesource.com/src/+/master/api/peerconnectioninterface.h))
 
 
 
@@ -85,8 +84,8 @@ The current HTML5 specification for WebRTC is here:
 
 The source code of the WebRTC Native API is here:
 
-<https://webrtc.googlesource.com/src/+/master/webrtc/api>
+<https://webrtc.googlesource.com/src/+/master/api>
 
 Client and server sample apps can be found here:
 
-<https://webrtc.googlesource.com/src/+/master/webrtc/examples>
+<https://webrtc.googlesource.com/src/+/master/examples>
