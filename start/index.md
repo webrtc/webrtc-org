@@ -150,7 +150,6 @@ More resources below.
 * Chris Wilson’s input demos at [webaudiodemos.appspot.com](http://webaudiodemos.appspot.com)
 * Paul Lewis’s gUM/WebGL demo: [lab.aerotwist.com/webgl/audio-room](http://lab.aerotwist.com/webgl/audio-room)
 * RTCPeerConnection integration: [simpl.info/webrtcwebaudio](http://simpl.info/webrtcwebaudio)
-* Theremin: getUserMedia + tracking + Web Audio: [g200kg.com/teburin](https://g200kg.com/teburin/)
 * [cabbibo.github.io/holly](http://cabbibo.github.io/holly/)
 
 #### Recording
@@ -171,7 +170,6 @@ More resources below.
 * [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
-* The first WebRTC game: [Puzzlible](https://protothon.com/blog/2012/mar/27/red-square-puzzle-group/)
 * [Who Am I?](https://designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
 * WebRTC + Web Audio + WebGL: [Cube Slam](http://cubeslam.com)
 * Face tracking: [shinydemos.com/facekat](https://shinydemos.com/facekat/)
@@ -183,7 +181,6 @@ More resources below.
 
 #### Phone
 * [Zingaya](http://demos.zingaya.com/webrtc-pstn/)
-* Disaster communications: [Tethr](http://tethr.tumblr.com/post/25513708436/tethr-and-tropo-in-the-google-i-o-sandbox)
 
 #### File sharing and P2P
 * [Sharefest](http://sharefest.me): share file by uploading and sharing link

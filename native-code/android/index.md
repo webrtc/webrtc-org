@@ -151,6 +151,6 @@ location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/sdk/android/README
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
+[2]: https://chromium.googlesource.com/external/webrtc/+/master/sdk/android/README
+[3]: https://chromium.googlesource.com/external/webrtc/+/master/examples/androidapp/README
 [4]: https://ninja-build.org/
