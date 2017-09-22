@@ -88,4 +88,4 @@ The source code of the WebRTC Native API is here:
 
 Client and server sample apps can be found here:
 
-<https://webrtc.googlesource.com/src/+/master/webrtc/examples>
+<https://webrtc.googlesource.com/src/+/master/examples>
