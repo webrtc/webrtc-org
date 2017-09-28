@@ -50,7 +50,7 @@ suppported configuration however.
 
 ### OS X
 
-The latest released Xcode version is recommended to be able to build all code.
+Xcode 5 or higher. Latest Xcode is recommended to be able to build all code.
 
 
 ### Android
