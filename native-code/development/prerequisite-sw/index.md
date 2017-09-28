@@ -47,10 +47,10 @@ available, you might be able to keep using it for some time by setting
 `GYP_MSVS_VERSION=2015` in your environment. Keep in mind that this is not a
 suppported configuration however.
 
+### macOS
 
-### OS X
-
-Xcode 5 or higher. Latest Xcode is recommended to be able to build all code.
+Xcode 9 or higher is required. Latest Xcode is recommended to be able to build
+all code.
 
 
 ### Android
