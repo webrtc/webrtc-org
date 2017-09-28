@@ -40,12 +40,17 @@ if you experience any other problems building.
 
 ### Windows
 
-Follow step 1 and 2 at [Chromium's build instructions for Windows][4].
+Follow the [Chromium's build instructions for Windows][4].
+
+WebRTC requires Visual Studio 2017 to be used. If you only have version 2015
+available, you might be able to keep using it for some time by setting
+`GYP_MSVS_VERSION=2015` in your environment. Keep in mind that this is not a
+suppported configuration however.
 
 
 ### OS X
 
-Xcode 5 or higher. Latest Xcode is recommended to be able to build all code.
+The latest released Xcode version is recommended to be able to build all code.
 
 
 ### Android
