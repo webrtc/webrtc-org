@@ -110,12 +110,12 @@ proceed with the upload to the WebRTC [code review server][3].
 
 #### Referencing bugs
 
-In your CL description you should always try to reference a bug using the `BUG=`
-field. After the equals sign you should add a prefix followed by the bug number
-in the issue tracker of your bug:
+In your CL description you should always try to reference a bug using the
+`Bug: ` field. After the equals sign you should add a prefix followed by the bug
+number in the issue tracker of your bug:
 
-* `webrtc:` for the [WebRTC bug tracker][10], e.g. `BUG=webrtc:1234`
-* `chromium:` for the [Chromium bug tracker][11], e.g. `BUG=chromium:123456`
+* `webrtc:` for the [WebRTC bug tracker][10], e.g. `Bug: webrtc:1234`
+* `chromium:` for the [Chromium bug tracker][11], e.g. `Bug: chromium:123456`
 
 
 #### Getting your CL Reviewed
@@ -128,13 +128,11 @@ the directory owners for each directory you modify. See the OWNERS files in
 the source tree and [read more about OWNERS files][4] if needed.
 
 A CL must be approved by a directory owner to be able to commit. To send out a
-mail with the CL to everybody included you need to press
-**Publish+Mail Comments**.
+mail with the CL to everybody included you need to press **Start review**.
 
-During the commenting process you need do **Publish+Mail Comments** again to
-make the comments visible, so you can first comment all files and send it out
-once. Reviewers are not notified when you upload a patch; you must again mail
-them.
+During the commenting process you need to **Reply** to make the comments
+visible, so you can first comment all files and send it out once. Reviewers are
+not notified when you upload a patch; you must again mail them.
 
 
 ### Running Tryjobs
@@ -149,15 +147,15 @@ git cl try
 ~~~~~
 
 The results will be presented in the code review web UI. You can also click the
-"CQ dry run" link. Both these alternatives will trigger the default trybots that
-are configured in [infra/config/cq.cfg][5].
+"CQ Dry run" button. Both these alternatives will trigger the default trybots
+that are configured in [infra/config/cq.cfg][5].
 To run tryjobs on a smaller set of bots; use the -b (--bot) flag:
 
 ~~~~~ bash
 git cl try -b mac -b mac_rel -m tryserver.webrtc
 ~~~~~
-You can see the available trybot names by clicking the "Choose trybots" link in
-Rietveld (scroll down to `tryserver.webrtc`).
+You can see the available trybot names by clicking the "Choose try jobs" link in
+Gerrit (scroll down to `tryserver.webrtc`).
 
 
 #### Tryjobs on Chromium trybots
@@ -170,12 +168,12 @@ otherwise would not be revealed until WebRTC is rolled in Chromium's
 
 To use this feature:
 
-  1. Create a Rietveld CL as usual.
+  1. Create a Gerrit CL as usual.
 
   2. Schedule the tryjobs using any of the following approaches:
 
-     **Rietveld UI:**
-     Click the "Choose trybots" link or add a line like this to your CL's
+     **Gerrit UI:**
+     Click the "Choose try jobs" link or add a line like this to your CL's
      description:
 
      ~~~~~ bash
@@ -192,9 +190,9 @@ To use this feature:
      git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
      ~~~~~
 
-     To see available trybots, click the "Choose trybots" link in Rietveld.
+     To see available trybots, click the "Choose try jobs" link in Gerrit.
 
-  3. The trybot results will be posted back to the Reitveld UI for the CL.
+  3. The trybot results will be posted back to the Gerrit UI for the CL.
 
 Example preset selection of bots (notice this may quickly become outdated):
 
@@ -221,7 +219,7 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 
 ## Committing your CL
 
-After the review process is done and you get LGTM (Looks Good To Me) from all
+After the review process is done and you get CR+1 (Code-Review +1) from all
 reviewers you can go ahead and submit your change, assuming you're an approved
 committer. If you're not a committer, you'll need to ask one of the reviewers
 to submit the CL for you using the Commit Queue (CQ).
@@ -232,7 +230,7 @@ how to commit the CL.
 
 [1]: https://cla.developers.google.com/about/google-individual
 [2]: https://cla.developers.google.com/about/google-corporate
-[3]: https://codereview.webrtc.org/
+[3]: https://webrtc-review.googlesource.com/
 [4]: http://www.chromium.org/developers/owners-files
 [5]: https://webrtc.googlesource.com/src/+/master/infra/config/cq.cfg
 [6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
