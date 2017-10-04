@@ -221,8 +221,7 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 
 After the review process is done and you get CR+1 (Code-Review +1) from all
 reviewers you can go ahead and submit your change, assuming you're an approved
-committer. If you're not a committer, you'll need to ask one of the reviewers
-to submit the CL for you using the Commit Queue (CQ).
+committer.
 
 See the "Committing Code" section at the
 [Development]({{ site.baseurl }}/native-code/development/) page for details on
