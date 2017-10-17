@@ -52,6 +52,7 @@ More resources below.
 * Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
 * Cullen Jennings video: HTML5 WebRTC:[ vimeo.com/47682405](http://vimeo.com/47682405)
 * [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
+* [Build a simple 1-to-1 video chat with WebRTC and Firebase](https://websitebeaver.com/insanely-simple-webrtc-video-chat-using-firebase-with-codepen-demo) (perfect for beginners)
 
 ### Codelabs
 * Walkthrough and code for setting up a server and client for video chat: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab)
