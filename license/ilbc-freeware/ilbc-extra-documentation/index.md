@@ -33,12 +33,10 @@ when new versions of the drafts were presented and discussed:
     [draft-andersen-ilbc-01.txt][5]
 
   * IETF 55 meeting, Atlanta:
-    [presentation of the updated version of both drafts][6]
     [draft-ietf-avt-rtp-ilbc-00.txt][7] and
     [draft-ietf-avt-ilbc-codec-00.txt][8]
 
   * IETF 56 meeting, San Francisco:
-    [presentation of the updated version of both drafts][9]
     [draft-ietf-avt-rtp-ilbc-01.txt][10] and
     [draft-ietf-avt-ilbc-codec-01.txt][11]
 
@@ -47,10 +45,8 @@ when new versions of the drafts were presented and discussed:
 [3]: http://www.ietf.org/proceedings/02jul/slides/avt-8.pdf
 [4]: http://tools.ietf.org/html/draft-duric-rtp-ilbc-01
 [5]: http://tools.ietf.org/html/draft-andersen-ilbc-01
-[6]: http://www.ilbcfreeware.org/documentation/ietf55-avt-duric.pdf
 [7]: http://tools.ietf.org/html/draft-ietf-avt-rtp-ilbc-00
 [8]: http://tools.ietf.org/html/draft-ietf-avt-ilbc-codec-00
-[9]: http://www.ilbcfreeware.org/documentation/ietf56-avt-duric.pdf
 [10]: http://tools.ietf.org/html/draft-ietf-avt-rtp-ilbc-01
 [11]: http://tools.ietf.org/html/draft-ietf-avt-ilbc-codec-01
 

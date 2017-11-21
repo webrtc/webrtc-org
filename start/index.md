@@ -16,7 +16,7 @@ Here are some suggestions to help you get started:
 4. Try our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web/#0).
 5. Read through the code for the canonical video chat app [appr.tc](https://appr.tc). The repo is at [github.com/webrtc/apprtc](http://github.com/webrtc/apprtc).
 6. For iOS, Android or the C++ WebRTC APIs, take a look at the Native APIs resources below.
-7. Ask general questions on [Stack Overflow](http://stackoverflow.com/tags/webrtc), deeper technical WebRTC questions on [discuss-webrtc](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc).
+7. Ask general questions on [Stack Overflow](https://stackoverflow.com/tags/webrtc), deeper technical WebRTC questions on [discuss-webrtc](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc).
 
 More resources below.
 
@@ -51,7 +51,8 @@ More resources below.
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
 * Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
 * Cullen Jennings video: HTML5 WebRTC:[ vimeo.com/47682405](http://vimeo.com/47682405)
-* [WebRTC Fundamentals](http://bit.ly/learnwebrtc): online course
+* [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
+* [Build a simple 1-to-1 video chat with WebRTC and Firebase](https://websitebeaver.com/insanely-simple-webrtc-video-chat-using-firebase-with-codepen-demo) (perfect for beginners)
 
 ### Codelabs
 * Walkthrough and code for setting up a server and client for video chat: [bitbucket.org/webrtc/codelab](https://bitbucket.org/webrtc/codelab)
@@ -86,7 +87,6 @@ More resources below.
 ### Discussion, blogs and articles
 * [discuss-webrtc ](http://groups.google.com/forum/?fromgroups#!forum/discuss-webrtc)
 * [@webrtc](http://twitter.com/webrtc)
-* [+webrtc](https://plus.sandbox.google.com/113817074606039822053/posts)
 * [WebRTC on Stack Overflow](http://stackoverflow.com/tags/webrtc)
 * [Tsahi Levent-Levi](https://bloggeek.me/)
 * [WebRTC Weekly](https://webrtcweekly.com/)
@@ -139,7 +139,7 @@ More resources below.
 * Xylophone: [soundstep.com/blog/experiments/jsdetection](http://soundstep.com/blog/experiments/jsdetection)
 * Photobooth with filters: [webcamtoy.com](http://webcamtoy.com)
 * SVG filters: [rawgithub.com/SenorBlanco/moggy/master/filterbooth.html](https://rawgithub.com/SenorBlanco/moggy/master/filterbooth.html)
-* Face masking with WebGL:[auduno.github.io/clmtrackr/face\_mask.html](http://auduno.github.io/clmtrackr/face_mask.html)
+* Face masking with WebGL:[www.auduno.com/clmtrackr/examples/face_mask.html](https://www.auduno.com/clmtrackr/examples/face_mask.html)
 * Face deformation with WebGL: [auduno.github.io/clmtrackr/examples/facedeform.html](http://auduno.github.io/clmtrackr/examples/facedeform.html)
 * Augmented Reality Photobooth: [picshare.jooink.com](https://picshare.jooink.com/)
 
@@ -151,7 +151,6 @@ More resources below.
 * Chris Wilson’s input demos at [webaudiodemos.appspot.com](http://webaudiodemos.appspot.com)
 * Paul Lewis’s gUM/WebGL demo: [lab.aerotwist.com/webgl/audio-room](http://lab.aerotwist.com/webgl/audio-room)
 * RTCPeerConnection integration: [simpl.info/webrtcwebaudio](http://simpl.info/webrtcwebaudio)
-* Theremin: getUserMedia + tracking + Web Audio: [g200kg.com/teburin](https://g200kg.com/teburin/)
 * [cabbibo.github.io/holly](http://cabbibo.github.io/holly/)
 
 #### Recording
@@ -164,7 +163,6 @@ More resources below.
 * [talky.io](http://talky.io)
 * [appear.in](http://appear.in)
 * [tawk.com](http://tawk.com)
-* [hu.tt](http://hu.tt)
 * [Twelephone](http://twelephone.com/): chat with Twitter contacts
 * [browsermeeting.com](http://browsermeeting.com/)
 * [codassium.com](http://codassium.com/): job interview tool with live coding
@@ -173,7 +171,6 @@ More resources below.
 * [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
-* The first WebRTC game: [Puzzlible](https://protothon.com/blog/2012/mar/27/red-square-puzzle-group/)
 * [Who Am I?](https://designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
 * WebRTC + Web Audio + WebGL: [Cube Slam](http://cubeslam.com)
 * Face tracking: [shinydemos.com/facekat](https://shinydemos.com/facekat/)
@@ -185,7 +182,6 @@ More resources below.
 
 #### Phone
 * [Zingaya](http://demos.zingaya.com/webrtc-pstn/)
-* Disaster communications: [Tethr](http://tethr.tumblr.com/post/25513708436/tethr-and-tropo-in-the-google-i-o-sandbox)
 
 #### File sharing and P2P
 * [Sharefest](http://sharefest.me): share file by uploading and sharing link

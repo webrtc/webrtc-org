@@ -8,6 +8,28 @@ permalink: /native-code/android/
 {% include toc-hide.html %}
 
 
+### Prebuilt libraries
+The easiest way to get started is using the [official prebuilt libraries][5]
+available at JCenter. These libraries are compiled from the tip-of-tree and are
+meant for development purposes only.
+
+On Android Studio 3 add to your dependencies:
+
+~~~~~
+implementation 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+On Android Studio 2 add to your dependencies:
+
+~~~~~
+compile 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+The version of the library is `1.0.<Cr-Commit-Position>`. The hash of the commit
+can be found in the .pom-file. The third party licenses can be found in the
+THIRD_PARTY_LICENSES.md file next to the .aar-file.
+
+
 ### Getting the Code
 
 Android development is only supported on Linux.
@@ -25,7 +47,7 @@ This will fetch a regular WebRTC checkout with the Android-specific parts
 added. Notice that the Android specific parts like the Android SDK and NDK are
 quite large (~8 GB), so the total checkout size will be about 16 GB.
 The same checkout can be used for both Linux and Android development since you
-can generate your [Ninja][6] project files in different directories for each
+can generate your [Ninja][4] project files in different directories for each
 build config.
 
 See [Development](/native-code/development/) for instructions on how to update
@@ -77,6 +99,39 @@ For instructions on how to build and run, see
 [webrtc/examples/androidapp/README][3].
 
 
+### Using Android Studio
+
+  1. Build the project normally (out/Debug should be the directory you used when
+     generating the build files using GN):
+
+     ~~~~~ bash
+     ninja -C out/Debug AppRTCMobile
+     ~~~~~
+
+  2. Generate the project files:
+
+     ~~~~~ bash
+     build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
+     --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources \
+     --split-projects --canary
+     ~~~~~
+
+  3. *Import* the project in Android Studio. (Do not just open it.) The project
+     is located in `out/Debug/gradle`. If asked which SDK to use, choose to use
+     Android Studio's SDK. When asked whether to use the Gradle wrapper, press
+     "OK".
+
+  4. Ensure target `webrtc > examples > AppRTCMobile` is selected and press Run.
+     AppRTCMobile should now start on the device.
+
+If you do any changes to the C++ code, you have to compile the project using
+ninja after the changes (see step 1).
+
+*Note: Only "arm" is supported as the target_cpu when using Android Studio. This
+still allows you to run the application on 64-bit ARM devices. x86-based devices
+are not supported right now.*
+
+
 ### Running WebRTC Native Tests on an Android Device
 
 To build APKs with the WebRTC native tests, follow these instructions.
@@ -118,8 +173,7 @@ location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/api/java/README
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
-[4]: https://gyp.gsrc.io/
-[5]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
-[6]: https://ninja-build.org/
+[2]: https://webrtc.googlesource.com/src/+/master/sdk/android/README
+[3]: https://webrtc.googlesource.com/src/+/master/examples/androidapp/README
+[4]: https://ninja-build.org/
+[5]: https://bintray.com/google/webrtc/google-webrtc
