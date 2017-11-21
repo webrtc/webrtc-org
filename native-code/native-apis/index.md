@@ -78,14 +78,10 @@ data streaming.
 
 ### Reference
 
-The current HTML5 specification for WebRTC is here:
+The current HTML5 specification for WebRTC: <http://w3c.github.io/webrtc-pc/>
 
-<http://w3c.github.io/webrtc-pc/>
+The source code of the WebRTC Native API: <https://webrtc.googlesource.com/src/+/master/api>
 
-The source code of the WebRTC Native API is here:
+Complete list of directories that contain API files: <https://webrtc.googlesource.com/src/+/master/native-api.md>
 
-<https://webrtc.googlesource.com/src/+/master/api>
-
-Client and server sample apps can be found here:
-
-<https://webrtc.googlesource.com/src/+/master/examples>
+Client and server sample apps: <https://webrtc.googlesource.com/src/+/master/examples>
