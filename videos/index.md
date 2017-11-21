@@ -10,7 +10,7 @@ class: videos
 
 ### WebRTC Update October 27th, 2017
 
-Watch talks from appear.in, Frozen Mountain, Twilio, Slack, Peer 5, Webkit (Apple), GDI, Vidyo, Atlassian, Voice base, Tokbox, Facebook and Google at from the [Kranky Geek Show](http://krankygeek.com/).
+Update from Google about the latest in WebRTC from the [Kranky Geek Show](http://krankygeek.com/).
 
 <div class="embed-responsive embed-responsive-16by9 yt-embed">
   <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
