@@ -140,7 +140,7 @@ Lots more resources for getting started are available from [webrtc.org/start](ht
       </li>
     </ul>
     <div class="embed-responsive embed-responsive-16by9 yt-embed">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
     </div>
 
   </div>
