@@ -8,6 +8,23 @@ class: videos
 {% include toc-hide.html %}
 
 
+### WebRTC Update October 27th, 2017
+
+Update from Google about the latest in WebRTC from the [Kranky Geek Show](http://krankygeek.com/).
+
+<div class="embed-responsive embed-responsive-16by9 yt-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+### WebRTC Update November 22nd, 2016
+
+Update from Google about the latest in WebRTC from the [Kranky Geek Show](http://krankygeek.com/) in São Paulo, Brazil.
+
+<div class="embed-responsive embed-responsive-16by9 yt-embed">
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=f5RZHPIedqo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
 ### WebRTC Update September 11, 2015
 
 14 brilliant WebRTC talks from the [Kranky Geek Show](http://krankygeek.com/),
