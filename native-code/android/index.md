@@ -96,7 +96,7 @@ AppRTCMobile is an Android application using WebRTC Native APIs via JNI (JNI
 wrapper is documented [here][2]).
 
 For instructions on how to build and run, see
-[webrtc/examples/androidapp/README][3].
+[examples/androidapp/README][3].
 
 
 ### Using Android Studio
@@ -112,7 +112,7 @@ For instructions on how to build and run, see
 
      ~~~~~ bash
      build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
-     --target "//webrtc/examples:AppRTCMobile" --use-gradle-process-resources \
+     --target "//examples:AppRTCMobile" --use-gradle-process-resources \
      --split-projects --canary
      ~~~~~
 
