@@ -70,6 +70,7 @@ More resources below.
 * [getUserMedia.js](https://github.com/addyosmani/getUserMedia.js): polyfill from Addy Osmani
 * Chrome–Firefox: [interop notes](https://webrtc.org/web-apis/interop/)
 * File bugs at [new.crbug.com](https://crbug.com/new)
+* KITE, a test engine designed to test WebRTC interoperability across browsers [https://github.com/webrtc/KITE](https://github.com/webrtc/KITE)
 
 ### Standards and protocols
 * [Web Real-Time Communications Working Group](https://w3.org/2011/04/webrtc/)
@@ -167,7 +168,6 @@ More resources below.
 * [browsermeeting.com](http://browsermeeting.com/)
 * [codassium.com](http://codassium.com/): job interview tool with live coding
 * [vmux.co](http://vmux.co)
-* [vidtok.com](http://vidtok.com)
 * [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
@@ -185,10 +185,8 @@ More resources below.
 
 #### File sharing and P2P
 * [Sharefest](http://sharefest.me): share file by uploading and sharing link
-* [dropple.me](http://dropple.me): get a file by sending a link to a share page
 * [peerCDN](https://peercdn.com/): P2P CDN
 * [WebTorrent:](http://webtorrent.io) BitTorrent over WebRTC
-* [cdn.peer5.com/pilots/kaltura](http://cdn.peer5.com/pilots/kaltura/index.html): P2P video
 * [webp2p.org](http://webp2p.org/)
 * [peer5.com](https://peer5.com): add P2P file download to your web page
 

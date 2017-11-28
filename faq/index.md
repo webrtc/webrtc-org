@@ -76,6 +76,9 @@ included as part of the WebRTC project.
 
 VP8 is a highly-efficient video compression technology developed by the WebM Project. It is the video codec included with WebRTC.
 
+### What is the VP9 video codec?
+
+Similar to VP8, VP9 is also from the WebM Project. Its a next-generation open video codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls. More details in [Google Developers](https://developers.google.com/web/updates/2016/01/vp9-webrtc/).  
 
 ### What other components are included in the WebRTC package?
 
