@@ -70,6 +70,7 @@ More resources below.
 * [getUserMedia.js](https://github.com/addyosmani/getUserMedia.js): polyfill from Addy Osmani
 * Chrome–Firefox: [interop notes](https://webrtc.org/web-apis/interop/)
 * File bugs at [new.crbug.com](https://crbug.com/new)
+* KITE, a test engine designed to test WebRTC interoperability across browsers [https://github.com/webrtc/KITE](https://github.com/webrtc/KITE)
 
 ### Standards and protocols
 * [Web Real-Time Communications Working Group](https://w3.org/2011/04/webrtc/)
