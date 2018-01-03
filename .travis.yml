@@ -17,8 +17,6 @@ before_install:
 
 cache:
   bundler: true
-  directories:
-  - "$HOME/google-cloud-sdk/"
 
 # See the following for more details:
 # https://docs.travis-ci.com/user/customizing-the-build/#Building-Specific-Branches
