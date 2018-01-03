@@ -10,7 +10,9 @@ env:
 
 before_install:
 - if [ ! -d ${HOME}/google-cloud-sdk ]; then
-     curl https://sdk.cloud.google.com | bash >& /dev/null;
+     # Run the install script, but suppress tar output since excessive output
+     # makes Travis choke.
+     curl https://sdk.cloud.google.com | bash | grep -v google-cloud-sdk
   fi
 
 cache:
