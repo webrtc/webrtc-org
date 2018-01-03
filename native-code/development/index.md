@@ -202,13 +202,13 @@ committer).
 If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
 already do), you can skip steps 1 and 2.
 
-  1. Go to <https://chromium.googlesource.com/new-password> and login with
+  1. Go to <https://webrtc.googlesource.com/new-password> and login with
      your webrtc.org account.
 
   2. Follow the instructions on how to store the credentials in the
      `.gitcookies` file in your home directory.
 
-  3. Go to <https://chromium-review.googlesource.com> and login with your
+  3. Go to <https://webrtc-review.googlesource.com> and login with your
      webrtc.org account. This will create the user in the Gerrit permission
      system so it can be added to the right committers group.
 
