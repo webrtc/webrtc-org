@@ -8,6 +8,11 @@ env:
   - CLOUDSDK_CORE_DISABLE_PROMPTS=1
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speed up html-proofer install
 
+before_install:
+- if [ ! -d ${HOME}/google-cloud-sdk ]; then
+     curl https://sdk.cloud.google.com | bash;
+  fi
+
 cache:
   bundler: true
   directories:
