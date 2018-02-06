@@ -124,8 +124,8 @@ Lots more resources for getting started are available from [webrtc.org/start](ht
     <ul>
       <li>
         <p>The master <strong>source repository</strong> for WebRTC is at
-        <a href="https://chromium.googlesource.com/external/webrtc">
-        https://chromium.googlesource.com/external/webrtc</a> (check
+        <a href="https://webrtc.googlesource.com/src">
+        https://webrtc.googlesource.com/src</a> (check
         <a href="{{ site.baseurl }}/native-code/development/">Development</a>
         for more details).</p>
       </li>
@@ -136,11 +136,11 @@ Lots more resources for getting started are available from [webrtc.org/start](ht
         <p><strong>Live demos</strong> can be accessed at <a href="https://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
       </li>
       <li>
-        <p>Check out the WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
+        <p>Check out the WebRTC 2017 update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
       </li>
     </ul>
     <div class="embed-responsive embed-responsive-16by9 yt-embed">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NEx1XwwwcO0" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
     </div>
 
   </div>

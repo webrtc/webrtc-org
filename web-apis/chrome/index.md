@@ -34,13 +34,6 @@ A few specific notes on data channels:
     work around this by breaking your data into < 16KB chunks and sending each
     chunk individually.
 
-  * Chrome also supports unreliable RTP-based data channels, and they can be
-    activated by a { RtpDataChannels: true } constraint to the PeerConnection
-    constructor. However, they should be considered deprecated and NOT used in
-    new code. Chrome will remove support for RTP-based data channels at some
-    point in the future.
-
-
 #### What API can I use for screensharing?
 
 [chrome.desktopCapture.chooseDesktopMedia][1] is the API that you want to use,
