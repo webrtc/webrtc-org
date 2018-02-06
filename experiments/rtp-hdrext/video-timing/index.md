@@ -25,8 +25,6 @@ First byte is a flags field. Defined flags:
 
 Both flags may be set at the same time. All remaining 6 bits are reserved and should be ignored.
 
-Next, 6 timestamps are stored as 16-bit values in big-endian order, representing delta from the capture time of a packet in ms. 
-
 Timestamps are, in order:
 
   * Encode start.

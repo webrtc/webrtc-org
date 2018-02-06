@@ -169,13 +169,14 @@ the 43 branch):
 
 ~~~~~ bash
 git checkout -b my_branch refs/remotes/branch-heads/43
+gclient sync
 ~~~~~
 
 Commit log for the branch:
-<https://chromium.googlesource.com/external/webrtc/+log/branch-heads/43>
+<https://webrtc.googlesource.com/src/+log/branch-heads/43>
 
 To browse it:
-<https://chromium.googlesource.com/external/webrtc/+/branch-heads/43>
+<https://webrtc.googlesource.com/src/+/branch-heads/43>
 
 For more details, read Chromium's [Working with Branches][6] and
 [Working with Release Branches][7] pages.
@@ -194,20 +195,20 @@ To commit code directly to the Git repo, you have to be a committer. CLs created
 by external contributors can be committed via the Commit Queue (CQ).
 
 The source of truth is the Git repository at
-<https://chromium.googlesource.com/external/webrtc>. To be able to push
+<https://webrtc.googlesource.com/src>. To be able to push
 commits to it, you need to perform the steps below (assuming you're a
 committer).
 
 If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
 already do), you can skip steps 1 and 2.
 
-  1. Go to <https://chromium.googlesource.com/new-password> and login with
+  1. Go to <https://webrtc.googlesource.com/new-password> and login with
      your webrtc.org account.
 
   2. Follow the instructions on how to store the credentials in the
      `.gitcookies` file in your home directory.
 
-  3. Go to <https://chromium-review.googlesource.com> and login with your
+  3. Go to <https://webrtc-review.googlesource.com> and login with your
      webrtc.org account. This will create the user in the Gerrit permission
      system so it can be added to the right committers group.
 
@@ -343,7 +344,7 @@ Target name `turnserver`. In active development to reach compatibility with
 [1]: {{ site.baseurl }}/native-code/android/
 [2]: {{ site.baseurl }}/native-code/ios/
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[4]: https://chromium.googlesource.com/external/webrtc/+/master/DEPS
+[4]: https://webrtc.googlesource.com/src/+/master/DEPS
 [5]: https://ninja-build.org/
 [6]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
 [7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
