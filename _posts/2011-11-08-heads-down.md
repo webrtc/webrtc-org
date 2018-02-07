@@ -24,7 +24,7 @@ fronts:
 Hopefully our next post will be soon, and will include a more useful URL :)
 
 
-[1]: http://www.ietf.org/meeting/82/index.html
+[1]: https://www.ietf.org/proceedings/82/index.html
 [2]: http://www.ietf.org/mail-archive/web/rtcweb/current/maillist.html
 [3]: http://lists.w3.org/Archives/Public/public-webrtc/
 [4]: http://www.w3.org/TR/webrtc/
