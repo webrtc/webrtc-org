@@ -7,25 +7,22 @@ permalink: /testing/kite/
 
 {% include toc-hide.html %}
 
+### Development:
 
-## This is Karoshi Interoperability Testing Engine (KITE)
+KITE is an open source test tool to test interoperability of WebRTC across browsers. KITE makes it easy to test interoperability of WebRTC applications and detect regressions early.
 
-
-The effortless way to test WebRTC compliance, prevent [Karoshi](https://en.wikipedia.org/wiki/Kar%C5%8Dshi) with KITE!
-
-KITE is designed to be a generic, reusable and easy to maintain automated testing environment.
+KITE is designed to be a generic, reusable and easy to maintain automated testing environment. The tests (implementing KiteTest interface) can be developed independently from the KITE Engine.
 
 So far, our developments on KITE allow interoperability testing on stable versions of all major web browsers, namely Chrome, Firefox, Safari and Edge, running on desktop OS, that is either Ubuntu, MacOS or Windows 10.
 
-Mobile testing (Chrome,Firefox on Android, Safari on iOS) is soon to be operational.
+Mobile testing (Chrome,Firefox on Android, Safari on iOS) is well in development.
 
-### Development:
 
-Check out KITE on [webrtc/KITE public repository](https://github.com/webrtc/KITE).
+You can check out the source for KITE and run your own tests [here](https://github.com/webrtc/KITE).
 
-### Included sample IceConnectionTest test
+### Included sample IceConnectionTest
 
-IceConnectionTest algorithm is as follows:
+The Ice Connection test is a basic test showing that two browsers can establish a connection. IceConnectionTest's algorithm is as follows:
 
     1) Open the 2 browsers with https://appr.tc/r/xxx.
 
