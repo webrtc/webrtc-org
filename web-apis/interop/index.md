@@ -42,3 +42,7 @@ AppRTC ([appr.tc](https://appr.tc)) uses the adapter.js polyfill, so it
 correctly handles interop between the browsers. You can test this with Chrome
 and Firefox today! This is tested continuously by our
 [automated Chrome-Firefox interop tests]({{ site.baseurl }}/testing/conformance/).
+
+### Testing with KITE
+
+KITE is an open-source testing Engine, designed to test interoperability between browsers, more information [here]({{ site.baseurl }}/testing/kite/).
