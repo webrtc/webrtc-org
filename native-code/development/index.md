@@ -59,7 +59,9 @@ For desktop development:
 
 See [Android][1] and [iOS][2] pages for separate instructions.
 
-
+NOTICE: if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`, make
+sure [you're logged in](#committing-code). The quota is much larger for logged
+in users.
 
 ### Updating the Code
 
@@ -148,22 +150,6 @@ To see available release branches, run:
 git branch -r
 ~~~~~
 
-**NOTICE:** If you only see your local branches, you have a checkout created
-before our switch to Git (March 24, 2015). In that case, first run:
-
-~~~~~ bash
-cd /path/to/webrtc/src
-gclient sync --with_branch_heads
-git fetch origin
-~~~~~
-
-You should now have an entry like this under [remote "origin"] in
-`.git/config`:
-
-~~~~~ bash
-fetch = +refs/branch-heads/*:refs/remotes/branch-heads/*
-~~~~~
-
 To create a local branch tracking a remote release branch (in this example,
 the 43 branch):
 
@@ -171,6 +157,24 @@ the 43 branch):
 git checkout -b my_branch refs/remotes/branch-heads/43
 gclient sync
 ~~~~~
+
+NOTICE: depot_tools are not tracked with your checkout, so it's possible gclient
+sync will break on sufficiently old branches. In that case, you can try using
+an older depot_tools:
+
+~~~~~ bash
+which gclient
+# cd to depot_tools dir
+# edit update_depot_tools; add an exit command at the top of the file
+git log  # find a hash close to the date when the branch happened
+git checkout <hash>
+cd ~/dev/webrtc/src
+gclient sync
+# When done, go back to depot_tools, git reset --hard, run gclient again and
+# verify the current branch becomes REMOTE:origin/master
+~~~~~
+
+The above is untested and unsupported, but it might help.
 
 Commit log for the branch:
 <https://webrtc.googlesource.com/src/+log/branch-heads/43>
