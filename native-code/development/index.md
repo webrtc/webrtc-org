@@ -59,7 +59,7 @@ For desktop development:
 
 See [Android][1] and [iOS][2] pages for separate instructions.
 
-NOTICE: if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`, make
+**NOTICE:** if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`, make
 sure [you're logged in](#committing-code). The quota is much larger for logged
 in users.
 
@@ -158,7 +158,7 @@ git checkout -b my_branch refs/remotes/branch-heads/43
 gclient sync
 ~~~~~
 
-NOTICE: depot_tools are not tracked with your checkout, so it's possible gclient
+**NOTICE**: depot_tools are not tracked with your checkout, so it's possible gclient
 sync will break on sufficiently old branches. In that case, you can try using
 an older depot_tools:
 
