@@ -40,7 +40,7 @@ You must do some preparation in order to upload your first CL:
 
   7. Then, run:
      ~~~~~ bash
-     git cl creds-check  # If any errors, ask for help on discuss-webrtc
+     git cl creds-check  # If any errors, ask for help on [discuss-webrtc][15].
      ~~~~~
 
 You will not have to repeat the above. After all that, you're ready to upload:
@@ -85,6 +85,7 @@ for gclient to find the `.gitcookies` file.
 
 After 10-20 non-trivial patches you can apply for commit rights. If you are
 writing a lot of patches you can also apply for try job access before then.
+To apply, send an email to [discuss-webrtc][15].
 
 The source of truth is the Git repository at
 <https://webrtc.googlesource.com/src>. To be able to push
@@ -266,3 +267,4 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [12]: {{ site.baseurl }}/contributing/
 [13]: {{ site.baseurl }}/contributing/#contributor-agreement
 [14]: {{ site.baseurl }}/contributing/#getting-your-cl-reviewed
+[15]: https://groups.google.com/forum/#!forum/discuss-webrtc

@@ -59,9 +59,8 @@ For desktop development:
 
 See [Android][1] and [iOS][2] pages for separate instructions.
 
-**NOTICE:** if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`, make
-sure [you're logged in](#committing-code). The quota is much larger for logged
-in users.
+**NOTICE:** if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`,
+make sure [you're logged in][14]. The quota is much larger for logged in users.
 
 ### Updating the Code
 
@@ -297,15 +296,14 @@ Target name `turnserver`. In active development to reach compatibility with
 [1]: {{ site.baseurl }}/native-code/android/
 [2]: {{ site.baseurl }}/native-code/ios/
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[4]: https://webrtc.googlesource.com/src/+/master/DEPS
 [5]: https://ninja-build.org/
 [6]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
 [7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
 [8]: {{ site.baseurl }}/contributing/
 [9]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [10]: {{ site.baseurl }}/native-code/native-apis/
-[11]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
 [12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
+[14]: https://webrtc.org/native-code/development/#contributing-your-first-patch
