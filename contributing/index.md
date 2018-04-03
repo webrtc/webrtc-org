@@ -270,5 +270,5 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com
-[12]: {{ site.baseurl }}/development/
+[12]: {{ site.baseurl }}/native-code/development/
 [15]: https://groups.google.com/forum/#!forum/discuss-webrtc
