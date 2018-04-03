@@ -22,15 +22,15 @@ You must do some preparation in order to upload your first CL:
 
   1. [Check out and build the code][12]
 
-  2. Fill in the [contributor agreement][13].
+  2. Fill in the [contributor agreement](#contributor-agreement).
 
   3. If you've never submitted code before, you must add your (or your
      organization's in the case the contributor agreement is signed by your
      organization) name and contact info to the [AUTHORS][9] file.
 
   4. Go to <https://webrtc.googlesource.com/new-password> and login with
-     your email account. This should be the same account as is returned by
-     git config user.email.
+     your email account. *This should be the same account as is returned by*
+     `git config user.email`.
 
   5. Follow the instructions on how to store the credentials in the
      `.gitcookies` file in your home directory.
@@ -40,10 +40,15 @@ You must do some preparation in order to upload your first CL:
 
   7. Then, run:
      ~~~~~ bash
-     git cl creds-check  # If any errors, ask for help on [discuss-webrtc][15].
+     git cl creds-check
      ~~~~~
+     If you get any errors, ask for help on [discuss-webrtc][15].
 
 You will not have to repeat the above. After all that, you're ready to upload:
+
+## Uploading your First Patch
+
+Now that you have your account set up, you can do the actual upload:
 
   1. Do this:
      ~~~~~ bash
@@ -65,8 +70,9 @@ You will not have to repeat the above. After all that, you're ready to upload:
   3. If you're not signed in, click the Sign In button in the top right and sign
   in with your email.
 
-  4. Click Start Review and add a reviewer. See [Getting your CL Reviewed][14]
-  for how to choose reviewers.
+  4. Click Start Review and add a reviewer. See
+  [Getting your CL Reviewed](#getting-your-cl-reviewed) for how to choose
+  reviewers.
 
   5. Address any reviewer feedback:
      ~~~~~ bash
@@ -264,7 +270,5 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com
-[12]: {{ site.baseurl }}/contributing/
-[13]: {{ site.baseurl }}/contributing/#contributor-agreement
-[14]: {{ site.baseurl }}/contributing/#getting-your-cl-reviewed
+[12]: {{ site.baseurl }}/native-code/development/
 [15]: https://groups.google.com/forum/#!forum/discuss-webrtc
