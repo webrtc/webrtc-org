@@ -59,28 +59,20 @@ For desktop development:
 
 See [Android][1] and [iOS][2] pages for separate instructions.
 
-**NOTICE:** if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`, make
-sure [you're logged in](#committing-code). The quota is much larger for logged
-in users.
+**NOTICE:** if you get `Remote: Daily bandwidth rate limit exceeded for <ip>`,
+make sure [you're logged in][14]. The quota is much larger for logged in users.
 
 ### Updating the Code
 
 Update your current branch with:
 
 ~~~~~ bash
-git pull
-~~~~~
-
-**NOTICE:** if you're not on a branch, `git pull` won't work, and you'll need
-to use `git fetch` instead.
-
-Periodically, the build toolchain and dependencies of WebRTC are updated. To
-get such updates you must run:
-
-~~~~~ bash
+git checkout master
+git pull origin master
 gclient sync
+git checkout my-branch
+git merge master
 ~~~~~
-
 
 ### Building
 
@@ -188,52 +180,8 @@ For more details, read Chromium's [Working with Branches][6] and
 
 ### Contributing Patches
 
-Please see [Contributing Fixes][8] for information on how to get your changes
-included in the WebRTC codebase. You'll also need to setup authentication for
-committing, below.
-
-
-### Committing Code
-
-To commit code directly to the Git repo, you have to be a committer. CLs created
-by external contributors can be committed via the Commit Queue (CQ).
-
-The source of truth is the Git repository at
-<https://webrtc.googlesource.com/src>. To be able to push
-commits to it, you need to perform the steps below (assuming you're a
-committer).
-
-If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
-already do), you can skip steps 1 and 2.
-
-  1. Go to <https://webrtc.googlesource.com/new-password> and login with
-     your webrtc.org account.
-
-  2. Follow the instructions on how to store the credentials in the
-     `.gitcookies` file in your home directory.
-
-  3. Go to <https://webrtc-review.googlesource.com> and login with your
-     webrtc.org account. This will create the user in the Gerrit permission
-     system so it can be added to the right committers group.
-
-  4. Ask to be added to the committers group to get push access.
-
-  5. Make sure you have set the `user.name` and `user.email` Git config
-     settings as specified at the [depot tools setup page][9]. If you're also
-     a Chromium committer, read the next section.
-
-Commit a change list to the Git repo using:
-
-~~~~~ bash
-git cl land
-~~~~~
-
-**NOTICE:** On Windows, you'll need to run this in a Git bash shell in order
-for gclient to find the `.gitcookies` file.
-
-Sometimes it's necessary to bypass the presubmit checks (like when fixing an
-error that has closed the tree). Then use the `--bypass-hooks` flag.
-
+Please see [Contributing Fixes][8] for information on how to run
+`git cl upload`, getting your patch reviewed, and getting it submitted.
 
 #### Chromium Committers
 
@@ -348,15 +296,14 @@ Target name `turnserver`. In active development to reach compatibility with
 [1]: {{ site.baseurl }}/native-code/android/
 [2]: {{ site.baseurl }}/native-code/ios/
 [3]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[4]: https://webrtc.googlesource.com/src/+/master/DEPS
 [5]: https://ninja-build.org/
 [6]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-branches
 [7]: https://www.chromium.org/developers/how-tos/get-the-code/working-with-release-branches
 [8]: {{ site.baseurl }}/contributing/
 [9]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [10]: {{ site.baseurl }}/native-code/native-apis/
-[11]: https://bugs.chromium.org/p/webrtc/issues/detail?id=5578
 [12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
 [13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
+[14]: https://webrtc.org/native-code/development/#contributing-your-first-patch

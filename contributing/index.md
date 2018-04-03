@@ -8,57 +8,101 @@ crumb: Contributing Fixes
 
 {% include toc-hide.html %}
 
-
 The project is open for external contributions ... and we welcome them!
-
-While we are only accepting bug fixes for the moment we will be opening it up
-more broadly soon. We are taking it step by step.
-
-When you start working on this project you will be a "project contributor",
-which does not give you the right to commit code directly, but you will be
-able to upload patches for review. The patches will be submitted for you after
-approval.
-
-After 10-20 non-trivial patches you can apply for commit rights. We will start
-the external contributions at a small scale, so please ask for access only
-when you have found a bug and have implemented a fix for it.
 
 ## Code of conduct
 
 Google and the WebRTC team are committed to preserving and fostering a diverse, welcoming and open
 community.
-To make sure we preserve this, we have adopted a [Code of conduct](https://webrtc.googlesource.com/src/+/master/CODE_OF_CONDUCT.md).
+To make sure we preserve this, we have adopted a [code of conduct](https://webrtc.googlesource.com/src/+/master/CODE_OF_CONDUCT.md).
 
-## How to Create a Patch
+## Contributing your First Patch
 
-These instructions assume you already have followed the [getting started guide]({{ site.baseurl }}/native-code/development/) and can build the WebRTC code. The work flow is:
+You must do some preparation in order to upload your first CL:
 
-  1. Make sure you accept and fill out the contributor agreement
+  1. [Check out and build the code][12]
 
-  2. Edit the code and collect your changes in a change list (CL)
+  2. Fill in the [contributor agreement][13].
 
   3. If you've never submitted code before, you must add your (or your
      organization's in the case the contributor agreement is signed by your
-     organization) name and contact info to the [AUTHORS][9] file
+     organization) name and contact info to the [AUTHORS][9] file.
 
-  4. Upload the CL for review and add suitable reviewers.
+  4. Go to <https://webrtc.googlesource.com/new-password> and login with
+     your email account. This should be the same account as is returned by
+     git config user.email.
 
-  5. After getting feedback, modify and upload new version of your CL (repeat
-     as needed).
+  5. Follow the instructions on how to store the credentials in the
+     `.gitcookies` file in your home directory.
 
-  6. Commit your change, or ask a reviewer to do it for you if you don't have
-     access right.
+  6. Go to <https://webrtc-review.googlesource.com> and login with your
+     email account.
 
+  7. Then, run:
+     ~~~~~ bash
+     git cl creds-check  # If any errors, ask for help on [discuss-webrtc][15].
+     ~~~~~
 
-Please help us:
+You will not have to repeat the above. After all that, you're ready to upload:
 
-  * Remember to keep your change lists small and focused.
+  1. Do this:
+     ~~~~~ bash
+     # Assuming you're on the master branch:
+     git checkout -b my-work-branch
+     # Make changes, build locally, run tests locally
+     git commit -am "Changed x, and it is working"
+     git upload
+     ~~~~~
+     This will open a text editor showing all local commit messages, allowing you
+     to modify it before it becomes the CL description. Save and close the file to
+     proceed with the upload to the WebRTC [code review server][3].
 
-  * Never fix more than one bug in each CL.
+     The command will print a link like <https://webrtc-review.googlesource.com/c/src/+/53121>
+     if everything goes well.
 
-  * New features will probably require dividing your work into multiple CLs.
-    (No new features just yet!)
+  2. Click the CL link.
 
+  3. If you're not signed in, click the Sign In button in the top right and sign
+  in with your email.
+
+  4. Click Start Review and add a reviewer. See [Getting your CL Reviewed][14]
+  for how to choose reviewers.
+
+  5. Address any reviewer feedback:
+     ~~~~~ bash
+     # Make changes, build locally, run tests locally
+     git commit -am "Fixed X and Y"
+     git upload
+     ~~~~~
+
+  6. Once the reviewer LGTMs (approves) the patch, ask them to put it into the
+  commit queue.
+
+**NOTICE:** On Windows, you'll need to run the above in a Git bash shell in order
+for gclient to find the `.gitcookies` file.
+
+## Becoming a Committer
+
+After 10-20 non-trivial patches you can apply for commit rights. If you are
+writing a lot of patches you can also apply for try job access before then.
+To apply, send an email to [discuss-webrtc][15].
+
+The source of truth is the Git repository at
+<https://webrtc.googlesource.com/src>. To be able to push
+commits to it, you need to perform the steps below (assuming you're a
+committer).
+
+If you already have a `.netrc`/`.gitcookies` file (most Chromium committers
+already do), you can skip steps 1 and 2.
+
+  1. Ask to be added to the committers group to get push access.
+
+  2. Make sure you have set the `user.name` and `user.email` Git config
+     settings as specified at the [depot tools setup page][9]. If you're also
+     a Chromium committer, read the next section.
+
+Sometimes it's necessary to bypass the presubmit checks (like when fixing an
+error that has closed the tree). Then use the `--bypass-hooks` flag.
 
 ## Testing
 
@@ -87,26 +131,12 @@ contributor agreements
   * [Individual Contributors License][1]
   * [Corporate Contributors License][2]
 
-Also, please re-read our project's
+Also, please read our project's
 [license]({{ site.baseurl}}/license/software/) and
 [patent grant]({{ site.baseurl }}/license/additional-ip-grant/).
 
 
 ## Detailed Instructions
-
-
-### Creating your CL
-
-To create a CL after you've done some edits (in a local Git branch):
-
-~~~~~ bash
-git cl upload
-~~~~~
-
-This will open a text editor showing all local commit messages, allowing you
-to modify it before it becomes the CL description. Save and close the file to
-proceed with the upload to the WebRTC [code review server][3].
-
 
 #### Referencing bugs
 
@@ -134,6 +164,13 @@ During the commenting process you need to **Reply** to make the comments
 visible, so you can first comment all files and send it out once. Reviewers are
 not notified when you upload a patch; you must again mail them.
 
+Please help us:
+
+  * Remember to keep your change lists small and focused.
+
+  * Never fix more than one bug in each CL.
+
+  * New features will probably require dividing your work into multiple CLs.
 
 ### Running Tryjobs
 
@@ -217,16 +254,6 @@ This makes it possible that a test still fails without the patch in case there's
 currently an error for the HEAD revision of WebRTC when built inside Chromium.
 
 
-## Committing your CL
-
-After the review process is done and you get CR+1 (Code-Review +1) from all
-reviewers you can go ahead and submit your change, assuming you're an approved
-committer.
-
-See the "Committing Code" section at the
-[Development]({{ site.baseurl }}/native-code/development/) page for details on
-how to commit the CL.
-
 [1]: https://cla.developers.google.com/about/google-individual
 [2]: https://cla.developers.google.com/about/google-corporate
 [3]: https://webrtc-review.googlesource.com/
@@ -237,3 +264,7 @@ how to commit the CL.
 [9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
 [11]: https://crbug.com
+[12]: {{ site.baseurl }}/contributing/
+[13]: {{ site.baseurl }}/contributing/#contributor-agreement
+[14]: {{ site.baseurl }}/contributing/#getting-your-cl-reviewed
+[15]: https://groups.google.com/forum/#!forum/discuss-webrtc
