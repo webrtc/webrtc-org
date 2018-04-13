@@ -1,5 +1,8 @@
-# Unified Plan - transition plan
-
+---
+layout: default
+title: Unified Plan SDP format - transition plan
+permalink: /web-apis/chrome/unified-plan/
+---
 Google is planning to transition Chrome’s WebRTC implementation from the current SDP format (called “Plan B”) to a standards conformant format (“Unified Plan”, draft-ietf-rtcweb-jsep) over the next couple of quarters.
 
 The plan involves 4 phases, and one transient API feature.
@@ -7,7 +10,7 @@ The plan involves 4 phases, and one transient API feature.
 ## Who will be affected
 People who use multiple audio tracks or multiple video tracks on a single PeerConnection will have to test their product under Unified Plan, and adapt accordingly. In the case where a call is initiated from a non-Chrome endpoint and replied to by Chrome, the form of the offer may have to change.
 People who do detailed SDP parsing and care about msid attributes will have to check that their parsing code picks up the new format (a=msid).
-The details on whether changes will be needed and how the apps need to change will be application dependent. We think that almost all applications that use only a single audio and a single video track will be unaffected by the change.
+The details on whether changes will be needed and how the apps need to change will be application dependent. We think that almost all applications that use only a single audio and a single video track per RTCPeerConnection will be unaffected by the change.
 ## The API feature
 We are adding one new feature to the RTCPeerConnection’s RTCConfiguration:
 ```
