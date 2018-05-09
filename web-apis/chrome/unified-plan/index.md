@@ -42,14 +42,13 @@ For applications that support Firefox, we expect this to be a very simple exerci
 
 ### Phase 3: Switch the default
 
-Planned for M70 (beta September 2018)
+The date for the switch will be set in consultation with the users, after extensive testing.
 
 In this phase, we’ll change the default value of the sdpSemantics flag to “unified-plan”.
 Applications that discover that they need more time to convert can set the sdpSemantics flag explicitly to “plan-b” in order to recover previous behaviour.
 
 We will be monitoring the usage of the flag, and the amount of SDP being received with “Plan B” semantics, in order to set the date for phase 4.
 ### Phase 4: Remove “plan B”
-Preliminary target: M72 (beta December 2018)
 
 In this phase, the sdpSemantics flag and all code for supporting Plan B will be removed from Chrome. Setting the sdpSemantics flag will not be an error, but will have no effect.
 
