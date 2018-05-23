@@ -97,7 +97,10 @@ Please include as many relevant details as possible.
   * Identify which bug tracker to use:
 
     * If you're hitting a problem in Chrome, file the bug using the
-      [Audio/Video Issue template][3].
+      [Blink>WebRTC component](https://bugs.chromium.org/p/chromium/components/detail?component=Blink%3EWebRTC).
+      This can be done after choosing "I am a web developer trying to build something" and
+      "Problems with a browser API" and ensures the right people will look
+      at your bug.
 
     * If you're a developer working with the native code, file the bug at
       [this link][4].
