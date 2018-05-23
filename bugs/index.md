@@ -66,9 +66,8 @@ Please include as many relevant details as possible.
   * For **functional** issues or **ICE** issues, in either Chrome or a native
     application, please gather a [native log][5].
 
-  * For **connectivity** issues on Chrome, while the call is in progress,
-
-    * please open **chrome://webrtc-internals** in another tab,
+  * For **connectivity** issues on Chrome, ensure **chrome://webrtc-internals**
+    is open in another tab before starting the call and while the call is in progress,
 
     * expand the **Create Dump** section,
 
