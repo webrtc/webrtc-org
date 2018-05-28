@@ -33,8 +33,8 @@ The WebRTC team takes security very seriously. If you find a vulnerability in
 WebRTC, please file a [Chromium security bug][ChromeSecurity], even if the bug
 only affects native WebRTC code and not Chromium.
 
-Any vulnerabilities will be disclosed on webrtc-discuss once we have fixed the
-bug.
+Any vulnerabilities will be disclosed on [discuss-webrtc][DiscussWebRTC]
+once we have fixed the bug.
 
 #### Example Data Points
 
@@ -118,3 +118,4 @@ bug.
 [4]: https://bugs.chromium.org/p/webrtc/issues/entry
 [5]: {{ site.baseurl }}/native-code/logging/
 [ChromeSecurity]: https://www.chromium.org/Home/chromium-security/reporting-security-bugs
+[DiscussWebRTC]: https://groups.google.com/group/discuss-webrtc
