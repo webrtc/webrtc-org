@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Known Security Bugs
-permalink: /bugs/security-bugs
+permalink: /bugs/security
 crumb: Known Security Bugs
 ---
 
