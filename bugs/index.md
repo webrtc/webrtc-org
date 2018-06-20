@@ -33,8 +33,21 @@ The WebRTC team takes security very seriously. If you find a vulnerability in
 WebRTC, please file a [Chromium security bug][ChromeSecurity], even if the bug
 only affects native WebRTC code and not Chromium.
 
-Any vulnerabilities will be disclosed on [discuss-webrtc][DiscussWebRTC]
-once we have fixed the bug.
+A history of fixed Chromium security bugs is best found via [security notes in
+Stable Channel updates on the Google Chrome releases blog][ChromeSecurityBlog].
+
+You can also find fixed, publicly visible [Type=Bug-Security][ChromeBugList]
+bugs in the issue tracker (note: security bugs automatically become publicly
+visible 14 weeks after they are fixed). If there is a bug in WebRTC code
+that Chromium isn’t using (such as the Java/ObjC wrappers for Android/iOS)
+we will announce fixes separately on [discuss-webrtc][DiscussWebRTC].
+
+[List of all disclosed native-only security bugs][WebRtcBugList].
+
+Note that we will generally NOT merge security fixes backwards to any branches,
+so if you’re using older branches it’s your responsibility to make sure the
+relevant security fixes get merged.
+
 
 #### Example Data Points
 
@@ -119,3 +132,6 @@ once we have fixed the bug.
 [5]: {{ site.baseurl }}/native-code/logging/
 [ChromeSecurity]: https://www.chromium.org/Home/chromium-security/reporting-security-bugs
 [DiscussWebRTC]: https://groups.google.com/group/discuss-webrtc
+[ChromeSecurityBlog]: https://chromereleases.googleblog.com/search/label/Stable%20updates
+[ChromeBugList]: https://bugs.chromium.org/p/chromium/issues/list?can=1&q=Type%3DBug-Security+component%3ABlink%3EWebRTC+-status%3ADuplicate%2CWontfix&sort=-closed&colspec=ID+Pri+M+Component+Status+Owner+Summary+OS+Closed&x=m&y=releaseblock&cells=ids
+[WebRtcBugList]: {{ site.baseurl }}/bugs/security
