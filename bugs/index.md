@@ -134,4 +134,4 @@ relevant security fixes get merged.
 [DiscussWebRTC]: https://groups.google.com/group/discuss-webrtc
 [ChromeSecurityBlog]: https://chromereleases.googleblog.com/search/label/Stable%20updates
 [ChromeBugList]: https://bugs.chromium.org/p/chromium/issues/list?can=1&q=Type%3DBug-Security+component%3ABlink%3EWebRTC+-status%3ADuplicate%2CWontfix&sort=-closed&colspec=ID+Pri+M+Component+Status+Owner+Summary+OS+Closed&x=m&y=releaseblock&cells=ids
-[WebRtcBugList]: {{ site.baseurl }}/bugs/security
+[WebRtcBugList]: {{ site.baseurl }}/bugs/security/
