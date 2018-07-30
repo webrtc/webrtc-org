@@ -220,6 +220,6 @@ For instructions on how to do this see [here][8]
 [3]: {{ site.baseurl }}/native-code/development/
 [4]: https://chromium.googlesource.com/external/webrtc/+/master/tools_webrtc/ios/build_ios_libs.py
 [5]: https://ninja-build.org/
-[6]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
+[6]: https://gn.googlesource.com/gn/+/master/README.md
 [7]: https://github.com/phonegap/ios-deploy
 [8]: http://ikennd.ac/blog/2015/02/stripping-unwanted-architectures-from-dynamic-libraries-in-xcode/
