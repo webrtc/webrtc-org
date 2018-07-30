@@ -302,8 +302,8 @@ Target name `turnserver`. In active development to reach compatibility with
 [8]: {{ site.baseurl }}/contributing/
 [9]: http://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/depot_tools_tutorial.html#_setting_up
 [10]: {{ site.baseurl }}/native-code/native-apis/
-[12]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/README.md
-[13]: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/reference.md#IDE-options
+[12]: https://gn.googlesource.com/gn/+/master/README.md
+[13]: https://gn.googlesource.com/gn/+/master/docs/reference.md#IDE-options
 [RFC 5389]: https://tools.ietf.org/html/rfc5389
 [RFC 5766]: https://tools.ietf.org/html/rfc5766
 [14]: https://webrtc.org/native-code/development/#contributing-your-first-patch
