@@ -79,8 +79,6 @@ More resources below.
 * [IETF RTCWEB](http://datatracker.ietf.org/wg/rtcweb/): protocol specifications
 
 ### Native APIs
-* [Getting started with WebRTC on iOS](https://tech.appear.in/2015/05/25/Getting-started-with-WebRTC-on-iOS/)
-* [Introduction to WebRTC on Android](https://tech.appear.in/2015/05/25/Introduction-to-WebRTC-on-Android)
 * [Build scripts from pristineio](https://github.com/pristineio/webrtc-build-scripts): repo with links to how-to guides for Android and iOS
 * [Native API documentation](https://webrtc.org/native-code/)
 * [WebRTC shim for WKWebView](https://github.com/common-tater/wkwebview-webrtc-shim)
@@ -100,7 +98,7 @@ More resources below.
 * Comprehensive list in the [webrtcHacks article about JavaScript libraries](https://webrtchacks.com/whats-in-a-webrtc-javascript-library/).
 
 #### Video chat
-* [appear.in](https://developer.appear.in/)
+* [appear.in](https://appear.in/)
 * [SimpleWebRTC](https://github.com/henrikjoreteg/SimpleWebRTC)
 * [easyRTC](https://github.com/priologic/easyrtc)
 * [LyteSpark](http://lytespark.com)
@@ -124,7 +122,6 @@ More resources below.
 
 #### Node
 * [rtc.io](http://rtc.io)
-* [appear.in](https://www.npmjs.com/package/appearin-sdk)
 
 ### Services
 * [OpenTok](https://tokbox.com/) (acquired by Telefonica Digital)
