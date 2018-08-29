@@ -34,7 +34,7 @@ Unified Plan is currently developed, and the flag for experimentation has been a
 If you run Chrome with “--enable-blink-features=RTCUnifiedPlan”, you will have access to the “sdpSemantics” feature described above, and can start testing with Unified Plan.
 
 ### Phase 2: Make the API feature generally available
-Planned for M68 (beta June 2018).
+Released in M69 (beta August 2018, stable September 2018)
 
 In this phase, the default value of the sdpSemantics flag is “plan-b”.
 In Phase 2, we expect people who have implementations that depend on the SDP format to run tests to see if their applications work when Unified Plan is in use.
@@ -42,13 +42,20 @@ For applications that support Firefox, we expect this to be a very simple exerci
 
 ### Phase 3: Switch the default
 
-The date for the switch will be set in consultation with the users, after extensive testing.
+The date for the switch will be set in consultation with the users, after extensive testing. Our current plan is M72 (beta December 2018, stable January 2019). 
 
 In this phase, we’ll change the default value of the sdpSemantics flag to “unified-plan”.
 Applications that discover that they need more time to convert can set the sdpSemantics flag explicitly to “plan-b” in order to recover previous behaviour.
+
+As part of testing, we expect to try changing the default value of the flag in Canary multiple times over the development cycle of M71 and M72.
 
 We will be monitoring the usage of the flag, and the amount of SDP being received with “Plan B” semantics, in order to set the date for phase 4.
 ### Phase 4: Remove “plan B”
 
 In this phase, the sdpSemantics flag and all code for supporting Plan B will be removed from Chrome. Setting the sdpSemantics flag will not be an error, but will have no effect.
 
+## Further information
+
+For information on Unified Plan in the C++ API, see the [C++ API transition plan](TBD).
+
+For detailed information on how to modify your application for Unified plan, see the [Web API transition guide](TBD).

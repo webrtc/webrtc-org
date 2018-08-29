@@ -14,6 +14,12 @@ for Windows, Linux, Mac and Android.
 
 ### FAQ about the current implementation
 
+### What's the status of Unified Plan SDP?
+
+Chrome is in the process of transitioning from the old, non-standard SDP
+called "plan b" to the standardized format called "Unified Plan".
+
+Details of this transition are found in the [Unified Plan document](unified-plan).
 
 #### What's the status of data channels?
 
