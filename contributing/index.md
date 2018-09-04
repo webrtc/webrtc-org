@@ -56,7 +56,7 @@ Now that you have your account set up, you can do the actual upload:
      git checkout -b my-work-branch
      # Make changes, build locally, run tests locally
      git commit -am "Changed x, and it is working"
-     git upload
+     git cl upload
      ~~~~~
      This will open a text editor showing all local commit messages, allowing you
      to modify it before it becomes the CL description. Save and close the file to
@@ -78,7 +78,7 @@ Now that you have your account set up, you can do the actual upload:
      ~~~~~ bash
      # Make changes, build locally, run tests locally
      git commit -am "Fixed X and Y"
-     git upload
+     git cl upload
      ~~~~~
 
   6. Once the reviewer LGTMs (approves) the patch, ask them to put it into the
