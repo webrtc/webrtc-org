@@ -28,10 +28,9 @@ A few specific notes on data channels:
     implementation of DTLSIdentityServiceInterface to
     PeerConnectionFactoryInterface::CreatePeerConnection.
 
-  * You should not try to send more than 16KB at a time via the
-    DataChannel.send() API. This limitation is temporary and will be removed
-    in a future update to the SCTP protocol (EOR + ndata). Until then, you can
-    work around this by breaking your data into < 16KB chunks and sending each
+  * You should not try to send more than 64KB at a time via the
+    DataChannel.send() API. This limitation is temporary and will be removed once Chrome has incorporated the [SCTP User Message Interleaving][6] extension. Until then, you can
+    work around this by breaking your data into < 64KB chunks and sending each
     chunk individually.
 
 #### What API can I use for screensharing?
@@ -78,5 +77,6 @@ and hit Ctrl+E to start capturing. {% comment %}More on that [here][5].{% endcom
 [3]: https://www.chromium.org/for-testers/enable-logging
 [4]: https://code.google.com/p/sawbuck/
 [5]: https://wiki.corp.google.com/twiki/bin/view/Main/SawbuckProject
+[6]: https://tools.ietf.org/html/rfc8260
 
 
