@@ -26,7 +26,7 @@ partial dictionary RTCConfiguration {
 ```
 The RTCConfiguration can be passed to the constructor of an RTCPeerConnection, and all offers and answers constructed will be in the Unified Plan format. Calls to setLocalDescription and setRemoteDescription will also expect the SDP to be in the Unified Plan format; if it is in the legacy Chrome format, then all but the first audio track and the first video track will be ignored.
 
-There’s also a command line flag (--enable-blink-features=RTCUnifiedPlanByDefault) that allows the default value of this flag to be set to “unified-plan”.
+There’s also a command line flag (--enable-features=RTCUnifiedPlanByDefault in M71 and above, --enable-blink-features=RTCUnifiedPlanByDefault in earlier versions) that allows the default value of this flag to be set to “unified-plan”.
 ## The Phases
 
 ### Phase 1: Implement Unified Plan
@@ -39,6 +39,8 @@ Released in M69 (beta August 2018, stable September 2018)
 In this phase, the default value of the sdpSemantics flag is “plan-b”.
 In Phase 2, we expect people who have implementations that depend on the SDP format to run tests to see if their applications work when Unified Plan is in use.
 For applications that support Firefox, we expect this to be a very simple exercise: just do as you would do for Firefox.
+
+The default value of the sdpSemantics flag can be changed in "chrome://flags"; look for the feature "WebRTC: Use Unified Plan SDP Semantics by default".
 
 ### Phase 3: Switch the default
 
@@ -56,6 +58,6 @@ In this phase, the sdpSemantics flag and all code for supporting Plan B will be 
 
 ## Further information
 
-For information on Unified Plan in the C++ API, see the [C++ API transition plan](TBD).
+For information on Unified Plan in the C++ API, see the C++ API transition plan (forthcoming).
 
-For detailed information on how to modify your application for Unified plan, see the [Web API transition guide](TBD).
+For detailed information on how to modify your application for Unified plan, see the Web API transition guide (forthcoming).
