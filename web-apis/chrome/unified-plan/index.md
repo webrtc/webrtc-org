@@ -56,8 +56,8 @@ We will be monitoring the usage of the flag, and the amount of SDP being receive
 
 In this phase, the sdpSemantics flag and all code for supporting Plan B will be removed from Chrome. Setting the sdpSemantics flag will not be an error, but will have no effect.
 
-## Further information
+## Preparing Your Application For Unified Plan
 
-For information on Unified Plan in the C++ API, see the C++ API transition plan (forthcoming).
+For detailed information about Plan B and Unified Plan differences and how your application may need to be updated in preparation for Unified plan, see the [“Unified Plan” Transition Guide (JavaScript)][1].
 
-For detailed information on how to modify your application for Unified plan, see the Web API transition guide (forthcoming).
+[1] https://docs.google.com/document/d/1-ZfikoUtoJa9k-GZG1daN0BU3IjIanQ_JSscHxQesvU/edit?usp=sharing
