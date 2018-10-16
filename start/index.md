@@ -187,7 +187,6 @@ More resources below.
 * [Sharefest](http://sharefest.me): share file by uploading and sharing link
 * [peerCDN](https://peercdn.com/): P2P CDN
 * [WebTorrent:](http://webtorrent.io) BitTorrent over WebRTC
-* [webp2p.org](http://webp2p.org/)
 * [peer5.com](https://peer5.com): add P2P file download to your web page
 
 #### Other

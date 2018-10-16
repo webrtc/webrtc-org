@@ -101,6 +101,9 @@ For instructions on how to build and run, see
 
 ### Using Android Studio
 
+*Note: This is known to be broken at the moment. See bug:
+https://bugs.webrtc.org/9282*
+
   1. Build the project normally (out/Debug should be the directory you used when
      generating the build files using GN):
 

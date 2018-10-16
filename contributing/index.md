@@ -56,11 +56,17 @@ Now that you have your account set up, you can do the actual upload:
      git checkout -b my-work-branch
      # Make changes, build locally, run tests locally
      git commit -am "Changed x, and it is working"
-     git upload
+     git cl upload
      ~~~~~
      This will open a text editor showing all local commit messages, allowing you
-     to modify it before it becomes the CL description. Save and close the file to
-     proceed with the upload to the WebRTC [code review server][3].
+     to modify it before it becomes the CL description.
+
+     Fill out the bug entry properly. Please specify the issue tracker prefix and
+     the issue number, separated by a colon, e.g. webrtc:123 or chromium:12345.
+     If you do not have an issue tracker prefix and an issue number just add
+     `None`.
+
+     Save and close the file to proceed with the upload to the WebRTC [code review server][3].
 
      The command will print a link like <https://webrtc-review.googlesource.com/c/src/+/53121>
      if everything goes well.
@@ -78,7 +84,7 @@ Now that you have your account set up, you can do the actual upload:
      ~~~~~ bash
      # Make changes, build locally, run tests locally
      git commit -am "Fixed X and Y"
-     git upload
+     git cl upload
      ~~~~~
 
   6. Once the reviewer LGTMs (approves) the patch, ask them to put it into the
