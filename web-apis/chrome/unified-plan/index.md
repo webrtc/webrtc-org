@@ -59,3 +59,6 @@ In this phase, the sdpSemantics flag and all code for supporting Plan B will be 
 ## Preparing Your Application For Unified Plan
 
 For detailed information about Plan B and Unified Plan differences and how your application may need to be updated in preparation for Unified plan, see the [“Unified Plan” Transition Guide (JavaScript)](https://docs.google.com/document/d/1-ZfikoUtoJa9k-GZG1daN0BU3IjIanQ_JSscHxQesvU/edit?usp=sharing).
+
+For native (C++) applications, see the document ["Migrating your native/mobile application to Unified Plan"](https://docs.google.com/document/d/1PPHWV6108znP1tk_rkCnyagH9FK205hHeE9k5mhUzOg/edit#heading=h.cp7krlgejmby).
+
