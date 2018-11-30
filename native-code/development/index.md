@@ -183,6 +183,8 @@ For more details, read Chromium's [Working with Branches][6] and
 Please see [Contributing Fixes][8] for information on how to run
 `git cl upload`, getting your patch reviewed, and getting it submitted.
 
+This also includes information on how to run tryjobs, if you're a committer.
+
 #### Chromium Committers
 
 Many WebRTC committers are also Chromium committers. To make sure to use the

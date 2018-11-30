@@ -201,56 +201,10 @@ that are configured in [infra/config/cq.cfg][5].
 To run tryjobs on a smaller set of bots; use the -b (--bot) flag:
 
 ~~~~~ bash
-git cl try -b mac -b mac_rel -m tryserver.webrtc
+git cl try -b mac -b mac_rel -B luci.webrtc.try
 ~~~~~
 You can see the available trybot names by clicking the "Choose try jobs" link in
 Gerrit (scroll down to `tryserver.webrtc`).
-
-
-#### Tryjobs on Chromium trybots
-
-It is also possible to send patches from a standalone WebRTC checkout to the
-Chromium trybots. This makes it possible to catch breakages in the
-[chromium.webrtc.fyi][6] waterfall before submit, i.e. detect errors that
-otherwise would not be revealed until WebRTC is rolled in Chromium's
-[DEPS file][7]!
-
-To use this feature:
-
-  1. Create a Gerrit CL as usual.
-
-  2. Schedule the tryjobs using any of the following approaches:
-
-     **Gerrit UI:**
-     Click the "Choose try jobs" link or add a line like this to your CL's
-     description:
-
-     ~~~~~ bash
-     CQ_INCLUDE_TRYBOTS=master.tryserver.chromium.linux:bot1,bot2;master.tryserver.chromium.mac:bot3
-     ~~~~~
-
-     Adjust it to your needs but make sure to follow the format convention:
-     semicolon between try servers and comma-separated bot names.
-     Then send it to CQ (or CQ dry run).
-
-     **Command line:**
-
-     ~~~~~ bash
-     git cl try -m tryserver.chromium.{linux,mac,win,android} -b <bot>
-     ~~~~~
-
-     To see available trybots, click the "Choose try jobs" link in Gerrit.
-
-  3. The trybot results will be posted back to the Gerrit UI for the CL.
-
-Example preset selection of bots (notice this may quickly become outdated):
-
-~~~~~ bash
-git cl try -m tryserver.chromium.win -b win_chromium_rel_ng
-git cl try -m tryserver.chromium.android -b android_compile_dbg -b linux_android_rel_ng
-git cl try -m tryserver.chromium.linux -b linux_chromium_rel_ng
-git cl try -m tryserver.chromium.mac -b mac_chromium_rel_ng -b ios-device
-~~~~~
 
 ##### Note about which tests are run
 Our bots in the [chromium.webrtc.fyi][6] waterfall runs special video and audio
