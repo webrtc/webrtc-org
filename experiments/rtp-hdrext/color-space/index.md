@@ -45,3 +45,7 @@ Followed by max light levels (4 bytes):
 Note, the byte order for all integers is big endian.
 
 See the standard SMPTE ST 2086 for more information about these entities.
+
+Notes: Extension shoud be present only in the last packet of video frames. If attached to other packets it should b
+e ignored.
+
