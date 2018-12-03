@@ -38,7 +38,7 @@ Mastering metadata (22 bytes):
   * X and Y coordinate of the white point, scaled by a factor of 10000 and each written
     as 16-bit unsigned integers.
 
-Followed by max light levels (4 bytes)):
+Followed by max light levels (4 bytes):
   * Max content light level, written as a 16-bit unsigned integer.
   * Max frame average light level, written as a 16-bit unsigned integer.
 
