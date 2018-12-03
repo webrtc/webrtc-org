@@ -8,11 +8,15 @@ The color space extension is used to communicate color space information and
 optionally also metadata that is needed in order to properly render a high
 dynamic range (HDR) video stream. Contact <kron@google.com> for more info.
 
-Name: "Color space" ; "RTP Header Extension for color space"
+**Name:** "Color space" ; "RTP Header Extension for color space"
 
-Formal name: <http://www.webrtc.org/experiments/rtp-hdrext/color-space>
+**Formal name:** <http://www.webrtc.org/experiments/rtp-hdrext/color-space>
 
-Wire format: 2-byte header + 4 or 30 bytes of data.
+**Status:** Draft
+
+## RTP header extension format
+
+Wire format: 1-byte header + 4 bytes of data or 2-byte header + 30 bytes of data.
 
 The data is written in the following order,
 Color space information (4 bytes):
@@ -46,6 +50,6 @@ Note, the byte order for all integers is big endian.
 
 See the standard SMPTE ST 2086 for more information about these entities.
 
-Notes: Extension shoud be present only in the last packet of video frames. If attached to other packets it should b
-e ignored.
+Notes: Extension shoud be present only in the last packet of video frames. If attached
+to other packets it should be ignored.
 
