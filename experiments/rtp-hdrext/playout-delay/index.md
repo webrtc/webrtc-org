@@ -41,10 +41,10 @@ A value of 0 for example is meaningless from the perspective of actually meeting
 
 ## RTP header extension format
 
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|  ID   | len=2 |       MIN delay       |       MAX delay       |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |  ID   | len=2 |       MIN delay       |       MAX delay       |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
 
 12 bits for Minimum and Maximum delay. This represents a range of 0 - 40950 milliseconds for minimum and maximum (with a granularity of 10 ms). A granularity of 10 ms is sufficient since we expect the following typical use cases:
