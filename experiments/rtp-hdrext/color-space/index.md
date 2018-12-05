@@ -12,7 +12,9 @@ dynamic range (HDR) video stream. Contact <kron@google.com> for more info.
 
 **Formal name:** <http://www.webrtc.org/experiments/rtp-hdrext/color-space>
 
-**Status:** Draft
+**Status:** This extension is defined here to allow for experimentation. Once experience
+has shown that it is useful, we intend to make a proposal based on it for standardization
+in the IETF.
 
 ## RTP header extension format
 
