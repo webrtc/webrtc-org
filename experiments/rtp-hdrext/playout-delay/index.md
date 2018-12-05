@@ -49,9 +49,9 @@ A value of 0 for example is meaningless from the perspective of actually meeting
 
 12 bits for Minimum and Maximum delay. This represents a range of 0 - 40950 milliseconds for minimum and maximum (with a granularity of 10 ms). A granularity of 10 ms is sufficient since we expect the following typical use cases:
 
-* 0: Certain gaming scenarios (likely without audio) where we will want to play the frame as soon as possible. Also, for remote desktop without audio where rendering a frame asap makes sense
-* 100/150/200: These could be the max target latency for interactive streaming use cases depending on the actual application (gaming, remoting with audio, interactive scenarios)
-* 400: Application that want to ensure a network glitch has very little chance of causing a freeze can start with a minimum delay target that is high enough to deal with network issues. Video streaming is one example.
+* 0 ms: Certain gaming scenarios (likely without audio) where we will want to play the frame as soon as possible. Also, for remote desktop without audio where rendering a frame asap makes sense
+* 100/150/200 ms: These could be the max target latency for interactive streaming use cases depending on the actual application (gaming, remoting with audio, interactive scenarios)
+* 400 ms: Application that want to ensure a network glitch has very little chance of causing a freeze can start with a minimum delay target that is high enough to deal with network issues. Video streaming is one example.
 
 The header is attached to the RTP packet by the RTP sender when it needs to change the min and max smoothing delay at the receiver. Once the sender is informed that at least one RTP packet which has the min and max details is delivered, it MAY stop providing details on all further RTP packets until another change warrants communicating the details to the receiver again.  This is done as follows:
 
