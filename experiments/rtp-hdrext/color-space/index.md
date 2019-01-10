@@ -66,7 +66,8 @@ Color space information (4 bytes):
 
 The extension may optionally include HDR metadata written in the following order,
 Mastering metadata (20 bytes):
-  * Luminance max, specified in the unit 1 nits. (16-bit unsigned integer)
+  * Luminance max, specified in nits, where 1 nit = 1 cd/m<sup>2</sup>.
+    (16-bit unsigned integer)
   * Luminance min, scaled by a factor of 10000 and specified in the unit 1/10000
     nits. (16-bit unsigned integer)
   * CIE 1931 xy chromaticity coordinates of the primary red, scaled by a factor of 50000.
@@ -79,8 +80,8 @@ Mastering metadata (20 bytes):
     (2x 16-bit unsigned integers)
 
 Followed by max light levels (4 bytes):
-  * Max content light level, specified in the unit 1 nits. (16-bit unsigned integer)
-  * Max frame average light level, specified in the unit 1 nits. (16-bit unsigned integer)
+  * Max content light level, specified in nits. (16-bit unsigned integer)
+  * Max frame average light level, specified in nits. (16-bit unsigned integer)
 
 Note, the byte order for all integers is big endian.
 
