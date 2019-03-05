@@ -69,9 +69,9 @@ thread. Resource-intensive processes should be posted to a different thread.
 The worker thread is used to handle more resource-intensive processes, such as
 data streaming.
 
-  * Stream APIs ([mediastreaminterface.h](https://webrtc.googlesource.com/src/+/master/api/mediastreaminterface.h))
+  * Stream APIs ([media_stream_interface.h](https://webrtc.googlesource.com/src/+/master/api/media_stream_interface.h))
 
-  * PeerConnection APIs ([peerconnectioninterface.h](https://webrtc.googlesource.com/src/+/master/api/peerconnectioninterface.h))
+  * PeerConnection APIs ([peer_connection_interface.h](https://webrtc.googlesource.com/src/+/master/api/peer_connection_interface.h))
 
 
 
