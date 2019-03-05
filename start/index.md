@@ -37,20 +37,20 @@ More resources below.
 * Simple getUserMedia demo: [simpl.info/gum](https://simpl.info/gum)
 * RTCPeerConnection 'on one page', i.e. without signalling: [simpl.info/pc](https://www.simpl.info/rtcpeerconnection)
 * Simple RTCDataChannel example: [simpl.info/rtcdatachannel](https://simpl.info/rtcdatachannel)
-* Data channel file transfer:  [webrtc.github.io/samples/src/content/datachannel/filetransfer](http://webrtc.github.io/samples/src/content/datachannel/filetransfer)
-* RTCPeerConnection signaling example:[ w3.org/TR/webrtc/#simple-example](http://w3.org/TR/webrtc/#simple-example)
+* Data channel file transfer: [webrtc.github.io/samples/src/content/datachannel/filetransfer](http://webrtc.github.io/samples/src/content/datachannel/filetransfer)
+* RTCPeerConnection signaling example: [w3.org/TR/webrtc/#simple-example](http://w3.org/TR/webrtc/#simple-example)
 * Constraints: [simpl.info/getusermedia/constraints](https://simpl.info/getusermedia/constraints/)
 * [Screen capture](https://html5-demos.appspot.com/static/getusermedia/screenshare.html)
 * Muaz Khan maintains a mighty assortment of experiments at [webrtc-experiment.com](https://www.webrtc-experiment.com).
 
 ### Tutorials
-* Getting Started With WebRTC:[ html5rocks.com/en/tutorials/webrtc/basics](http://html5rocks.com/en/tutorials/webrtc/basics/)
+* Getting Started With WebRTC: [html5rocks.com/en/tutorials/webrtc/basics](http://html5rocks.com/en/tutorials/webrtc/basics/)
 * [WebRTC in the real world: STUN, TURN and signaling](http://html5rocks.com/en/tutorials/webrtc/infrastructure/)
 * [A practical guide to WebRTC](https://slideshare.net/vline/a-practical): presentation slides from vLine
-* Capturing audio and video in HTML5:[ html5rocks.com/en/tutorials/getusermedia/intro](http://html5rocks.com/en/tutorials/getusermedia/intro)
+* Capturing audio and video in HTML5: [html5rocks.com/en/tutorials/getusermedia/intro](http://html5rocks.com/en/tutorials/getusermedia/intro)
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
-* Justin Uberti at Google I/O 2012:[ youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
-* Cullen Jennings video: HTML5 WebRTC:[ vimeo.com/47682405](http://vimeo.com/47682405)
+* Justin Uberti at Google I/O 2012: [youtu.be/E8C8ouiXHHk](http://youtube.com/watch?v=E8C8ouiXHHk)
+* Cullen Jennings video: HTML5 WebRTC: [vimeo.com/47682405](http://vimeo.com/47682405)
 * [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
 * [Build a simple 1-to-1 video chat with WebRTC and Firebase](https://websitebeaver.com/insanely-simple-webrtc-video-chat-using-firebase-with-codepen-demo) (perfect for beginners)
 
@@ -176,9 +176,6 @@ More resources below.
 #### Telehealth
 * [Regional Cystic Fibrosis Program](https://pulseitmagazine.com.au/index.php?option=com_content&view=article&id=1382:cystic-fibrosis-project-to-trial-webrtc-home-monitoring-and-shared-ehr&catid=16:australian-ehealth&Itemid=327)
 * [consultdirect.com.au](http://consultdirect.com.au/)
-
-#### Phone
-* [Zingaya](http://demos.zingaya.com/webrtc-pstn/)
 
 #### File sharing and P2P
 * [Sharefest](http://sharefest.me): share file by uploading and sharing link
