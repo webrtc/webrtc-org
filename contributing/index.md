@@ -197,7 +197,7 @@ git cl try
 
 The results will be presented in the code review web UI. You can also click the
 "CQ Dry run" button. Both these alternatives will trigger the default trybots
-that are configured in [infra/config/cq.cfg][5].
+that are configured in [infra/config/commit-queue.cfg][5].
 To run tryjobs on a smaller set of bots; use the -b (--bot) flag:
 
 ~~~~~ bash
@@ -224,7 +224,7 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [2]: https://cla.developers.google.com/about/google-corporate
 [3]: https://webrtc-review.googlesource.com/
 [4]: http://www.chromium.org/developers/owners-files
-[5]: https://webrtc.googlesource.com/src/+/master/infra/config/cq.cfg
+[5]: https://webrtc.googlesource.com/src/+/infra/config/commit-queue.cfg
 [6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
 [7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
 [9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
