@@ -50,7 +50,6 @@ More resources below.
 * Capturing audio and video in HTML5: [html5rocks.com/en/tutorials/getusermedia/intro](http://html5rocks.com/en/tutorials/getusermedia/intro)
 * Excellent series of articles by Louis Stowasser and Robert Nyman: [hacks.mozilla.org/category/webrtc](https://hacks.mozilla.org/category/webrtc/)
 * Justin Uberti at Google I/O 2012: [youtu.be/E8C8ouiXHHk](https://youtube.com/watch?v=E8C8ouiXHHk)
-* Cullen Jennings video: HTML5 WebRTC: [vimeo.com/47682405](https://vimeo.com/47682405)
 * [WebRTC Fundamentals](https://www.pluralsight.com/courses/webrtc-fundamentals): online course
 * [Build a simple 1-to-1 video chat with WebRTC and Firebase](https://websitebeaver.com/insanely-simple-webrtc-video-chat-using-firebase-with-codepen-demo) (perfect for beginners)
 
