@@ -96,7 +96,7 @@ sender system’s NTP clock, to also estimate the capture system’s NTP clock:
 
 A receiver MUST treat the first CSRC in the CSRC list of a received packet as if
 it belongs to the capture system. If the CSRC list is empty, then the receiver
-should treat the SSRC as if it belongs to the capture system. Mixers SHOULD put
+MUST treat the SSRC as if it belongs to the capture system. Mixers SHOULD put
 the most prominent CSRC as the first CSRC in a packet’s CSRC list.
 
 #### Intermediate systems
