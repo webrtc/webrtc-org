@@ -42,7 +42,7 @@ visible 14 weeks after they are fixed). If there is a bug in WebRTC code
 that Chromium isn’t using (such as the Java/ObjC wrappers for Android/iOS)
 we will announce fixes separately on [discuss-webrtc][DiscussWebRTC].
 
-[List of all disclosed native-only security bugs][WebRtcBugList].
+[Tracking released security bug disclosures][WebRtcBugList].
 
 Note that we will generally NOT merge security fixes backwards to any branches,
 so if you’re using older branches it’s your responsibility to make sure the
