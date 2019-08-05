@@ -136,6 +136,10 @@ page.
     For example, if UserA and UserB are in a call, and UserA hears herself
     speak, please obtain an audio recording from UserB.
 
+  * For **regressions**, i.e. things that worked in one version and stopped working in
+    a later versioņ, provide both versions. If you know steps to reproduce you might
+    want to try [a bisect](https://www.chromium.org/developers/bisect-builds-py) to
+    identify the commit that changed the behaviour.
 
 #### Instructions
 
