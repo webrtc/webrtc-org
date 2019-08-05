@@ -5,10 +5,12 @@ permalink: /release-notes/
 crumb: Release Notes
 ---
 
-  * [M74 Release Noted](https://groups.google.com/d/msg/discuss-webrtc/cXEtXIIYrQs/R7y0yIK2AQAJ)
-  * [M73 Release Noted](https://groups.google.com/d/msg/discuss-webrtc/l0gc3RjBhc0/FsMqOlOSBwAJ)
-  * [M72 Release Noted](https://groups.google.com/d/msg/discuss-webrtc/3h4y0fimHwg/j6G4dTVvCAAJ)
-  * [M71 Release Noted](https://groups.google.com/d/msg/discuss-webrtc/HUpIxlDlkSE/qR1nswqZCwAJ)
+  * [M76 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/Y7TIuNbgP8M/UoXP-RuxAwAJ)
+  * [M75 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/_jlUbYjv-hQ/mCtjlVyjAgAJ)
+  * [M74 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/cXEtXIIYrQs/R7y0yIK2AQAJ)
+  * [M73 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/l0gc3RjBhc0/FsMqOlOSBwAJ)
+  * [M72 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/3h4y0fimHwg/j6G4dTVvCAAJ)
+  * [M71 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/HUpIxlDlkSE/qR1nswqZCwAJ)
   * [M70 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/6ImvPjWQvbE/AlCtGQnYBQAJ)
   * [M69 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/i1Td6qhfKlQ/ryXly46JCwAJ)
   * [M68 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/nDdDqIBtFBM/bf_0eknmAwAJ)
