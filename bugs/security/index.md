@@ -8,7 +8,7 @@ crumb: Security Bugs
 {% include toc-hide.html %}
 
 ### Filing A Security Bug
-If you have found a potential security related bug [please follow the instructions here.](https://webrtc.org/bugs/#filing-a-security-bug).
+If you have found a potential security related bug [please follow the instructions here.](https://webrtc.org/bugs/#filing-a-security-bug)
 
 ### Tracking WebRTC Chromium - Security Bugs
 Publicly visible security bugs in the Chromium issue tracker normally become
