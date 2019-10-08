@@ -97,7 +97,7 @@ More resources below.
 * Comprehensive list in the [webrtcHacks article about JavaScript libraries](https://webrtchacks.com/whats-in-a-webrtc-javascript-library/).
 
 #### Video chat
-* [appear.in](https://appear.in/)
+* [Whereby (formerly appear.in)](https://whereby.com/)
 * [SimpleWebRTC](https://github.com/henrikjoreteg/SimpleWebRTC)
 * [easyRTC](https://github.com/priologic/easyrtc)
 * [LyteSpark](http://lytespark.com)
