@@ -8,26 +8,35 @@ permalink: /native-code/android/
 {% include toc-hide.html %}
 
 
+### Prebuilt libraries
+The easiest way to get started is using the [official prebuilt libraries][5]
+available at JCenter. These libraries are compiled from the tip-of-tree and are
+meant for development purposes only.
+
+On Android Studio 3 add to your dependencies:
+
+~~~~~
+implementation 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+On Android Studio 2 add to your dependencies:
+
+~~~~~
+compile 'org.webrtc:google-webrtc:1.0.+'
+~~~~~
+
+The version of the library is `1.0.<Cr-Commit-Position>`. The hash of the commit
+can be found in the .pom-file. The third party licenses can be found in the
+THIRD_PARTY_LICENSES.md file next to the .aar-file.
+
+
 ### Getting the Code
 
 Android development is only supported on Linux.
 
   1. Install [prerequisite software][1]
 
-  2. Set the path to your Java OpenJDK 7 dir if you're not using the Ubuntu
-     default:
-
-     ~~~~~ bash
-     export JAVA_HOME=<location of OpenJDK 7>
-     ~~~~~
-
-  3. Set the target OS in your environment:
-
-     ~~~~~ bash
-     export GYP_DEFINES="OS=android"
-     ~~~~~
-
-  4. Create a working directory, enter it, and run:
+  2. Create a working directory, enter it, and run:
 
      ~~~~~ bash
      fetch --nohooks webrtc_android
@@ -35,12 +44,38 @@ Android development is only supported on Linux.
      ~~~~~
 
 This will fetch a regular WebRTC checkout with the Android-specific parts
-added. The same checkout can be used for both Linux and Android development,
-depending on the OS you set in `GYP_DEFINES` (see above).
+added. Notice that the Android specific parts like the Android SDK and NDK are
+quite large (~8 GB), so the total checkout size will be about 16 GB.
+The same checkout can be used for both Linux and Android development since you
+can generate your [Ninja][4] project files in different directories for each
+build config.
 
 See [Development](/native-code/development/) for instructions on how to update
 the code, building etc.
 
+### Compiling
+
+  1. Generate projects using GN.
+
+     Make sure your current working directory is src/ of your workspace.
+     Then run:
+
+     ~~~~~ bash
+     gn gen out/Debug --args='target_os="android" target_cpu="arm"'
+     ~~~~~
+
+     You can specify a directory of your own choice instead of `out/Debug`,
+     to enable managing multiple configurations in parallel.
+
+      * To build for ARM64: use `target_cpu="arm64"`
+      * To build for 32-bit x86: use `target_cpu="x86"`
+      * To build for 64-bit x64: use `target_cpu="x64"`
+
+  2. Compile using:
+
+     ~~~~~ bash
+     ninja -C out/Debug
+     ~~~~~
 
 ### Using the Bundled Android SDK/NDK
 
@@ -55,23 +90,49 @@ In order to use the Android SDK and NDK that is bundled in
 Then you'll have `adb` and all the other Android tools in your `PATH`.
 
 
-### Running the AppRTCDemo App
+### Running the AppRTCMobile App
 
-AppRTCDemo is an Android application using WebRTC Native APIs via JNI (JNI
+AppRTCMobile is an Android application using WebRTC Native APIs via JNI (JNI
 wrapper is documented [here][2]).
 
 For instructions on how to build and run, see
-[webrtc/examples/androidapp/README][3].
+[examples/androidapp/README][3].
 
 
-### Running WebRTCDemo
+### Using Android Studio
 
-WebRTCDemo is a sample app that can send and receive media streams if manually
-connected to another WebRTCDemo that is directly accessible (e.g. firewalls
-might prevent you from establishing a connection). Further, it allows setting,
-enabling and disabling audio and video processing functionality (e.g. echo
-cancellation, NACK, audio codec and video codec). For instructions on how to
-build and run it, see [webrtc/examples/android/media_demo/README][4]
+*Note: This is known to be broken at the moment. See bug:
+https://bugs.webrtc.org/9282*
+
+  1. Build the project normally (out/Debug should be the directory you used when
+     generating the build files using GN):
+
+     ~~~~~ bash
+     ninja -C out/Debug AppRTCMobile
+     ~~~~~
+
+  2. Generate the project files:
+
+     ~~~~~ bash
+     build/android/gradle/generate_gradle.py --output-directory $PWD/out/Debug \
+     --target "//examples:AppRTCMobile" --use-gradle-process-resources \
+     --split-projects --canary
+     ~~~~~
+
+  3. *Import* the project in Android Studio. (Do not just open it.) The project
+     is located in `out/Debug/gradle`. If asked which SDK to use, choose to use
+     Android Studio's SDK. When asked whether to use the Gradle wrapper, press
+     "OK".
+
+  4. Ensure target `webrtc > examples > AppRTCMobile` is selected and press Run.
+     AppRTCMobile should now start on the device.
+
+If you do any changes to the C++ code, you have to compile the project using
+ninja after the changes (see step 1).
+
+*Note: Only "arm" is supported as the target_cpu when using Android Studio. This
+still allows you to run the application on 64-bit ARM devices. x86-based devices
+are not supported right now.*
 
 
 ### Running WebRTC Native Tests on an Android Device
@@ -81,54 +142,41 @@ To build APKs with the WebRTC native tests, follow these instructions.
   1. Ensure you have an Android device set in Developer mode connected via
      USB.
 
-  2. With the target OS set in `GYP_DEFINES` as described above, compile
-     everything:
+  2. Compile as described in the section above.
 
-     ~~~~~ bash
-     ninja -C out/Debug
-     ~~~~~
-
-  3. Check which tests are available (see the output for the `--suite` flag):
-
-     ~~~~~ bash
-     webrtc/build/android/test_runner.py gtest --help
-     ~~~~~
+  3. To see which tests are available: look in `out/Debug/bin`.
 
   4. Run a test on your device:
 
      ~~~~~ bash
-     webrtc/build/android/test_runner.py gtest -s modules_unittests
+     out/Debug/bin/run_modules_unittests
      ~~~~~
 
-  5. If want to run a Release build, add `--release` to the command line
-     above.
-
-     If you want to limit to a subset of tests, use the `--gtest_filter flag`,
+  5. If you want to limit to a subset of tests, use the `--gtest_filter flag`,
      e.g.
 
      ~~~~~
-     webrtc/build/android/test_runner.py gtest -s modules_unittests \
+     out/Debug/bin/run_modules_unittests \
      --gtest_filter=RtpRtcpAPITest.SSRC:RtpRtcpRtcpTest.*
      ~~~~~
 
   6. **NOTICE:** The first time you run a test, you must accept a dialog on
      the device!
 
-  7. **NOTICE:** If you run large test suites (like `webrtc_perf_tests` and
-     `modules_unittests`) without any test filter, you may need to pass the
-     `-t` flag to the script to set a higher timeout than the default 60
-     seconds. 1800 seconds is needed for `webrtc_perf_tests` on slower
-     devices.
+If want to run Release builds instead; pass `is_debug=false` to GN (and
+preferably generate the projects files into a directory like `out/Release`).
+Then use the scripts generated in `out/Release/bin` instead.
 
 
 ### Running WebRTC Instrumentation Tests on an Android Device
 
-To run the instrumentation tests (like AppRTCDemoTest and
-libjingle_peerconnection_android_unittest), use the `instrumentation` command
-for `test_runner.py` instead of `gtest`.
+The instrumentation tests (like AppRTCMobileTest and
+libjingle_peerconnection_android_unittest) gets scripts generated in the same
+location as the native tests described in the previous section.
 
 
 [1]: {{ site.baseurl }}/native-code/development/prerequisite-sw/
-[2]: https://chromium.googlesource.com/external/webrtc/+/master/talk/app/webrtc/java/README
-[3]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/androidapp/README
-[4]: https://chromium.googlesource.com/external/webrtc/+/master/webrtc/examples/android/media_demo/README
+[2]: https://webrtc.googlesource.com/src/+/master/sdk/android/README
+[3]: https://webrtc.googlesource.com/src/+/master/examples/androidapp/README
+[4]: https://ninja-build.org/
+[5]: https://bintray.com/google/webrtc/google-webrtc

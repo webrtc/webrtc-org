@@ -7,7 +7,7 @@ class: home
 
 <div class="jumbotron clearfix" markdown="1">
 
-<img src="{{ site.baseurl }}/assets/images/webrtc-logo-vert-retro-255x305.png" class="pull-right" style="margin-left: 2em; margin-bottom: .5em;">
+<!-- <img src="{{ site.baseurl }}/assets/images/webrtc-logo-vert-retro-255x305.png" class="pull-right" style="margin-left: 2em; margin-bottom: .5em;"> -->
 
 **WebRTC is a free, open project** that provides browsers and mobile
 applications with Real-Time Communications (RTC) capabilities via simple APIs.
@@ -19,6 +19,10 @@ all to communicate via a common set of protocols.
 
 The WebRTC initiative is a project supported by Google, Mozilla and Opera,
 amongst others. This page is maintained by the Google Chrome team.
+
+**New to WebRTC? Take a look at our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web).**
+
+Lots more resources for getting started are available from [webrtc.org/start](https://webrtc.org/start).
 
 </div>
 
@@ -120,8 +124,8 @@ amongst others. This page is maintained by the Google Chrome team.
     <ul>
       <li>
         <p>The master <strong>source repository</strong> for WebRTC is at
-        <a href="https://chromium.googlesource.com/external/webrtc">
-        https://chromium.googlesource.com/external/webrtc</a> (check
+        <a href="https://webrtc.googlesource.com/src">
+        https://webrtc.googlesource.com/src</a> (check
         <a href="{{ site.baseurl }}/native-code/development/">Development</a>
         for more details).</p>
       </li>
@@ -132,11 +136,11 @@ amongst others. This page is maintained by the Google Chrome team.
         <p><strong>Live demos</strong> can be accessed at <a href="https://webrtc.github.io/samples">webrtc.github.io/samples</a>.</p>
       </li>
       <li>
-        <p>Check out the latest WebRTC update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
+        <p>Check out the WebRTC 2017 update below, or <a href="{{ site.baseurl }}/videos/"><strong>browse our other videos</strong></a>.</p>
       </li>
     </ul>
     <div class="embed-responsive embed-responsive-16by9 yt-embed">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/HCE3S1E5UwY" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PEXnbTyygi4" frameborder="0" allowfullscreen></iframe>
     </div>
 
   </div>

@@ -9,5 +9,6 @@ npm-debug.log
 .drone.sec.yml
 artwork-new
 artwork/webicons
+build
 
 ## Temporary ignores

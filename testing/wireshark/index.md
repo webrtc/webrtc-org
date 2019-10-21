@@ -50,9 +50,13 @@ well, more info can be found [here][3].
 
   7. A popup window should appear with lots of RTP streams.
 
-  8. The ones we are interested in should have a proper payload type e.g.
-     **100** (VP8 in Chrome), **111** (Opus in Chrome) and **116** (VP8 with
-     FEC in Chrome). Firefox and Opera may have different payload types for
+  8. The RTP payload types indicate which codec is in use. For payload types
+     between 96 and 128, they are assigned in the SDP negotiation setting up
+     the RTP streams, but browsers typically have preferred values.
+
+     The ones we are interested in typically have a payload type
+     **96** (VP8 in Chrome), **111** (Opus in Chrome) and **127** (VP8 with
+     RED in Chrome). Firefox and Opera may have different payload types for
      VP8 etc.
 
      * Sorting by number of packets is usually a good approach to filter out

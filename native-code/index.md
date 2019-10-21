@@ -12,11 +12,11 @@ API](http://dev.w3.org/2011/webrtc/editor/webrtc.html) instead.
 
 The WebRTC **native code package** can be found at:
 
-  * <https://chromium.googlesource.com/external/webrtc>
+  * <https://webrtc.googlesource.com/src>
 
 The **change log** is at:
 
-  * <https://chromium.googlesource.com/external/webrtc/+log>
+  * <https://webrtc.googlesource.com/src/+log>
 
 Please read the [**License & Rights**]({{ site.baseurl }}/license/) and
 [**FAQ**]({{ site.baseurl }}/faq/) before downloading the source code.
@@ -34,3 +34,4 @@ native code package.
     * [Prerequisite software]({{ site.baseurl }}/native-code/development/prerequisite-sw/)
   * [iOS]({{ site.baseurl }}/native-code/ios/)
   * [Native APIs]({{ site.baseurl }}/native-code/native-apis/)
+  * [Logging]({{ site.baseurl }}/native-code/logging/)

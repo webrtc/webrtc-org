@@ -25,7 +25,7 @@ The tests are continually updated as the spec changes. If you're interested in c
 
 #### Conformance Tests in Chrome
 
-The conformance tests are [pulled into Chrome][1] continuous integration every now and then. To see the tests running, click into a WebKit bot ([example][2]) and search for mediacapture-streams.
+The conformance tests are [pulled into Chrome][1] continuous integration every now and then.
 
 
 ### Interop Tests
@@ -35,7 +35,6 @@ We actually have an automated test which tests Firefox nightly with Chrome conti
 Read more here on the Google testing blog: [Part 1][3], [Part 2][4]
 
 
-[1]: http://www.chromium.org/blink/importing-the-w3c-tests
-[2]: http://build.chromium.org/p/chromium.webkit/builders/WebKit%20Linux%20%28dbg%29/
+[1]: https://chromium.googlesource.com/chromium/src/+/master/docs/testing/web_platform_tests.md
 [3]: http://googletesting.blogspot.se/2014/08/chrome-firefox-webrtc-interop-test-pt-1.html
 [4]: http://googletesting.blogspot.se/2014/09/chrome-firefox-webrtc-interop-test-pt-2.html

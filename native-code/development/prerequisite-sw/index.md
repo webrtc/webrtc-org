@@ -11,82 +11,63 @@ crumb: Prerequisites
 
 ### Depot Tools
 
-  1. You'll need to have the depot tools installed:
+  1. [Install the Chromium depot tools][1].
 
-     <http://dev.chromium.org/developers/how-tos/install-depot-tools>
-
-  2. Git: On Windows it will install a special version of Git automatically on
-     the first sync. On Mac and Linux, you'll need to install Git by yourself
-     (<http://git-scm.com>)
+  2. On Windows, depot tools will download a special version of Git during your
+     first `gclient sync`.
+     On Mac and Linux, you'll need to install Git by yourself
+     (<http://git-scm.com>).
 
 
 ### Linux (Ubuntu/Debian)
 
-This, and more, is described on the Chromium site:
-
-<https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md>
-
-A script is provided for Ubuntu, which is available after your first gclient
-sync:
+A script is provided for Ubuntu, which is unfortunately only available after
+your first gclient sync:
 
 ~~~~~ bash
 ./build/install-build-deps.sh
 ~~~~~
 
-PulseAudio is missing from the script. On Ubuntu, this is provided by the
-`libpulse-dev` package.
-
-Although the [install-build-deps.sh][1] script is the recommended method, it
-will install much more than you need. Here is a (hopefully complete) minimal
-list of packages to install (`sudo apt-get install ...`):
-
-~~~~~ bash
-g++ (>= 4.2)
-python (>= 2.4)
-libnss3-dev >= 3.12
-libasound2-dev
-libpulse-dev
-libjpeg62-dev
-libxv-dev
-libgtk2.0-dev
-libexpat1-dev
-~~~~~
+Most of the libraries installed with this script are not needed since we now
+build using Debian sysroot images in build/linux, but there are still some tools
+needed for the build that are installed with [install-build-deps.sh][2]
 
 [1]: https://code.google.com/p/chromium/codesearch#chromium/src/build/install-build-deps.sh
 
-To create 32-bit builds for Linux on a 64-bit system (not needed or Android
-builds):
-
-~~~~~ bash
-lib32asound2-dev
-lib32z1
-lib32ncurses5
-lib32bz2-1.0
-~~~~~
-
-Tips for other distributions are available on the Chromium page.
+You may also want to have a look at the [Chromium Linux Build instructions][3]
+if you experience any other problems building.
 
 
 ### Windows
 
-Follow Chromium's build instructions at
-<http://www.chromium.org/developers/how-tos/build-instructions-windows>.
+Follow the [Chromium's build instructions for Windows][4].
 
+WebRTC requires Visual Studio 2017 to be used. If you only have version 2015
+available, you might be able to keep using it for some time by setting
+`GYP_MSVS_VERSION=2015` in your environment. Keep in mind that this is not a
+suppported configuration however.
 
-### OS X
+### macOS
 
-Xcode 3.0 or higher
+Xcode 9 or higher is required. Latest Xcode is recommended to be able to build
+all code.
 
 
 ### Android
 
-These instructions are tested on a Linux development machine. In WebRTC, we're
-using the same Android toolchain as Chrome (the one that is downloaded into
-`third_party/android_tools`). You don't need to install NDK/SDK separately.
+You'll need a Linux development machine. WebRTC is using the same Android
+toolchain as Chrome (downloaded into `third_party/android_tools`) so you won't
+need to install the NDK/SDK separately.
 
-  1. Install [Chrome's Linux prerequisites](https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions_prerequisites.md)
+  1. Install Java OpenJDK as described in the [Chromium Android prerequisites][6]
+  2. All set! If you don't run Ubuntu, you may want to have a look at
+    [Chromium's Linux prerequisites][5] for distro-specific details.
 
-  2. Install [depot_tools](http://dev.chromium.org/developers/how-tos/install-depot-tools)
 
-  3. Install Java OpenJDK as described at [Android prerequisites](https://www.chromium.org/developers/how-tos/android-build-instructions)
 
+[1]: http://dev.chromium.org/developers/how-tos/install-depot-tools
+[2]: https://cs.chromium.org/chromium/src/build/install-build-deps.sh
+[3]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md
+[4]: https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md
+[5]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md#Install
+[6]: https://www.chromium.org/developers/how-tos/android-build-instructions

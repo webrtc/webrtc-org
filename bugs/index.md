@@ -27,6 +27,52 @@ triaged by Chrome and WebRTC engineers.
 Please include as many relevant details as possible.
 
 
+### Filing a Security Bug
+
+The WebRTC team takes security very seriously. If you find a vulnerability in
+WebRTC, please file a [Chromium security bug][ChromeSecurity], even if the bug
+only affects native WebRTC code and not Chromium.
+
+A history of fixed Chromium security bugs is best found via [security notes in
+Stable Channel updates on the Google Chrome releases blog][ChromeSecurityBlog].
+
+You can also find fixed, publicly visible [Type=Bug-Security][ChromeBugList]
+bugs in the issue tracker (note: security bugs normally become publicly
+visible 14 weeks after they are fixed). If there is a bug in WebRTC code
+that Chromium isn’t using (such as the Java/ObjC wrappers for Android/iOS)
+we will announce fixes separately on [discuss-webrtc][DiscussWebRTC].
+
+[Tracking released security bug disclosures][WebRtcBugList].
+
+Note that we will generally NOT merge security fixes backwards to any branches,
+so if you’re using older branches it’s your responsibility to make sure the
+relevant security fixes get merged.
+
+
+### Receiving notifications about security bugs in Chrome
+
+To get automatic notifications about activity/comments in security bugs in
+Chrome you need to be either explicitly cc:d on specific bugs (by someone who
+has access to the bug) or be part of a special mailing list for all security bug
+notifications. To get on that list you have to apply to the Chrome Security
+team, see more about this on the [Chrome Security page][ChromeSecurity] under
+"How can I get access to Chromium vulnerabilities?" at the bottom of the page.
+
+Please note that Chrome's security-notify list will receive notifications about
+all security bugs in Chrome and not just the WebRTC ones. Normally it shouldn't
+be a problem to figure out whether an issue affects WebRTC since it will most
+likely be tagged with one of the WebRTC-related components (one of Blink>WebRTC,
+Blink>GetUserMedia, Blink>MediaStream, Blink>MediaRecording) or their sub-
+components.
+
+Also note that access granted by the list will only apply to bugs of Type=Bug-
+Security. Not all bugs with crashes, memory leaks and other potential
+vulnerabilities are marked as Bug-Security though. You can read more about what
+categories of bugs are deemed security bugs in the [Severity Guidelines for
+Security Issues][SeverityGuidelines] and also on the [Security FAQ][SecurityFaq]
+page.
+
+
 #### Example Data Points
 
   * Version of the browser/app
@@ -63,9 +109,11 @@ Please include as many relevant details as possible.
     * If you experience a crash while using WebRTC native code, please include
       the full stacktrace.
 
-  * For **connectivity** issues on Chrome, while the call is in progress,
+  * For **functional** issues or **ICE** issues, in either Chrome or a native
+    application, please gather a [native log][5].
 
-    * please open **chrome://webrtc-internals** in another tab,
+  * For **connectivity** issues on Chrome, ensure **chrome://webrtc-internals**
+    is open in another tab before starting the call and while the call is in progress,
 
     * expand the **Create Dump** section,
 
@@ -88,13 +136,20 @@ Please include as many relevant details as possible.
     For example, if UserA and UserB are in a call, and UserA hears herself
     speak, please obtain an audio recording from UserB.
 
+  * For **regressions**, i.e. things that worked in one version and stopped working in
+    a later versioņ, provide both versions. If you know steps to reproduce you might
+    want to try [a bisect](https://www.chromium.org/developers/bisect-builds-py) to
+    identify the commit that changed the behaviour.
 
 #### Instructions
 
   * Identify which bug tracker to use:
 
     * If you're hitting a problem in Chrome, file the bug using the
-      [Audio/Video Issue template][3].
+      [Blink>WebRTC component](https://bugs.chromium.org/p/chromium/components/detail?component=Blink%3EWebRTC).
+      This can be done after choosing "I am a web developer trying to build something" and
+      "Problems with a browser API" and ensures the right people will look
+      at your bug.
 
     * If you're a developer working with the native code, file the bug at
       [this link][4].
@@ -105,3 +160,12 @@ Please include as many relevant details as possible.
 [2]: http://www.chromium.org/for-testers/bug-reporting-guidelines/reporting-crash-bug
 [3]: https://code.google.com/p/chromium/issues/entry?template=Audio/Video%20Issue
 [4]: https://bugs.chromium.org/p/webrtc/issues/entry
+[5]: {{ site.baseurl }}/native-code/logging/
+[ChromeSecurity]: https://www.chromium.org/Home/chromium-security/reporting-security-bugs
+[DiscussWebRTC]: https://groups.google.com/group/discuss-webrtc
+[ChromeSecurityBlog]: https://chromereleases.googleblog.com/search/label/Stable%20updates
+[ChromeBugList]: https://bugs.chromium.org/p/chromium/issues/list?can=1&q=Type%3DBug-Security+component%3ABlink%3EWebRTC+-status%3ADuplicate%2CWontfix&sort=-closed&colspec=ID+Pri+M+Component+Status+Owner+Summary+OS+Closed&x=m&y=releaseblock&cells=ids
+[WebRtcBugList]: {{ site.baseurl }}/bugs/security/
+[ChromeSecurity]: https://www.chromium.org/Home/chromium-security
+[SeverityGuidelines]: https://chromium.googlesource.com/chromium/src/+/master/docs/security/severity-guidelines.md
+[SecurityFaq]: https://chromium.googlesource.com/chromium/src/+/master/docs/security/faq.md

@@ -14,6 +14,12 @@ for Windows, Linux, Mac and Android.
 
 ### FAQ about the current implementation
 
+### What's the status of Unified Plan SDP?
+
+Chrome is in the process of transitioning from the old, non-standard SDP
+called "plan b" to the standardized format called "Unified Plan".
+
+Details of this transition are found in the [Unified Plan document](unified-plan).
 
 #### What's the status of data channels?
 
@@ -28,18 +34,10 @@ A few specific notes on data channels:
     implementation of DTLSIdentityServiceInterface to
     PeerConnectionFactoryInterface::CreatePeerConnection.
 
-  * You should not try to send more than 16KB at a time via the
-    DataChannel.send() API. This limitation is temporary and will be removed
-    in a future update to the SCTP protocol (EOR + ndata). Until then, you can
-    work around this by breaking your data into < 16KB chunks and sending each
+  * You should not try to send more than 64KB at a time via the
+    DataChannel.send() API. This limitation is temporary and will be removed once Chrome has incorporated the [SCTP User Message Interleaving][6] extension. Until then, you can
+    work around this by breaking your data into < 64KB chunks and sending each
     chunk individually.
-
-  * Chrome also supports unreliable RTP-based data channels, and they can be
-    activated by a { RtpDataChannels: true } constraint to the PeerConnection
-    constructor. However, they should be considered deprecated and NOT used in
-    new code. Chrome will remove support for RTP-based data channels at some
-    point in the future.
-
 
 #### What API can I use for screensharing?
 
@@ -85,5 +83,6 @@ and hit Ctrl+E to start capturing. {% comment %}More on that [here][5].{% endcom
 [3]: https://www.chromium.org/for-testers/enable-logging
 [4]: https://code.google.com/p/sawbuck/
 [5]: https://wiki.corp.google.com/twiki/bin/view/Main/SawbuckProject
+[6]: https://tools.ietf.org/html/rfc8260
 
 
