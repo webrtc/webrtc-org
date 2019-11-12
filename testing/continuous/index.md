@@ -9,26 +9,24 @@ permalink: /testing/continuous/
 
 
 The WebRTC-in-Chrome implementation is built on the code you find in
-code.webrtc.org. This code includes two libraries: webrtc and libjingle. In
-order to ensure the quality of those libraries, we have a ton of unit tests
+code.webrtc.org. In order to ensure the quality of those libraries, we have a ton of unit tests
 and integration tests for those libraries. These tests can be built and run by
 developers, and they also run in the Chrome continuous integration system at
 build.chromium.org. You can see those here:
 
-<http://build.chromium.org/p/client.webrtc/waterfall>
+<https://ci.chromium.org/p/webrtc/g/ci/console>
 
-Furthermore, there's a lot of code in Chromium which uses the webrtc and
-libjingle libraries to implement the WebRTC web standard. There's a bunch of
-tests for that too, which run here:
+Furthermore, there's a lot of code in Chromium which uses the webrtc library to 
+implement the WebRTC web standard. There's a bunch of tests for that too, which run here:
 
 <http://build.chromium.org/p/chromium.webrtc/waterfall>
 
-When you submit a patch to webrtc or libjingle, it will first run in the
-client.webrtc waterfall to ensure you change is sound on the library level.
-When we roll the WebRTC and libjingle versions in Chrome (which happens
-roughly once a week) you change will be tested against all the WebRTC-in-
-Chrome tests to ensure the change is OK. If your change breaks something on
-some level, it will be reverted and you'll get a chance to fix and re-submit.
+When you submit a patch to webrtc, it will first run in the
+WebRTC waterfall to ensure you change is sound on the library level.
+When we roll the WebRTC version in Chrome (which normally happens daily) 
+you change will be tested against all the WebRTC-in-Chrome tests to ensure the
+change is OK. If your change breaks something on some level, it will be reverted 
+and you'll get a chance to fix and re-submit.
 
 
 ### Want to Add a Test?
@@ -40,7 +38,7 @@ knowing it! Feel free to [write an issue][1] if you want to come into contact
 with the main WebRTC devs and discuss collaborating about tests.
 
 
-### WebRTC and libjingle Tests
+### WebRTC Tests
 
 Like we said earlier, these tests run [here][2]. The waterfall is a bit tricky
 to understand, but essentially each build bot will compile as soon as a patch
@@ -79,7 +77,7 @@ See the [Conformance testing]({{ site.baseurl }}/testing/conformance/) page.
 
 
 [1]: http://bugs.webrtc.org
-[2]: http://build.chromium.org/p/client.webrtc/waterfall
+[2]: https://ci.chromium.org/p/webrtc/g/ci/console
 [3]: https://webrtc.googlesource.com/src/+/master/BUILD.gn#568
 [4]: https://cs.chromium.org/chromium/src/chrome/browser/media/webrtc/webrtc_browsertest.cc
 [5]: https://cs.chromium.org/chromium/src/content/browser/webrtc/webrtc_browsertest.cc
