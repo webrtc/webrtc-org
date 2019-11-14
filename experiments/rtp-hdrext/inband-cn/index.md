@@ -1,7 +1,7 @@
 ---
 layout: default
 title: inband comfort noise header extension
-permalink: /experiments/rtp-hdrext/playout-delay/
+permalink: /experiments/rtp-hdrext/inband-cn/
 ---
 
 **Name:** "Inband Comfort Noise" ; "RTP Header Extension to signal inband comfort noise"
