@@ -29,19 +29,21 @@ While RTP packets that contain outband CN can be easily identified as they bear 
 
 The inband CN extension can be encoded using either the one-byte or two-byte header defined in \[RFC 5285\]. Figures 1 and 2 show encodings with each of these header formats.
 
- 0                   1
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|  ID   | len=0 |N| noise level |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
- Figure 1. Encoding Using the One-Byte Header Format
+     0                   1
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |  ID   | len=0 |N| noise level |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
- 0                   1                   2
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|      ID       |     len=1     |N| noise level |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
- Figure 2. Encoding Using the Two-Byte Header Format
+Figure 1. Encoding Using the One-Byte Header Format
+
+     0                   1                   2
+     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    |      ID       |     len=1     |N| noise level |
+    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Figure 2. Encoding Using the Two-Byte Header Format
 
 Noise level is an optional data. The bit "N" being 1 indicates that there is a noise level. The noise level is defined the same way as the audio level in \[RFC 6464\] and therefore can be used to avoid the Audio Level Header Extension on the same RTP packet. This also means that this level is defined the same as the noise level in \[RFC 3389\] and therfore can be compared against outband CN.
 
