@@ -291,8 +291,7 @@ Utilities for NAT as documented in [RFC 5389].
 
 #### TURN Server
 
-Target name `turnserver`. In active development to reach compatibility with
-[RFC 5766].
+Target name `turnserver`. Used for unit tests.
 
 
 [1]: {{ site.baseurl }}/native-code/android/
