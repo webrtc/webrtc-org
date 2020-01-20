@@ -146,7 +146,6 @@ More resources below.
 #### Web Audio integration
 * Music production: [soundtrap.com](http://soundtrap.com)
 * Chris Wilson’s input demos at [webaudiodemos.appspot.com](http://webaudiodemos.appspot.com)
-* Paul Lewis’s gUM/WebGL demo: [lab.aerotwist.com/webgl/audio-room](http://lab.aerotwist.com/webgl/audio-room)
 * RTCPeerConnection integration: [simpl.info/webrtcwebaudio](http://simpl.info/webrtcwebaudio)
 * [cabbibo.github.io/holly](http://cabbibo.github.io/holly/)
 
