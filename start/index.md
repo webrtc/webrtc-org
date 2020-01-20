@@ -146,7 +146,6 @@ More resources below.
 #### Web Audio integration
 * Music production: [soundtrap.com](http://soundtrap.com)
 * Chris Wilson’s input demos at [webaudiodemos.appspot.com](http://webaudiodemos.appspot.com)
-* Paul Lewis’s gUM/WebGL demo: [lab.aerotwist.com/webgl/audio-room](http://lab.aerotwist.com/webgl/audio-room)
 * RTCPeerConnection integration: [simpl.info/webrtcwebaudio](http://simpl.info/webrtcwebaudio)
 * [cabbibo.github.io/holly](http://cabbibo.github.io/holly/)
 
@@ -167,7 +166,7 @@ More resources below.
 * [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
-* [Who Am I?](https://designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
+* [Who Am I?](https://www.designweek.co.uk/issues/may-2012/magneticnorth-creates-who-am-i-game-for-google/) (second ever WebRTC game, no longer online)
 * WebRTC + Web Audio + WebGL: [Cube Slam](http://cubeslam.com)
 * Face tracking: [shinydemos.com/facekat](https://shinydemos.com/facekat/)
 * RTCDataChannel + WebGL: [BananaBread](https://hacks.mozilla.org/2013/03/webrtc-data-channels-for-great-multiplayer/)
