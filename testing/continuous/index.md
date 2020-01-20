@@ -19,7 +19,7 @@ build.chromium.org. You can see those here:
 Furthermore, there's a lot of code in Chromium which uses the webrtc library to 
 implement the WebRTC web standard. There's a bunch of tests for that too, which run here:
 
-<http://build.chromium.org/p/chromium.webrtc/waterfall>
+<https://ci.chromium.org/p/chromium/g/chromium.webrtc/console>
 
 When you submit a patch to webrtc, it will first run in the
 WebRTC waterfall to ensure you change is sound on the library level.

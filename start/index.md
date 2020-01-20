@@ -167,7 +167,7 @@ More resources below.
 * [voxeet.com](https://voxeet.com/): high quality audio
 
 #### Games
-* [Who Am I?](https://designweek.co.uk/news/magneticnorth-creates-who-am-i-game-for-google/3034813.article) (second ever WebRTC game, no longer online)
+* [Who Am I?](https://www.designweek.co.uk/issues/may-2012/magneticnorth-creates-who-am-i-game-for-google/) (second ever WebRTC game, no longer online)
 * WebRTC + Web Audio + WebGL: [Cube Slam](http://cubeslam.com)
 * Face tracking: [shinydemos.com/facekat](https://shinydemos.com/facekat/)
 * RTCDataChannel + WebGL: [BananaBread](https://hacks.mozilla.org/2013/03/webrtc-data-channels-for-great-multiplayer/)

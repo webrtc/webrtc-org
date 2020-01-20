@@ -69,5 +69,5 @@ need to install the NDK/SDK separately.
 [2]: https://cs.chromium.org/chromium/src/build/install-build-deps.sh
 [3]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md
 [4]: https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md
-[5]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md#Install
-[6]: https://www.chromium.org/developers/how-tos/android-build-instructions
+[5]: https://chromium.googlesource.com/chromium/src/+/master/docs/linux/build_instructions.md#Install
+[6]: https://chromium.googlesource.com/chromium/src/+/master/docs/android_build_instructions.md

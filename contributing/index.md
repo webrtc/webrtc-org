@@ -225,7 +225,7 @@ currently an error for the HEAD revision of WebRTC when built inside Chromium.
 [3]: https://webrtc-review.googlesource.com/
 [4]: http://www.chromium.org/developers/owners-files
 [5]: https://webrtc.googlesource.com/src/+/infra/config/commit-queue.cfg
-[6]: https://build.chromium.org/p/chromium.webrtc.fyi/waterfall
+[6]: https://ci.chromium.org/p/chromium/g/chromium.webrtc/console
 [7]: https://code.google.com/p/chromium/codesearch#chromium/src/DEPS
 [9]: https://webrtc.googlesource.com/src/+/master/AUTHORS
 [10]: https://bugs.webrtc.org
