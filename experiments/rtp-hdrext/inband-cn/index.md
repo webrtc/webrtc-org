@@ -1,61 +1,154 @@
 ---
 layout: default
-title: inband comfort noise header extension
-permalink: /experiments/rtp-hdrext/inband-cn/
+title: abs-capture-time
+permalink: /experiments/rtp-hdrext/abs-capture-time/
 ---
 
-**Name:** "Inband Comfort Noise" ; "RTP Header Extension to signal inband comfort noise"
+The Absolute Capture Time extension is used to stamp RTP packets with a NTP
+timestamp showing when the first audio or video frame in a packet was originally
+captured. The intent of this extension is to provide a way to accomplish
+audio-to-video synchronization when RTCP-terminating intermediate systems (e.g.
+mixers) are involved.
 
-**Formal name:** <http://www.webrtc.org/experiments/rtp-hdrext/inband-cn>
+**Name:**
+"Absolute Capture Time"; "RTP Header Extension for Absolute Capture Time"
 
-**Status:** This extension is defined here to allow for experimentation. Once experience has shown that it is useful, we intend to make a proposal based on it for standardization in the IETF.
+**Formal name:**
+<http://www.webrtc.org/experiments/rtp-hdrext/abs-capture-time>
 
-## Introduction
+**Status:**
+This extension is defined here to allow for experimentation. Once experience has
+shown that it is useful, we intend to make a proposal based on it for
+standardization in the IETF.
 
-Comfort noise \(CN\) is widely used in real time communication, as it significantly reduces the frequency of RTP packets, and thus saves the network bandwidth, when participants in the communication are constantly actively speaking.
-
-One way of deploying CN is through \[RFC 3389\]. It defines CN as a special payload, which needs to be encoded and decoded independently from the codec\(s\) applied to active speech signals. This deployment is referred to as outband CN in this context.
-
-Some codecs, for example RFC 6716: Definition of the Opus Audio Codec, implement their own CN schemes. Basically, the encoder can notify that a CN packet is issued and/or no packet needs to be transmitted.
-
-Since CN packets have their particularities, cloud and client may need to identify them and treat them differently. Special treatments on CN packets include but are not limited to
-
-* Upon receiving multiple streams of CN packets, choose only one to relay or mix.
-* Adapt jitter buffer wisely according to the discontinuous transmission nature of CN packets.
-
-While RTP packets that contain outband CN can be easily identified as they bear a different payload type, inband CN cannot. Some codecs may be able to extract the information by decoding the packet, but that depends on codec implementation, not even mentioning that decoding packets is not always feasible. This document proposes using an RTP header extension to signal the inband CN. 
+Contact <chxg@google.com> for more info.
 
 ## RTP header extension format
 
-The inband CN extension can be encoded using either the one-byte or two-byte header defined in \[RFC 5285\]. Figures 1 and 2 show encodings with each of these header formats.
+### Data layout overview
+Data layout of the shortened version of `abs-capture-time` with a 1-byte header
+\+ 8 bytes of data:
 
-     0                   1
-     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    |  ID   | len=0 |N| noise level |
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      0                   1                   2                   3
+      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  ID   | len=7 |     absolute capture timestamp (bit 0-23)     |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |             absolute capture timestamp (bit 24-55)            |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  ... (56-63)  |
+     +-+-+-+-+-+-+-+-+
 
-Figure 1. Encoding Using the One-Byte Header Format
+Data layout of the extended version of `abs-capture-time` with a 1-byte header +
+16 bytes of data:
 
-     0                   1                   2
-     0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-    |      ID       |     len=1     |N| noise level |
-    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+      0                   1                   2                   3
+      0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  ID   | len=15|     absolute capture timestamp (bit 0-23)     |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |             absolute capture timestamp (bit 24-55)            |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  ... (56-63)  |   sender's capture clock offset (bit 0-23)    |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |           sender's capture clock offset (bit 24-55)           |
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+     |  ... (56-63)  |
+     +-+-+-+-+-+-+-+-+
 
-Figure 2. Encoding Using the Two-Byte Header Format
+### Data layout details
+#### Absolute capture timestamp
 
-Noise level is an optional data. The bit "N" being 1 indicates that there is a noise level. The noise level is defined the same way as the audio level in \[RFC 6464\] and therefore can be used to avoid the Audio Level Header Extension on the same RTP packet. This also means that this level is defined the same as the noise level in \[RFC 3389\] and therfore can be compared against outband CN.
+`Absolute capture timestamp` is the NTP timestamp of when the first frame in a
+packet was originally captured. This timestamp MUST be based on the same clock
+as the clock used to generate NTP timestamps for RTCP sender reports on the
+capture system.
 
-## Further details
+It's not always possible to do an NTP clock readout at the exact moment of when
+a media frame is captured. A capture system MAY postpone the readout until a
+more convenient time. A capture system SHOULD have known delays (e.g. from
+hardware buffers) subtracted from the readout to make the final timestamp as
+close to the actual capture time as possible.
 
-The existence of this header extension in an RTP packet indicates that it has inband CN, and therefore it will be used sparsely, and results in very small transmission cost.
+This field is encoded as a 64-bit unsigned fixed-point number with the high 32
+bits for the timestamp in seconds and low 32 bits for the fractional part. This
+is also known as the UQ32.32 format and is what the RTP specification defines as
+the canonical format to represent NTP timestamps.
 
-The end receiver can utilize this RTP header extension to get notified about an upcoming discontinuous transmission. This can be useful for its jitter buffer management. This RTP header extension signals comfort noise, it can also be used by audio mixer to mix streams wisely. As an example, it can avoid mixing multiple comfort noises together.
+#### Sender's capture clock offset
 
-Cloud may have the benefits of this RTP header extension as an end receiver, if it does transcoding. It may also utilize this RTP header extension to prioritize RTP packets if it does packet filtering. In both cases, this RTP header extension should not be encrypted.
+`Sender's capture clock offset` is the sender's estimate of the offset between
+its own NTP clock and the capture system's NTP clock. The sender is here defined
+as the system that owns the NTP clock used to generate the NTP timestamps for
+the RTCP sender reports on this stream. The sender system is typically either
+the capture system or a mixer. In the case that the sender system is also the
+capture system, the `sender's capture clock offset` is zero.
+
+This field is encoded as a 64-bit two’s complement **signed** fixed-point number
+with the high 32 bits for the seconds and low 32 bits for the fractional part.
+It’s intended to make it easy for a receiver, which knows how to estimate the
+offset between its own NTP clock and that of the sender, to also estimate the
+offset between its own NTP clock and that of the capturer:
+
+     Receiver's Capture Clock Offset = Receiver's Sender Clock Offset + Sender's
+Capture Clock Offset.
+
+For an intermediate system, this facilitates to update the "sender's capture clock
+offset" field in the header extension before forwarding it.
+
+For any receiver, this facilites to estimate the one-way delay of this packet.
+Simply, the receiver can use the receiver's capture clock offset to translate the
+`absolute capture timestamp` into its own clock and calculate the elapsed time tills
+the packet being consumed.
+
+### Further details
+
+#### Capture system
+
+A receiver MUST treat the first CSRC in the CSRC list of a received packet as if
+it belongs to the capture system. If the CSRC list is empty, then the receiver
+MUST treat the SSRC as if it belongs to the capture system. Mixers SHOULD put
+the most prominent CSRC as the first CSRC in a packet’s CSRC list.
+
+#### Intermediate systems
+
+An intermediate system (e.g. mixer) MAY adjust these timestamps as needed. It
+MAY also choose to rewrite the timestamps completely, using its own NTP clock as
+reference clock, if it wants to present itself as a capture system for A/V-sync
+purposes.
+
+#### Timestamp interpolation
+
+A sender SHOULD save bandwidth by not sending `abs-capture-time` with every
+RTP packet. It SHOULD still send them at regular intervals (e.g. every second)
+to help mitigate the impact of clock drift and packet loss. Mixers SHOULD always
+send `abs-capture-time` with the first RTP packet after changing capture system.
+
+A receiver SHOULD memorize the capture system (i.e. CSRC/SSRC), capture
+timestamp, and RTP timestamp of the most recently received `abs-capture-time`
+packet on each received stream. It can then use that information, in combination
+with RTP timestamps of packets without `abs-capture-time`, to extrapolate
+missing capture timestamps.
+
+Timestamp interpolation works fine as long as there’s reasonably low NTP/RTP
+clock drift. This is not always true. Senders that detect "jumps" between its
+NTP and RTP clock mappings SHOULD send `abs-capture-time` with the first RTP
+packet after such a thing happening.
+
+#### Receiver's sender clock offset
+One way for a receiver to estimate the offset between its own NTP clock and that
+of the sender follows. First, a receiver can estimate its round trip time (RTT)
+to the sender according to [RFC3611]. Then upon receiving of a sender report (SR)
+as defined in [RFC3550], which contains the NTP timestamp that the SR was sent
+according to the sender's clock, the receiver can use its NTP time that it
+received the SR, to estimate its clock offset againt the sender's NTP clock by:
+
+     Receiver's Sender Clock Offset = Receiver's NTP timestamp of receiving SR -
+(Sender's NTP timestamp in SR + RTT / 2).
 
 ## References
-* \[RFC 3389\] Zopf, R., "Real-time Transport Protocol \(RTP\) Payload for Comfort Noise \(CN\)", RFC 3389, September 2002.
-* \[RFC 6465\] Ivov, E., Ed., Marocco, E., Ed., and J. Lennox, "A Real-time Transport Protocol \(RTP\) Header Extension for Mixer-to-Client Audio Level Indication", RFC 6465, December 2011.
-* \[RFC 5285\] Singer, D. and H. Desineni, "A General Mechanism for RTP Header Extensions", RFC 5285, July 2008.
+ * [RFC3611] Friedman, T., Ed., Caceres, R., Ed., and A. Clark, Ed., "RTP Control
+ Protocol Extended Reports (RTCP XR)", RFC 3611, November 2003.
+ * [RFC3550] Schulzrinne, H., Casner, S., Frederick, R. and V. Jacobson, "RTP: A
+ Transport Protocol for Real-Time Applications", RFC 3550, July 2003.
+
