@@ -22,7 +22,7 @@ amongst others. This page is maintained by the Google Chrome team.
 
 **New to WebRTC? Take a look at our [codelab](https://codelabs.developers.google.com/codelabs/webrtc-web).**
 
-Lots more resources for getting started are available from [webrtc.org/start](https://webrtc.org/start).
+Lots more resources for getting started are available from [webrtc.org/start](https://webrtc.github.io/webrtc-org/start/).
 
 </div>
 
