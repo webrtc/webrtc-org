@@ -27,52 +27,6 @@ triaged by Chrome and WebRTC engineers.
 Please include as many relevant details as possible.
 
 
-### Filing a Security Bug
-
-The WebRTC team takes security very seriously. If you find a vulnerability in
-WebRTC, please file a [Chromium security bug][ChromeSecurity], even if the bug
-only affects native WebRTC code and not Chromium.
-
-A history of fixed Chromium security bugs is best found via [security notes in
-Stable Channel updates on the Google Chrome releases blog][ChromeSecurityBlog].
-
-You can also find fixed, publicly visible [Type=Bug-Security][ChromeBugList]
-bugs in the issue tracker (note: security bugs normally become publicly
-visible 14 weeks after they are fixed). If there is a bug in WebRTC code
-that Chromium isn’t using (such as the Java/ObjC wrappers for Android/iOS)
-we will announce fixes separately on [discuss-webrtc][DiscussWebRTC].
-
-[Tracking released security bug disclosures][WebRtcBugList].
-
-Note that we will generally NOT merge security fixes backwards to any branches,
-so if you’re using older branches it’s your responsibility to make sure the
-relevant security fixes get merged.
-
-
-### Receiving notifications about security bugs in Chrome
-
-To get automatic notifications about activity/comments in security bugs in
-Chrome you need to be either explicitly cc:d on specific bugs (by someone who
-has access to the bug) or be part of a special mailing list for all security bug
-notifications. To get on that list you have to apply to the Chrome Security
-team, see more about this on the [Chrome Security page][ChromeSecurity] under
-"How can I get access to Chromium vulnerabilities?" at the bottom of the page.
-
-Please note that Chrome's security-notify list will receive notifications about
-all security bugs in Chrome and not just the WebRTC ones. Normally it shouldn't
-be a problem to figure out whether an issue affects WebRTC since it will most
-likely be tagged with one of the WebRTC-related components (one of Blink>WebRTC,
-Blink>GetUserMedia, Blink>MediaStream, Blink>MediaRecording) or their sub-
-components.
-
-Also note that access granted by the list will only apply to bugs of Type=Bug-
-Security. Not all bugs with crashes, memory leaks and other potential
-vulnerabilities are marked as Bug-Security though. You can read more about what
-categories of bugs are deemed security bugs in the [Severity Guidelines for
-Security Issues][SeverityGuidelines] and also on the [Security FAQ][SecurityFaq]
-page.
-
-
 #### Example Data Points
 
   * Version of the browser/app
@@ -155,6 +109,52 @@ page.
       [this link][4].
 
   * Include as much as possible from the data points listed above.
+
+### Filing a Security Bug
+
+The WebRTC team takes security very seriously. If you find a vulnerability in
+WebRTC, please file a [Chromium security bug][ChromeSecurity], even if the bug
+only affects native WebRTC code and not Chromium.
+
+A history of fixed Chromium security bugs is best found via [security notes in
+Stable Channel updates on the Google Chrome releases blog][ChromeSecurityBlog].
+
+You can also find fixed, publicly visible [Type=Bug-Security][ChromeBugList]
+bugs in the issue tracker (note: security bugs normally become publicly
+visible 14 weeks after they are fixed). If there is a bug in WebRTC code
+that Chromium isn’t using (such as the Java/ObjC wrappers for Android/iOS)
+we will announce fixes separately on [discuss-webrtc][DiscussWebRTC].
+
+[Tracking released security bug disclosures][WebRtcBugList].
+
+Note that we will generally NOT merge security fixes backwards to any branches,
+so if you’re using older branches it’s your responsibility to make sure the
+relevant security fixes get merged.
+
+
+### Receiving notifications about security bugs in Chrome
+
+To get automatic notifications about activity/comments in security bugs in
+Chrome you need to be either explicitly cc:d on specific bugs (by someone who
+has access to the bug) or be part of a special mailing list for all security bug
+notifications. To get on that list you have to apply to the Chrome Security
+team, see more about this on the [Chrome Security page][ChromeSecurity] under
+"How can I get access to Chromium vulnerabilities?" at the bottom of the page.
+
+Please note that Chrome's security-notify list will receive notifications about
+all security bugs in Chrome and not just the WebRTC ones. Normally it shouldn't
+be a problem to figure out whether an issue affects WebRTC since it will most
+likely be tagged with one of the WebRTC-related components (one of Blink>WebRTC,
+Blink>GetUserMedia, Blink>MediaStream, Blink>MediaRecording) or their sub-
+components.
+
+Also note that access granted by the list will only apply to bugs of Type=Bug-
+Security. Not all bugs with crashes, memory leaks and other potential
+vulnerabilities are marked as Bug-Security though. You can read more about what
+categories of bugs are deemed security bugs in the [Severity Guidelines for
+Security Issues][SeverityGuidelines] and also on the [Security FAQ][SecurityFaq]
+page.
+
 
 [1]: https://accounts.google.com/
 [2]: http://www.chromium.org/for-testers/bug-reporting-guidelines/reporting-crash-bug
