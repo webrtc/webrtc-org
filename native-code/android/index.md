@@ -50,7 +50,7 @@ The same checkout can be used for both Linux and Android development since you
 can generate your [Ninja][4] project files in different directories for each
 build config.
 
-See [Development](/native-code/development/) for instructions on how to update
+See [Development][6] for instructions on how to update
 the code, building etc.
 
 ### Compiling
@@ -180,3 +180,4 @@ location as the native tests described in the previous section.
 [3]: https://webrtc.googlesource.com/src/+/master/examples/androidapp/README
 [4]: https://ninja-build.org/
 [5]: https://bintray.com/google/webrtc/google-webrtc
+[6]: {{ site.baseurl }}/native-code/development/
