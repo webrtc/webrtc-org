@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Chrome Report Notes
+title: Chrome Release Notes
 permalink: /release-notes/
 crumb: Release Notes
 ---
+Refer to the [native repository](https://chromium.googlesource.com/external/webrtc/+/refs/heads/master/docs/release-notes.md) for updates.
 
   * [M85 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/Qq3nsR2w2HU/7WGLPscPBwAJ)  
   * [M84 Release Notes](https://groups.google.com/d/msg/discuss-webrtc/MRAV4jgHYV0/5019yB-HAwAJ)  
