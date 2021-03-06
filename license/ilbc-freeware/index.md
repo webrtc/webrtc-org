@@ -10,8 +10,8 @@ crumb: iLBC Freeware
 
 
 
-Global IP Solutions, the creator of iLBC, was acquired by Google in January
-2011. Google continues to support the iLBC effort and is offering it as part
+Global IP Solutions, the creator of iLBC, was acquired by Google in
+January 2011. Google continues to support the iLBC effort and is offering it as part
 of it's WebRTC open source effort. iLBC is now available under the same
 [license]({{ site.baseurl }}/license/) as the WebRTC project. On this page,
 you will find material taken from the old ilbcfreeware.org page.
@@ -51,3 +51,6 @@ in connection with lost or delayed IP packets.
 
 Please read on how you can get the source code and contribute to the code by
 reading the [build]({{ site.baseurl }}/native-code/development/) information.
+
+A third party-maintained "[libilbc](https://github.com/TimothyGu/libilbc)"
+project is also available for direct integrationg with the iLBC codec.
